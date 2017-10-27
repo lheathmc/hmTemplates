@@ -1,0 +1,17 @@
+@import "_variables.scss";
+body{
+    font-family:$FontFamily;
+    color:$BodyColor;
+    h1{
+        color:$Headers;
+    }
+    a{
+        color:$LinkColor;
+        &:visited{
+            color:lighten($LinkColor,10%);
+        }
+        &:hover{
+            color:$LinkHoverColor;
+        }
+    }
+}
