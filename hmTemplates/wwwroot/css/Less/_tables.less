@@ -1,0 +1,119 @@
+﻿/* how to make your tables responsive: */
+table {
+    width:100%;
+}
+table.responsive td {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  vertical-align: top !important;
+  border:1px solid red;
+}
+@media screen and (min-width: 768px) {
+  table.responsive td {
+    width: inherit;
+    display: inline-block;
+  }
+  table.responsive.l-tdw50 td {
+    /*width 50%: table with 2 columns*/
+    width: 50%;
+  }
+}
+table.manage-membership {
+  max-width: 600px;
+}
+.ratingtd td {
+  padding-right: 15px;
+}
+.table > tbody > tr:last-child{
+border-bottom:1px solid #dddddd;
+}
+
+.table{
+    th{
+        vertical-align: bottom;
+    }
+}
+
+.table-container-outer { position: relative; }
+	
+	.table-container
+	{
+		width: 100%;
+		overflow-y: auto;
+		_overflow: auto;
+		margin: 0 0 1em;
+	}
+	
+	.table-container::-webkit-scrollbar
+	{
+		-webkit-appearance: none;
+		width: 14px;
+		height: 14px;
+	}
+	
+	.table-container::-webkit-scrollbar-thumb
+	{
+		border-radius: 8px;
+		border: 3px solid #fff;
+		background-color: rgba(0, 0, 0, .3);
+	}
+	
+	.table-container-fade
+	{
+		position: absolute;
+		right: 0;
+		width: 30px;
+		height: 100%;
+		background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+		background-image: -moz-linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+		background-image: -ms-linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+		background-image: -o-linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+		background-image: linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+	}
+
+
+/*
+WHY did this stop working?sn
+ActionStepEdit.aspx
+*/
+/*the default styling here is for mobile
+.main-content table.l-check-box-list-table label {
+  font-weight: 400;
+  display: inline;
+  background-color:#000001;
+}
+.main-content table.l-check-box-list-table td {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  vertical-align: top;
+  background-color:#cccccc;
+
+}
+*/
+
+ /*tablet landscape, make checkboxes 3 across
+@media screen and (min-width: 1024px) {
+ 
+  table.l-check-box-list-table {
+    width: 100%;
+      border:1px solid red;
+  }
+  table.l-check-box-list-table td {
+    width: 33%;
+    display: inline-block;
+  }
+  table.l-check-box-list-table input[type=checkbox] {
+    margin: 3px 10px 30px 0;
+    float: left;
+  }
+  table.l-check-box-list-table label {
+    float: left;
+    display: block;
+    width: 80%;
+  }
+}*/
+
+
+

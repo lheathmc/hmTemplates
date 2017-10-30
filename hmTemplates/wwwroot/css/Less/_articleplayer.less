@@ -1,0 +1,138 @@
+﻿
+@import (reference) "../bootstrap/less/bootstrap.less";
+.cp-content,
+.cp-workspace-content-frame {
+  /*height: 500px;*/
+}
+.cp-content {
+  display: inline-block;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0 0 10px;
+}
+.cp-workspace-header,
+.cp-workspace-content,
+.cp-workspace-footer {
+  display: inline-block;
+  width: 100%;
+}
+
+.cp-workspace-content-frame {
+  border: none;
+  width: 100%;
+  padding: 0px;
+}
+.cp-title-text,
+.cp-title-progress {
+  display: inline-block;
+  float: left;
+  left: 208px;
+  position: relative;
+  top: -21px;
+}
+.cp-workspace-footer {
+  width: 96%;
+  margin: 0 17px;
+  a{
+      .pull-left;
+      /*.l-mt10;*/
+  }
+  .btn-next, .btn-previous, .btn-finish{
+      .btn;
+      .btn-primary;
+      .pull-right;
+      /*.l-ml5;*/
+  }
+}
+.cp-title-progress .jqx-progressbar {
+  position: relative;
+  top: -18px;
+  background: #666666 !important;
+}
+.cp-workspace-footer .left {
+  float: left;
+}
+.cp-workspace-footer .right {
+  float: right;
+}
+.jq-coursename {
+  position: relative;
+  top: 3px;
+}
+
+.recommended-articles {
+    .make-row();
+    p {
+        .make-sm-column(12);
+    }
+}
+.cp-side-menu {
+  background: #5e5e5e;
+  float: left;
+  height: 475px;
+  padding: 15px;
+  width: 0%;
+  overflow: auto;
+  display: none;
+}
+.cp-side-menu-mini {
+  width: 4%;
+  right: -5px;
+  top: -8px;
+}
+.cp-side-menu-mini .cp-side-menu-bar {
+  right: 10px;
+  top: -4px;
+}
+.courseplayer-full .cp-side-menu-mini .cp-side-menu-bar {
+  right: -3px;
+  top: -4px;
+}
+.jq-hidefullscreen {
+  color: #000 !important;
+  font-weight: bold;
+  margin: 0 15px 0 0;
+  position: relative;
+  top: 39px;
+  z-index: 9999;
+}
+.article-viewer .content-area {
+  /*why don't "body iframe body" work?*/
+  background-color: #fff;
+  padding: 5px;
+}
+.content-area img {
+  height: auto !important;
+  max-width: 100%;
+}
+.article-viewer .iframebg {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.article-viewer .iframebg .label-success {
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 230px;
+}
+.article-hdng{
+    margin-top:0;
+}
+
+/*------------ Articalplayer ---------------*/ 
+.panel-generalviewer, .panel-htmlviewer, .panel-actionstepviewer {
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    margin-bottom: 0 !important;
+}
+.panel-articleplayer {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin-top: -15px;
+}
+.jwplayer{
+    width:100% !important;
+}

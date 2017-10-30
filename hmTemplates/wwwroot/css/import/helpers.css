@@ -1,0 +1,326 @@
+﻿.float-left {
+    float: left !important;
+}
+
+.m-t-15 {
+    margin-top: -15px !important;
+}
+
+.m-t0 {
+    margin-top: 0 !important;
+}
+
+.m-r0 {
+    margin-right: 0 !important;
+}
+
+.m-l0 {
+    margin-left: 0 !important;
+}
+
+.m-l5 {
+    margin-left: 5 !important;
+}
+
+.m-b0 {
+    margin-bottom: 0px !important;
+}
+
+.m-t10 {
+    margin-top: 10px !important;
+}
+
+.m-tb10 {
+    margin: 10px 0 !important;
+}
+
+.m-tb15 {
+    margin: 15px 0 !important;
+}
+
+.m-t15 {
+    margin-top: 15px !important;
+}
+
+.m-t20 {
+    margin-top: 20px !important;
+}
+
+.m-t100 {
+    margin-top: 100px !important;
+}
+
+.m-b15 {
+    margin-bottom: 15px !important;
+}
+
+.m-b10 {
+    margin-bottom: 10px !important;
+}
+
+.m-b20 {
+    margin-bottom: 20px !important;
+}
+
+.m-b5 {
+    margin-bottom: 5px !important;
+}
+
+.m-r10 {
+    margin-right: 10px !important;
+}
+
+.m-r15 {
+    margin-right: 15px !important;
+}
+
+.p-l0 {
+    padding-left: 0 !important;
+}
+
+.p-all5 {
+    padding: 5px !important;
+}
+
+.p-all10 {
+    padding: 10px !important;
+}
+
+.p-l10 {
+    padding-left: 10px !important;
+}
+
+.p-t10 {
+    padding-top: 10px !important;
+}
+
+.p-t5 {
+    padding-top: 5px !important;
+}
+
+.p-b10 {
+    padding-bottom: 10px !important;
+}
+
+.p-r10 {
+    padding-right: 10px !important;
+}
+
+.p-r25 {
+    padding-right: 25px !important;
+}
+
+.p-r0 {
+    padding-right: 0px !important;
+}
+
+.p-b0 {
+    padding-bottom: 0px !important;
+}
+
+.p-t0 {
+    padding-top: 0px !important;
+}
+
+.l-p0 {
+    padding: 0;
+}
+
+.l-mb5 {
+    margin-bottom: 5px;
+}
+
+.l-mr5 {
+    margin-right: 5px !important;
+}
+
+.l-mlt0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.lbl-btn {
+    margin: -6px 0 -10px 5px !important;
+    float: left !important;
+}
+/*variables defined here are only available to the THEME, loaded later*/
+/* to float left for mobile, but right for tablet and desk */
+@media screen and (min-width: 768px) {
+    .pull-right-desk,
+    a.pull-right-desk,
+    button.pull-right-desk {
+        float: right;
+    }
+}
+/*usage: <span class="l-breakinline"><br/></span> 
+    breaks line for mobile, but lengthens for desk*/
+.l-breakinline {
+    visibility: visible;
+    display: inline;
+}
+
+@media screen and (min-width: 1200px) {
+    .l-breakinline {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.vertical-align {
+    vertical-align: middle;
+}
+
+.transparent {
+    background-color: transparent !important;
+    /*correct use*/
+}
+
+.large {
+    /*this looks wrong, I think there is a bootstrap class already named this?*/
+    font-size: 4rem;
+}
+/* ------------------------R E U S A B L E ----------------------- */
+/*will remove these soon, now obsolute with mixins*/
+.l-mb0 {
+    margin-bottom: 0 !important;
+}
+
+.l-mb10 {
+    margin-bottom: 15px;
+}
+
+.l-mb15 {
+    margin-bottom: 15px;
+}
+
+.l-mb30 {
+    margin-bottom: 30px;
+}
+
+.l-mb60 {
+    margin-bottom: 60px;
+}
+
+.l-mt0 {
+    margin-top: 0;
+}
+
+.l-mt5 {
+    margin-top: 5px;
+}
+
+.l-mt10 {
+    margin-top: 10px;
+}
+
+.l-mt15 {
+    margin-top: 15px;
+}
+
+.l-mt30 {
+    margin-top: 30px;
+}
+
+.l-mt40 {
+    margin-top: 40px;
+}
+
+.l-ml5 {
+    margin-left: 5px;
+}
+
+.l-ml10 {
+    margin-left: 10px;
+}
+
+.l-ml15 {
+    margin-left: 15px;
+}
+
+.l-mr5 {
+    margin-right: 5px;
+}
+
+.l-p0 {
+    padding: 0;
+}
+
+.l-m0 {
+    margin: 0;
+}
+
+.l-pt0 {
+    padding-top: 0 !important;
+}
+
+.l-pl0 {
+    padding-left: 0 !important;
+}
+
+.l-pr0 {
+    padding-right: 0 !important;
+}
+
+.l-w600 {
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.saturate {
+    -webkit-filter: saturate(3);
+    filter: saturate(3);
+}
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.contrast {
+    -webkit-filter: contrast(160%);
+    filter: contrast(160%);
+}
+
+.brightness {
+    -webkit-filter: brightness(0.25);
+    filter: brightness(0.25);
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.invert {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.sepia {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+}
+
+.huerotate {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg);
+}
+
+.rss.opacity {
+    -webkit-filter: opacity(50%);
+    filter: opacity(50%);
+}
+
+.black {
+    -webkit-filter: brightness(0);
+    filter: brightness(0);
+}
+
+.white {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}

@@ -1,0 +1,881 @@
+﻿.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after,
+.btn-toolbar:before,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:before,
+.btn-group-vertical > .btn-group:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-collapse:before,
+.navbar-collapse:after,
+.pager:before,
+.pager:after,
+.panel-body:before,
+.panel-body:after,
+.modal-footer:before,
+.modal-footer:after {
+  content: " ";
+  display: table;
+}
+.dl-horizontal dd:after,
+.container:after,
+.container-fluid:after,
+.row:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.panel-body:after,
+.modal-footer:after {
+  clear: both;
+}
+/*------------------New Notification Page styles----------------*/
+.notification-page {
+  /*-----------------------NC Top Filter Bar-----------------*/
+}
+.notification-page .theme-hdr-container,
+.notification-page .main-content-container,
+.notification-page .main-content,
+.notification-page .breadcrumbs,
+.notification-page .site-footer .container,
+.notification-page #divBreadcrumbNav,
+.notification-page .container {
+  width: 100% !important;
+}
+.notification-page .nc {
+  width: 100%;
+  float: left;
+}
+.notification-page .nc-folders .nav li {
+  width: 100%;
+}
+.notification-page .nc-folders .nav li a[data-toggle="collapse"]:before {
+  content: "\f0d7";
+  font-family: fontAwesome;
+  padding: 0 2px 0 0;
+  float: right;
+  position: relative;
+  top: -2px;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.notification-page .nc-folders .nav li .collapsed:before {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.notification-page .nc-folders .nav li ul {
+  padding: 0;
+  list-style: none;
+}
+.notification-page .nc-folders .nav li ul a {
+  padding: 8px 15px 8px 25px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+}
+.notification-page .nc-folders .nav li ul ul li a {
+  padding: 8px 10px 8px 35px;
+}
+.notification-page .nc-folders h5 {
+  padding: 20px 15px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+}
+.notification-page .nc-messages {
+  padding-bottom: 20px;
+  min-height: 496px;
+  /*-------------------------Message Details------------------*/
+}
+.notification-page .nc-messages .page-title {
+  margin: 10px 0;
+}
+.notification-page .nc-messages .nc-messages-list {
+  width: 100%;
+  float: left;
+}
+.notification-page .nc-messages .panel {
+  margin-bottom: 0;
+  box-shadow: none !important;
+}
+.notification-page .nc-messages .panel .panel-heading {
+  padding: 15px;
+  border-radius: 0;
+  border: none;
+}
+.notification-page .nc-messages .panel .panel-heading .panel-title {
+  font-size: 13px;
+  font-weight: bold;
+}
+.notification-page .nc-messages .panel .panel-heading input {
+  margin-top: 1px;
+  float: left;
+}
+.notification-page .nc-messages .panel .panel-heading .nc-time {
+  float: right;
+  font-size: 12px;
+}
+.notification-page .nc-messages .panel .panel-heading a:hover {
+  text-decoration: none;
+}
+.notification-page .nc-messages .panel .panel-heading.nc-message-old .panel-title {
+  font-weight: normal;
+}
+.notification-page .nc-messages .panel .panel-heading.nc-message-old .panel-title b {
+  font-weight: normal;
+}
+.notification-page .nc-messages .nc-sent .panel .panel-heading .panel-title {
+  font-weight: normal;
+}
+.notification-page .nc-messages .nc-sent .panel .panel-heading .panel-title b {
+  font-weight: normal;
+}
+.notification-page .nc-messages .nc-message-detail {
+  margin: 20px 0;
+  font-size: 13px;
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.notification-page .nc-messages .nc-message-detail .panel-body {
+  padding: 0;
+}
+.notification-page .nc-messages .nc-message-detail .nc-thread-main {
+  padding: 15px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.notification-page .nc-messages .nc-message-detail .nc-msg-body {
+  margin-top: 18px;
+}
+.notification-page .nc-messages .nc-message-detail .thread-options {
+  position: absolute;
+  right: 15px;
+  top: 38px;
+}
+.notification-page .nc-messages .nc-message-detail .thread-options i {
+  padding: 8px 6px 8px 4px;
+  cursor: pointer;
+  border-right: 1px solid #ccc;
+}
+.notification-page .nc-messages .nc-message-detail .thread-options i:last-child {
+  border: none;
+}
+.notification-page .nc-messages .nc-message-detail .bg-info {
+  padding: 10px 15px;
+  width: 100%;
+  float: left;
+}
+.notification-page .nc-messages .nc-message-detail .compose-inline {
+  padding: 0 !important;
+  float: left;
+  margin: 20px 0;
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.notification-page .nc-messages .nc-message-detail .compose-inline blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.notification-page .nc-messages .nc-message-detail .compose-inline .nc-recipient {
+  float: left;
+  width: 100%;
+}
+.notification-page .nc-messages .nc-message-detail .compose-inline .nc-to {
+  width: 100%;
+}
+.notification-page .nc-messages .nc-message-detail .compose-inline .form-actions {
+  margin: 0;
+  padding: 10px 15px;
+}
+.notification-page .nc-messages .nc-message-detail .modal .nc-to {
+  width: 100%;
+}
+.notification-page .nc-messages .nc-message-detail .modal .nc-subject {
+  float: left;
+}
+.notification-page .bg-High i {
+  margin: 0 8px 0 5px;
+}
+.notification-page .nc-empty-list {
+  font-size: 25px;
+  padding-top: 30px;
+  padding-left: 8px;
+}
+.notification-page .nc-topbar {
+  padding: 10px 0;
+  float: left;
+  width: 100%;
+}
+.notification-page .nc-topbar .nc-messages-menu .page-status {
+  padding: 8px 10px 0 0;
+  display: inline-block;
+}
+.notification-page .nc-topbar .nc-messages-menu .select-all {
+  float: left;
+  text-align: center;
+  padding: 7px 10px;
+  margin-right: 5px;
+}
+.notification-page .nc-topbar .nc-messages-menu .select-all input {
+  margin: 0;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-refresh {
+  float: left;
+  text-align: center;
+  padding: 6px 6px 7px 6px;
+  margin-right: 5px;
+}
+.notification-page .nc-topbar .nc-messages-menu .fa-refresh {
+  cursor: pointer;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters {
+  margin-left: 0;
+  padding: 0;
+  width: auto;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search {
+  float: left;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search label {
+  float: left;
+  margin: 10px 4px 0 4px;
+  font-size: 12px;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal {
+  float: left;
+  margin-right: 5px;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal:-ms-input-placeholder {
+  color: #999999;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal::-webkit-input-placeholder {
+  color: #999999;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal[disabled],
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal[readonly],
+fieldset[disabled] .notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal[disabled],
+fieldset[disabled] .notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal {
+  cursor: not-allowed;
+}
+textarea.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .jqx-dropdownlist-state-normal {
+  height: auto;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .nc-text-search {
+  float: left;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .nc-text-search .form-control {
+  height: 36px;
+  width: 140px;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .nc-date-search {
+  float: left;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .nc-date-search .jqx-datetimeinput {
+  float: left;
+  height: 33px !important;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-sort {
+  float: left;
+  margin-left: 0;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-sort label {
+  float: left;
+  margin: 10px 4px 0 4px;
+  font-size: 12px;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-sort .nc-sort-orders {
+  float: left;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-sort .nc-sort-orders i {
+  float: left;
+  padding: 10px 5px 10px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-sort .form-control {
+  float: left;
+  margin-right: 5px;
+  padding: 3px;
+}
+.notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-sort-btns {
+  float: left;
+  margin-left: 5px;
+}
+.notification-page .nc-topbar .nc-messages-menu .button {
+  margin-right: 5px;
+  padding: 6px 6px;
+}
+.reply-editor-main .modal .compose-inline .panel-body {
+  height: 355px;
+  overflow: auto;
+}
+/*--------------------------------------------COMPOSE---------------*/
+.compose-dock {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  width: 680px;
+}
+.compose-dock .panel-body {
+  height: 455px;
+  overflow: auto;
+}
+.compose-dock.minimized {
+  width: auto;
+}
+.compose-popup .panel-body {
+  height: 470px;
+  overflow: auto;
+}
+.compose-dock .panel-heading,
+.compose-inline .panel-heading,
+.compose-popup .panel-heading {
+  width: 100%;
+  cursor: pointer;
+  display: table;
+  padding: 5px 10px !important;
+}
+.compose-dock .panel-heading h4,
+.compose-inline .panel-heading h4,
+.compose-popup .panel-heading h4 {
+  font-size: 14px;
+  float: left;
+  font-weight: normal;
+}
+.compose-dock .panel-heading i,
+.compose-inline .panel-heading i,
+.compose-popup .panel-heading i {
+  font-size: 12px;
+  padding: 5px 3px;
+}
+.compose-dock .panel-body,
+.compose-inline .panel-body,
+.compose-popup .panel-body {
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+.compose-dock .panel-body label,
+.compose-inline .panel-body label,
+.compose-popup .panel-body label {
+  font-weight: normal;
+}
+.compose-dock .panel-body .jqx-widget,
+.compose-inline .panel-body .jqx-widget,
+.compose-popup .panel-body .jqx-widget {
+  border-radius: 0;
+}
+.compose-dock .panel-body .nc-recipient input,
+.compose-inline .panel-body .nc-recipient input,
+.compose-popup .panel-body .nc-recipient input,
+.compose-dock .panel-body .nc-subject input,
+.compose-inline .panel-body .nc-subject input,
+.compose-popup .panel-body .nc-subject input {
+  border: none;
+}
+.compose-dock .panel-body .nc-recipient input[type="text"],
+.compose-inline .panel-body .nc-recipient input[type="text"],
+.compose-popup .panel-body .nc-recipient input[type="text"],
+.compose-dock .panel-body .nc-subject input[type="text"],
+.compose-inline .panel-body .nc-subject input[type="text"],
+.compose-popup .panel-body .nc-subject input[type="text"] {
+  min-width: 210px;
+}
+.compose-dock .panel-body .nc-recipient .form-group,
+.compose-inline .panel-body .nc-recipient .form-group,
+.compose-popup .panel-body .nc-recipient .form-group {
+  float: left;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 0;
+}
+.compose-dock .panel-body .nc-recipient label,
+.compose-inline .panel-body .nc-recipient label,
+.compose-popup .panel-body .nc-recipient label {
+  float: left;
+  margin: 3px 8px 0 0;
+}
+.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal,
+.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal,
+.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal {
+  float: left;
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  margin-right: 8px;
+}
+.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal:focus,
+.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal:focus,
+.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal::-moz-placeholder,
+.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal::-moz-placeholder,
+.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal:-ms-input-placeholder,
+.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal:-ms-input-placeholder,
+.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal:-ms-input-placeholder {
+  color: #999999;
+}
+.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal::-webkit-input-placeholder,
+.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal::-webkit-input-placeholder,
+.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal::-webkit-input-placeholder {
+  color: #999999;
+}
+.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal[disabled],
+.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal[disabled],
+.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal[disabled],
+.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal[readonly],
+.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal[readonly],
+.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal[readonly],
+fieldset[disabled] .compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal,
+fieldset[disabled] .compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal,
+fieldset[disabled] .compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal[disabled],
+.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal[disabled],
+.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal[disabled],
+fieldset[disabled] .compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal,
+fieldset[disabled] .compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal,
+fieldset[disabled] .compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal {
+  cursor: not-allowed;
+}
+textarea.compose-dock .panel-body .nc-recipient .jqx-dropdownlist-state-normal,
+textarea.compose-inline .panel-body .nc-recipient .jqx-dropdownlist-state-normal,
+textarea.compose-popup .panel-body .nc-recipient .jqx-dropdownlist-state-normal {
+  height: auto;
+}
+.compose-dock .panel-body .nc-recipient a,
+.compose-inline .panel-body .nc-recipient a,
+.compose-popup .panel-body .nc-recipient a {
+  float: left;
+  margin-top: 8px;
+}
+.compose-dock .panel-body .nc-recipient .jq-subfield,
+.compose-inline .panel-body .nc-recipient .jq-subfield,
+.compose-popup .panel-body .nc-recipient .jq-subfield {
+  cursor: pointer;
+}
+.compose-dock .panel-body .nc-recipient .user-tags span,
+.compose-inline .panel-body .nc-recipient .user-tags span,
+.compose-popup .panel-body .nc-recipient .user-tags span {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.compose-dock .panel-body .nc-recipient .user-tags span:hover,
+.compose-inline .panel-body .nc-recipient .user-tags span:hover,
+.compose-popup .panel-body .nc-recipient .user-tags span:hover {
+  text-decoration: underline;
+}
+.compose-dock .panel-body .nc-recipient .nc-recipient-tags,
+.compose-inline .panel-body .nc-recipient .nc-recipient-tags,
+.compose-popup .panel-body .nc-recipient .nc-recipient-tags {
+  margin: 2px 0;
+}
+.compose-dock .panel-body .nc-recipient .user-tags,
+.compose-inline .panel-body .nc-recipient .user-tags,
+.compose-popup .panel-body .nc-recipient .user-tags {
+  margin: 0 5px 2px 0;
+  padding: 3px;
+  font-size: 12px;
+  float: left;
+}
+.compose-dock .panel-body .nc-recipient .user-tags span,
+.compose-inline .panel-body .nc-recipient .user-tags span,
+.compose-popup .panel-body .nc-recipient .user-tags span {
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.compose-dock .panel-body .nc-subject input,
+.compose-inline .panel-body .nc-subject input,
+.compose-popup .panel-body .nc-subject input {
+  padding: 8px 8px 8px 15px !important;
+  width: 80%;
+}
+.compose-dock .panel-body .nc-priority,
+.compose-inline .panel-body .nc-priority,
+.compose-popup .panel-body .nc-priority {
+  float: right;
+  position: relative;
+  top: 7px;
+  right: 15px;
+}
+.compose-dock .panel-body .nc-contacts,
+.compose-inline .panel-body .nc-contacts,
+.compose-popup .panel-body .nc-contacts {
+  font-weight: bold;
+}
+.compose-dock .panel-body .nc-message-body,
+.compose-inline .panel-body .nc-message-body,
+.compose-popup .panel-body .nc-message-body {
+  margin: -15px 0 0 0;
+}
+.compose-dock .panel-body .form-actions,
+.compose-inline .panel-body .form-actions,
+.compose-popup .panel-body .form-actions {
+  padding: 0 15px;
+}
+.compose-dock .panel-body .nc-recipient-field,
+.compose-inline .panel-body .nc-recipient-field,
+.compose-popup .panel-body .nc-recipient-field {
+  float: left;
+  width: 100%;
+}
+.compose-dock .panel-body .nc-recipients-type,
+.compose-inline .panel-body .nc-recipients-type,
+.compose-popup .panel-body .nc-recipients-type {
+  margin-top: 5px !important;
+}
+.compose-dock .nc-empty-list,
+.compose-inline .nc-empty-list,
+.compose-popup .nc-empty-list {
+  font-size: 25px;
+}
+/*---------------------------Advance Search---------------*/
+.advance-search .jqx-grid {
+  margin: 10px 0;
+}
+.advance-search .jqx-toolbar-tool .jqx-checkbox {
+  margin-top: 10px;
+}
+.advance-search .jqx-default {
+  padding: 0;
+}
+/*-----------------User Tags-------------*/
+.role-user-tags {
+  width: 100%;
+  float: left;
+}
+.role-user-tags span {
+  width: auto;
+  float: left;
+  padding: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.role-user-tags i {
+  cursor: pointer;
+}
+.jqx-menu-dropdown {
+  width: 200px !important;
+}
+@media only screen and (max-width: 320px) {
+  .notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search label {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .nc-date-search {
+    margin: 5px 0;
+  }
+  .notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search label {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .notification-page .nc {
+    margin: 0 0px;
+  }
+  .notification-page .nc-messages {
+    padding-top: 20px;
+  }
+  .notification-page .nc-messages .nc-message-detail .thread-options {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    top: inherit;
+  }
+  .notification-page .nc-messages-menu .nc-filters {
+    position: relative;
+    top: -20px;
+    margin-left: 0;
+    padding: 0;
+  }
+  .notification-page .nc-messages-menu .nc-filters .nc-search {
+    width: 100%;
+  }
+  .notification-page .nc-messages-menu .nc-filters .nc-search .nc-text-search .form-control {
+    width: 150px;
+  }
+  .notification-page .nc-messages-menu .nc-filters .nc-sort {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  .notification-page .nc-messages-menu .select-all,
+  .notification-page .nc-messages-menu .nc-refresh {
+    position: relative;
+    margin-bottom: 25px;
+    z-index: 999;
+  }
+  .notification-page .nc-messages-menu .jq-nc-bulkActions {
+    position: relative;
+    margin-bottom: 25px;
+    z-index: 999;
+  }
+  .compose-dock {
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .compose-dock .fa-expand,
+  .compose-dock .fa-minus {
+    display: none;
+  }
+  .compose-dock .panel-body .nc-subject input {
+    width: 68%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .notification-page .nc-messages-menu .nc-filters .nc-search {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .notification-page .nc-messages-menu .select-all,
+  .notification-page .nc-messages-menu .nc-refresh {
+    position: relative;
+    top: 115px;
+    z-index: 999;
+  }
+  .notification-page .nc-messages-menu .jq-nc-bulkActions {
+    position: relative;
+    top: 115px;
+    z-index: 999;
+  }
+  .notification-page .nc-messages-menu .nc-filters {
+    position: relative;
+    top: -20px;
+  }
+  .notification-page .nc-messages-menu .page-status {
+    padding: 8px 10px 10px 0;
+  }
+  .notification-page .paging {
+    width: 100%;
+  }
+  .nc-topbar {
+    padding: 0;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .notification-page .nc-messages-menu .nc-filters {
+    top: -38px;
+    width: 100% !important;
+  }
+  .notification-page .nc-messages-menu .nc-filters .nc-search {
+    width: auto;
+  }
+  .notification-page .nc-messages-menu .jq-nc-bulkActions {
+    top: 78px;
+  }
+  .notification-page .nc-messages-menu .select-all,
+  .notification-page .nc-messages-menu .nc-refresh {
+    top: 78px;
+  }
+  .ipad-fullwidth {
+    width: 100%;
+  }
+  .nc-topbar {
+    padding: 15px 0;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+  .notification-page .nc-messages-menu .jq-nc-bulkActions {
+    top: 126px;
+  }
+  .notification-page .nc-messages-menu .select-all,
+  .notification-page .nc-messages-menu .nc-refresh {
+    top: 126px;
+  }
+}
+.panel-notificationpreferences,
+.panel-systemlevelnotificationpreferences,
+.panel-myrelations {
+  border: none !important;
+}
+.panel-notificationpreferences .panel-heading,
+.panel-systemlevelnotificationpreferences .panel-heading,
+.panel-myrelations .panel-heading {
+  background: none !important;
+  border-bottom: 1px solid #ccc !important;
+  padding: 10px 0 5px 0 !important;
+  color: #44ad9f !important;
+}
+.panel-notificationpreferences .panel-body,
+.panel-systemlevelnotificationpreferences .panel-body,
+.panel-myrelations .panel-body {
+  padding: 15px 0;
+}
+.panel-notificationpreferences .portlet-toolbar,
+.panel-systemlevelnotificationpreferences .portlet-toolbar,
+.panel-myrelations .portlet-toolbar,
+.panel-notificationpreferences i,
+.panel-systemlevelnotificationpreferences i,
+.panel-myrelations i {
+  display: none !important;
+}
+@media only screen and (max-width: 670px) {
+  .notification-page .nc-topbar .nc-messages-menu .nc-filters .nc-search .nc-text-search .form-control {
+    width: 80px !important;
+    margin-bottom: 30px !important;
+  }
+}
+@media only screen and (max-device-width: 667px) and (min-device-width: 375px) and (orientation: landscape) {
+  .notification-page .nc-messages-menu .select-all,
+  .notification-page .nc-messages-menu .nc-refresh {
+    top: 160px !important;
+  }
+}
+/*@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .nc-time {
+    float: left !important;
+}
+ }*/
+@media only screen and (max-width: 375px) {
+  .nc-time {
+    width: 100%;
+    text-align: right;
+  }
+  .notification-page .nc-messages .panel .panel-heading {
+    min-height: 50px !important;
+  }
+}
+/* NC Subject Line Sizes*/
+.nc-subject,
+.nc-subject-value {
+  font-size: 13px !important;
+}
+.nc-msg-body > table {
+  margin-top: 35px !important;
+}
+/*delete button for mobile*/
+.notification-page .nc-messages .nc-message-detail .thread-options {
+  position: initial !important;
+  margin-right: -15px !important;
+  top: 0;
+}
+.notification-page .nc-messages .panel .panel-heading .nc-time {
+  float: right;
+  font-size: 13.5px;
+}
+.nc-composer .modal iframe {
+  height: 100% !important;
+}
+.nc-messages-page .showmore,
+.nc-messages-page .showless {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.alert-inner-content a {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.nc-topbar .paging .btn {
+  padding: .42857143rem 5px;
+}
+/*# sourceMappingURL=notifications.css.map */

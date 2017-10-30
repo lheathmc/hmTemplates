@@ -1,0 +1,76 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+@grid-gutter-width:30px;
+@gutter:1280px;
+
+.row, .columns {
+    margin-bottom: (@grid-gutter-width/2);
+}
+.container,
+.container-fluid {
+    padding-top: (@grid-gutter-width/2);
+    background-color:#ffffff;
+}
+.column-2, .column.two{
+    .make-sm-column(6);
+}
+.column-3{
+    .make-sm-column(4);
+}
+.column-narrow, .zone-right {
+    .make-sm-column(4);
+}
+.zone-right{
+    .pull-right;
+    .make-xs-column(12);
+    .make-sm-column(4);
+}
+.column-wide, .zone-left {
+    .make-sm-column(8);
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  /*overflow:hidden;*/
+}
+
+
+/*
+check palm beach?*/
+
+table {
+  max-width: 100%;
+}
+
+.panel-heading{
+    border-bottom:none;
+}
+
+*:focus,a:visited, a:focus, .nav.nav-tabs > li a:focus, .dropdown > a:focus, .dropdown.open > a {
+    outline: none;
+}
+.nav-tabs .active {
+    padding:0;
+    margin-right:2px;
+}
+
+
+/*Container Width for Tablet - we like full screen containers for tablet (no bg) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .hidden-xs-p{
+        display:none;
+    }
+    #dvLeaderBoardPoints{
+        border:none !important;
+    }
+}
+
+.open>.dropdown-toggle.btn{
+    background-color:transparent !important;
+}
+

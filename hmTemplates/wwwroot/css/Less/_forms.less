@@ -1,0 +1,1690 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+
+
+/*Checkboxes*/
+/*when SRG wraps checkboxes with span, reduce the left margin*/
+span.checkbox input[type=checkbox] {
+    margin-left: 0;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    margin-right: 5px;
+    /* this interferring with SiteSettingsSiteMenus form on bottom; can we do without this style here?
+      position: relative;
+  top: 2px;*/
+}
+
+/*resetting legacy font sizes all to 14px base.*/
+.form-pair {
+    .form-group;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: (@grid-gutter-width/2);
+    .field-label {
+        font-weight:bold;
+        line-height:30px;
+        .label {
+            font-size: 14px;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: pre-line;
+            text-align: right;
+            word-break: break-word;
+        }
+    }
+    #ddlContentTypes{
+        margin-top:8px;
+    }
+    .field-input {
+        label{
+            display:inline-block;
+            margin-top:10px;
+            font-weight:normal;
+            @media (max-width: @screen-xs-min) { 
+                display: block;
+                clear: left;
+                text-align: left;
+            }
+        }
+        span {
+            font-size: 14px;
+            white-space: normal;
+        }
+
+        .error {
+            margin-top: 0;
+        }
+
+        .button {
+            span {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.form-pair.inline {
+    .field-input {
+        width: 25%;
+    }
+}
+
+.form-group {
+    span.error {
+        /*position:absolute;
+        top:0;
+        left:15px;*/
+        padding: 0;
+    }
+}
+/*because I can't get the clearfix to work above*/
+.form-pair:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-actions {
+    .form-group;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: (@grid-gutter-width/2);
+    @extend: clearfix;
+
+    .button {
+        margin-right: 5px;
+    }
+}
+
+.button, .btn {
+    @media (max-width: @screen-sm-min) {   
+            margin-bottom:10px;
+    }
+    .btn;
+    .btn-primary; /*this makes all buttons primary*/
+}
+
+.error {
+    .text-warning;
+    text-align: center;
+}
+
+.field-text {
+    position: relative;
+
+    .error {
+        position: relative;
+        top: 0;
+    }
+}
+
+.form-error {
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            text-align: left;
+        }
+    }
+}
+
+.date {
+    display: inline-block;
+
+    .date-input {
+        float: left;
+    }
+
+    .time-zone {
+        display: inline-block;
+        float: right;
+        margin-left: 5px;
+    }
+}
+
+.label, span.label {
+    color: #000000;
+    padding: 0;
+    font-size: 100%;
+}
+
+.label-wrap {
+    .label, span.label {
+        white-space: normal;
+    }
+}
+
+/*make input use font awesome and look like a button primary*/
+input[type=submit].fa {
+    .button;
+}
+
+.form-inline {
+    .clearfix;
+
+    .field-input {
+        .form-control;
+        display: inline-block;
+        width: auto;
+        max-width: 300px;
+    }
+
+    .checkbox-inline, .radio-inline {
+        padding-top: 5px;
+    }
+
+    .field-input.jqx-widget {
+        padding: 2px;
+    }
+
+    .field-label {
+        display: inline-block;
+    }
+
+    select {
+        display: inline-block;
+    }
+
+    margin-bottom: @grid-gutter-width/2 @grid-gutter-width/2 0 @grid-gutter-width/2;
+}
+
+
+/*Pre-made form classes for laying out labels and inputs*/
+.label-sm {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(2);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(10);
+
+        input, select, textarea {
+            .form-control;
+            max-width: 400px;
+        }
+    }
+
+    .field-label, label {
+        font-size: 100%;
+        .make-sm-column(2);
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-sm.input100 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(2);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(10);
+
+        input, select {
+            .form-control;
+            max-width: 100px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(2);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-sm.input200 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(2);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(10);
+
+        input, select {
+            .form-control;
+            max-width: 200px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(2);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-sm.input300 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(2);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(10);
+
+        input, select {
+            .form-control;
+            max-width: 300px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(2);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-md {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(3);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(9);
+         @media (max-width: 568px) {
+             padding-left:0px;
+        }
+        input, select {
+            .form-control;
+                max-width: 400px;
+            }
+    }
+
+    .field-label {
+        .make-sm-column(3);
+        @media (max-width:@screen-sm-max) {
+              padding-left:0;
+          }
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-md.input100 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(3);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(9);
+
+        input, select {
+            .form-control;
+            max-width: 100px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(3);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-md.input200 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(3);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(9);
+
+        input, select {
+            .form-control;
+            max-width: 200px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(3);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-md.input300 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(3);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(9);
+
+        input, select {
+            .form-control;
+            max-width: 300px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(3);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-lg {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(4);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(8);
+          @media (max-width:@screen-sm-max) {
+              padding-left:0;
+          }
+        input, select {
+            .form-control;
+            max-width: 400px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(4);
+         @media (max-width:@screen-sm-max) {
+              padding-left:0;
+          }
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-lg.input100 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(4);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(8);
+
+        input, select {
+            .form-control;
+            max-width: 100px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(4);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-lg.input200 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(4);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(8);
+
+        input, select {
+            .form-control;
+            max-width: 200px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(4);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-lg.input300 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(4);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(8);
+
+        input, select {
+            .form-control;
+            max-width: 300px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(4);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-xl {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(5);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(7);
+
+        input, select {
+            .form-control;
+            max-width: 400px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(5);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-xl.input100 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(5);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(7);
+
+        input, select {
+            .form-control;
+            max-width: 100px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(5);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-xl.input200 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(5);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(7);
+
+        input, select {
+            .form-control;
+            max-width: 200px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(5);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.label-xl.input300 {
+    .form-actions {
+        clear: both;
+        .make-sm-column-offset(5);
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+    /*centering the buttom form buttons*/
+    .form-actions.text-center {
+        .make-sm-column-offset(0);
+        clear: both;
+        padding-top: (@grid-gutter-width/2);
+        padding-left: (@grid-gutter-width/2);
+        margin-bottom: (@grid-gutter-width/2);
+    }
+
+    .field-input {
+        .make-sm-column(7);
+
+        input, select {
+            .form-control;
+            max-width: 300px;
+        }
+    }
+
+    .field-label {
+        .make-sm-column(5);
+
+        @media (min-width: @screen-sm-min) { /*tablet labels are right align*/
+            text-align: right;
+        }
+    }
+}
+
+.field-label {
+    text-overflow: ellipsis;
+}
+
+/*SiteSettings */
+/*for tables inside forms, like for checkboxlists and radios*/
+/* This follows pattern: field-input>table>input&label  */
+.label-sm .field-input table,
+.label-sm.input100 .field-input table,
+.label-sm.input200 .field-input table,
+.label-sm.input300 .field-input table,
+.label-md .field-input table,
+.label-md.input100 .field-input table,
+.label-md.input200 .field-input table,
+.label-md.input300 .field-input table,
+.label-lg .field-input table,
+.label-lg.input100 .field-input table,
+.label-lg.input200 .field-input table,
+.label-lg.input300 .field-input table,
+.label-xl .field-input table,
+.label-xl.input100 .field-input table,
+.label-xl.input200 .field-input table,
+.label-xl.input300 .field-input table {
+    width: 100%;
+    table-layout: fixed;
+
+    input[type=checkbox], input[type=radio] {
+        display: inline;
+        float: left;
+        width: 20px;
+        height: 20px;
+    }
+
+    label {
+        display: inline;
+        float: none;
+    }
+    /* This follows pattern: field-input>table>SPAN>input&label  */
+    span {
+        width: 100%;
+        display: block; /*behave!*/
+        input[type=checkbox] {
+            display: inline;
+            float: left;
+            width: 20px;
+            height: 20px;
+        }
+
+        label {
+            display: inline;
+            float: none;
+        }
+    }
+}
+
+/*make table responsive*/
+/*.label-sm td,
+.label-sm.input100 td,
+.label-sm.input200 td,
+.label-sm.input300 td,
+.label-md td,
+.label-md.input100 td,
+.label-md.input200 td,
+.label-md.input300 td,
+.label-lg td,
+.label-lg.input100 td,
+.label-lg.input200 td,
+.label-lg.input300 td {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    vertical-align: top;
+}*/ //Not fully responcive 
+
+@media (min-width: @screen-sm-min) {
+    .label-sm td,
+    .label-sm.input100 td,
+    .label-sm.input200 td,
+    .label-sm.input300 td,
+    .label-md td,
+    .label-md.input100 td,
+    .label-md.input200 td,
+    .label-md.input300 td,
+    .label-lg td,
+    .label-lg.input100 td,
+    .label-lg.input200 td,
+    .label-lg.input300 td {
+        display: table-cell;
+    }
+}
+
+
+.label-sm .field-input input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    float: left;
+    display: inline;
+}
+
+.label-sm .field-input label {
+    text-align: left;
+}
+
+.label-sm .field-input input[type=file] {
+    border: none;
+    width: auto;
+    box-shadow: none;
+    height: auto;
+    padding: 0;
+    margin: 4px 0;
+}
+
+.label-sm input.btn, .label-sm input.button,
+.label-md input.btn, .label-md input.button,
+.label-lg input.btn, .label-lg input.button {
+    /*.btn;
+    .btn-primary;*/
+    font-size: 1em;
+    width: auto;
+}
+
+.label-md .field-label {
+    margin: 0;
+    font-size: 14px;
+}
+
+/*------------------ C H E C K B O X L I S T S--------------------*/
+/*
+    Used for:
+SiteSettingSiteMenus.ascx 
+ActionStepEdit.aspx
+SEE "CHECKBOXLIST" IN THE STYLEGUIDE FOR EXPLANATION
+*/
+/*the default styling here is for mobile*/
+table.l-check-box-list-table label {
+    font-weight: 400;
+    display: inline;
+    border: 1px solid red;
+}
+
+table.l-check-box-list-table td {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid blue;
+}
+
+.group.standard span input[type="checkbox"] {
+    float: none;
+    margin: 5;
+    margin-left: 5px;
+}
+
+.full.standard.group {
+    .label {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /*tablet landscape, make checkboxes 3 across*/
+    table.l-check-box-list-table {
+        width: 100%;
+        border: 1px solid red;
+    }
+
+    table.l-check-box-list-table td {
+        width: 33%;
+        display: inline-block;
+    }
+
+    table.l-check-box-list-table input[type=checkbox] {
+        margin: 3px 10px 30px 0;
+        float: left;
+    }
+
+    table.l-check-box-list-table label {
+        float: left;
+        display: block;
+        width: 80%;
+    }
+}
+.display .form-control {
+    border: solid 0px;
+    box-shadow: none;
+    padding: 6px 0px;
+}
+
+/* jqx Widgets Bootstrap Modifications */
+.form-horizontal .jqx-dropdownlist-state-normal {
+    display: inline-block;
+}
+
+.portlet-progress-monitor .jqx-dropdownlist-state-normal span {
+    font-weight: normal;
+}
+/*incorrect? where is this used? 
+     .field-label.col-sm-2 {
+  padding-left: 30px;
+}*/
+.jq-assessmentsettings .form-horizontal .control-label,
+.jq-assessmentpage .form-horizontal .control-label {
+    /*these declaration are long, can we target this a different way by inserting a class instead? */
+    padding-top: 0;
+}
+
+
+
+.form-control.shorttext {
+    width: 30% !important;
+}
+
+.radio-button-list td {
+    padding: 0 25px 0 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    position: relative;
+    width: auto !important;
+    height: auto !important;
+    display: inline !important;
+}
+
+.srgt-label.col-sm-2 {
+    font-weight: bold;
+    padding: 0;
+}
+
+
+@media screen and (min-width:0) {
+    input[type="checkbox"] {
+        border: none !important;
+        box-shadow: none !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+
+    input[type="radio"] {
+        border: none !important;
+        box-shadow: none !important;
+        background: none !important;
+        padding: 4px 2px 4px 0 !important;
+    }
+}
+
+/* Document Tree */
+
+.document-tree {
+    table {
+        width: auto !important;
+
+        td {
+            width: auto;
+            padding: 5px 0;
+        }
+    }
+}
+
+input[type=file] {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    height: 34px !important;
+}
+
+/*--Filters--*/
+.filters {
+    .jqx-widget {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 6px;
+    }
+
+    .filters-header {
+        font-weight: bold;
+    }
+
+    .column {
+        margin-bottom: 16px;
+    }
+
+    .spanstyle {
+        display: block;
+        font-weight: bold;
+    }
+
+    .filters-body {
+        padding: @grid-gutter-width/4 @grid-gutter-width/4 3px @grid-gutter-width/4;
+        .jqx-widget.jqx-dropdownlist-state-normal{
+            background:#ffffff;
+            height:24px !important;
+            padding: 0 4px !important;
+        }
+    }
+
+    .filter-section.odd {
+        margin: -11px -10px 2px -10px;
+        padding: 6px 10px 0 10px;
+    }
+
+    .filter-group, .form-group {
+        float: left;
+        margin-bottom: 1px;
+        margin-right: @grid-gutter-width/4;
+        .button {
+            float: right;
+            margin-left: @grid-gutter-width/4;
+        }
+    }
+
+    .filter-footer {
+        .text-center;
+        .clearfix;
+    }
+
+    .jq-CloseUser {
+        border: 1px solid #9f9b9b;
+        font-size: 18px;
+        padding: 4px 3px;
+        margin-top: 0;
+        color: red;
+        border-radius: 4px;
+        height: 28px !important;
+        width: 28px !important;
+        cursor:pointer;
+    }
+}
+
+.filters.form-inline {
+    .form-group {
+        float: left;
+
+        label {
+            display: block;
+        }
+    }
+}
+
+.file-upload {
+    .container-fluid;
+
+    .field-input {
+        input {
+            .button;
+        }
+    }
+
+    .field-attribute {
+        table {
+            .pull-right;
+
+            td {
+                border: solid 1px #ddd;
+            }
+        }
+    }
+}
+
+.form-float {
+    .field-label {
+        padding: 0;
+    }
+}
+
+.input-button {
+    input[type="text"] {
+        width: 50%;
+        float: left;
+        margin-right: 5px;
+    }
+}
+
+.hascalendar {
+    position: absolute;
+    right: 20px;
+    top: 9px;
+    font-size: 18px;
+}
+
+.hasdatepicker {
+    width: 200px;
+    float: left;
+    position: relative;
+
+    i {
+        right: 0;
+        cursor: pointer;
+    }
+}
+
+.radio {
+    margin: 10px 0 10px 5px;
+
+    input[type=radio] {
+        margin-top: 2px;
+    }
+}
+/* Bootstrap Override
+.checkbox-inline, .radio-inline {
+    min-width: 200px;
+    margin: 0 20px 0 0 !important;
+}
+*/
+.hide {
+    display: none !important;
+}
+
+input.hide {
+    display: none !important;
+}
+
+
+
+/*========= Styles for Henry Feedbcak Tabs =========*/
+.inputFloat {
+    .selectclass-sowinput {
+        width: 280px;
+        margin-left: 15px;
+    }
+
+    .form-control {
+        float: left;
+    }
+}
+
+.jq-usertag.select-authors.button.inline-block {
+    display: inline-block;
+}
+
+
+/*custom elements(copied from bootstrap 4 - to be removed once we upgrade to version 4)*/
+
+.custom-control {
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-control + .custom-control {
+    margin-left: 1rem;
+}
+
+.custom-control-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-control-input:checked ~ .custom-control-indicator {
+    color: #fff;
+    background-color: #0074d9;
+}
+
+.custom-control-input:focus ~ .custom-control-indicator {
+    -webkit-box-shadow: 0 0 0 .075rem #fff,0 0 0 .2rem #0074d9;
+    box-shadow: 0 0 0 .075rem #fff,0 0 0 .2rem #0074d9;
+}
+
+.custom-control-input:active ~ .custom-control-indicator {
+    color: #fff;
+    background-color: #84c6ff;
+}
+
+.custom-control-input:disabled ~ .custom-control-indicator {
+    cursor: not-allowed;
+    background-color: #eee;
+}
+
+.custom-control-input:disabled ~ .custom-control-description {
+    color: #767676;
+    cursor: not-allowed;
+}
+
+.custom-control-indicator {
+    position: absolute;
+    top: .0625rem;
+    left: 0;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: 50% 50%;
+    background-size: 50% 50%;
+}
+
+.custom-checkbox .custom-control-indicator {
+    border-radius: .25rem;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
+    background-color: #0074d9;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E");
+}
+
+.custom-radio .custom-control-indicator {
+    border-radius: 50%;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.custom-controls-stacked .custom-control {
+    display: inline;
+}
+
+.custom-controls-stacked .custom-control::after {
+    display: block;
+    margin-bottom: .25rem;
+    content: "";
+}
+
+.custom-controls-stacked .custom-control + .custom-control {
+    margin-left: 0;
+}
+
+.custom-select {
+    display: inline-block;
+    max-width: 100%;
+    padding: .375rem 1.75rem .375rem .75rem;
+    padding-right: .75rem\9;
+    color: #55595c;
+    vertical-align: middle;
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .75rem center;
+    background-image: none\9;
+    -webkit-background-size: 8px 10px;
+    background-size: 8px 10px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.custom-select:focus {
+    border-color: #51a7e8;
+    outline: 0;
+}
+
+.custom-select:focus::-ms-value {
+    color: #55595c;
+    background-color: #fff;
+}
+
+.custom-select:disabled {
+    color: #818a91;
+    cursor: not-allowed;
+    background-color: #eceeef;
+}
+
+.custom-select::-ms-expand {
+    opacity: 0;
+}
+
+.custom-select-sm {
+    padding-top: .375rem;
+    padding-bottom: .375rem;
+    font-size: 75%;
+}
+
+.custom-file {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+.custom-file-input {
+    min-width: 14rem;
+    max-width: 100%;
+    margin: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.custom-file-control {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 2.5rem;
+    padding: .5rem 1rem;
+    line-height: 1.5;
+    color: #555;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+}
+
+.custom-file-control:lang(en)::after {
+    content: "Choose file...";
+}
+
+.custom-file-control::before {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: 6;
+    display: block;
+    height: 2.5rem;
+    padding: .5rem 1rem;
+    line-height: 1.5;
+    color: #555;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 0 .25rem .25rem 0;
+}
+
+.custom-file-control:lang(en)::before {
+    content: "Browse";
+}
+
+
+/*end custom styles*/
+
+/*radio button starts*/
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+    background: #52B366;
+}
+/*radio button ends*/
+/*checkbox start*/
+input.checkbox-custom,
+input.radio-custom {
+    display: none !important;
+}
+
+.checkbox-custom,
+.checkbox-custom-label,
+.radio-custom,
+.radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px 0;
+    font-size:14px;
+}
+
+.checkbox-custom-label,
+.radio-custom-label {
+    position: relative;
+    font-weight: normal;
+}
+
+.checkbox-custom + .checkbox-custom-label:before,
+.radio-custom + .radio-custom-label:before {
+    content: '';
+    border: 2px solid #999;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: bottom;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    background: #52B366;
+    color: #ffffff;
+    padding: 0 1px;
+}
+/*checkbox ends*/
+
+/*custom switch*/
+.onoffswitch {
+    position: relative;
+    width: 70px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #999999;
+    border-radius: 20px;
+}
+
+.onoffswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner1,
+.onoffswitch-inner2 {
+    float: left;
+    width: 50%;
+    height: 28px;
+    padding: 0;
+    line-height: 28px;
+    font-size: 14px;
+    color: white;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner1 {
+    padding-left: 11px;
+    background-color: #00A600;
+    color: #FFFFFF;
+}
+
+.onoffswitch-inner2 {
+    padding-right: 9px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    width: 30px;
+    margin: 0px;
+    background: #FFFFFF;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 5px;
+    right: 40px;
+    -moz-transition: all 0.3s ease-in 0s;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: -1px;
+}
+/*custom switch ends*/
+
+.form-control {
+    padding: 6px 12px;
+    &:focus{
+        border-color: #888 !important;
+        box-shadow:none !important;
+    }
+}
+.input-group {
+    width:100%;
+}
+
+//Unifying dropdowns / Selects between JQX, Bootstrap, and default selects. - Heath 2/15/17 Please discuss with me before removing. Thanks.
+
+select, textarea {
+    .form-control;
+    max-width: 100%;
+}
+select{
+    text-indent: 1px;
+    text-overflow: '';
+    width:100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 20px 2px 2px;
+    border: solid 1px #888;
+    background:url("/Scripts/jqwidgets/styles/images/icon-down.png") no-repeat right center #ffffff !important;
+    &:focus{
+        border-color: #888 !important;
+        box-shadow:none !important;
+    }
+    option{
+        &:focus{
+            background-color:#d1d1d1;
+        }
+    }
+}
+
+.field-input {
+    select {
+        .form-control;
+        background:url("/Scripts/jqwidgets/styles/images/icon-down.png") no-repeat right center #ffffff !important;
+    }
+}
+
+//JQX select
+.jqx-widget.jqx-dropdownlist-state-normal{
+    background:#ffffff;
+    height:23px !important;
+    padding: 4px 4px 6px 4px !important;
+    .jqx-widget-content, .jqx-dropdownlist-content{
+        .jqx-listitem-elemen{
+            .jqx-listitem-state-normal{
+
+            }
+            .jqx-listitem-state-selected,.jqx-fill-state-pressed,.jqx-listitem-state-hover,.jqx-fill-state-hover{
+                color:#ffffff !important;
+                background-color:#3399ff !important;
+            }
+        }
+    }
+}
+
+.filter.jqx-widget.jqx-dropdownlist-state-normal {
+    height: 23px !important;
+    padding: 0 !important;
+}
+
+.jqx-editor-toolbar-group.jqx-fill-state-normal{
+    .jqx-editor-dropdownlist, .jqx-dropdownlist-state-normal{
+        background:#efefef;
+        height:25px !important;
+        float:none;
+        border:solid 1px #aaa !important;
+        padding:0 !important;
+        .jqx-widget-content, .jqx-dropdownlist-content{
+            margin-top:4px !important;
+        }
+    }
+}
+
+.jqx-listbox{
+     .jqx-item.jqx-rc-all.jqx-listitem-state-selected.jqx-fill-state-pressed{
+        color:#ffffff !important;
+        background-color:#3399ff !important;
+        border:none;
+        border-radius:0 !important;
+     }
+    .jqx-listitem-state-normal, .jqx-fill-state-normal, .jqx-fill-state-normal-classic {
+        color:#666666 !important;
+        /*background-color:#ffffff !important;
+        border:none;*/
+        border-radius:0 !important;
+    }
+    .jqx-fill-state-hover, .jqx-fill-state-hover-classic {
+        color:#ffffff !important;
+        background-color:#3399ff !important;
+        border:none;
+        border-radius:0 !important;
+    }
+}
+
+
+
+.jqx-grid{
+    .jqx-widget.jqx-dropdownlist-state-normal{
+        background:#ffffff;
+        height: 18px !important;
+        float:left;
+        padding: 0 !important;
+        font-weight: normal;
+        margin: 0;
+        line-height: 14px;
+        font-size:12px;
+        .jqx-widget-content, .jqx-dropdownlist-content{
+            margin-top:3px !important;
+            .jqx-listitem-elemen{
+                .jqx-listitem-state-normal{
+
+                }
+                .jqx-listitem-state-selected,.jqx-fill-state-pressed,.jqx-listitem-state-hover,.jqx-fill-state-hover{
+                    color:#ffffff !important;
+                    background-color:#3399ff !important;
+                }
+            }
+        }
+        .jqx-icon{
+            //margin-top:-13px;
+        }
+    }
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    display:table-cell !important;
+}
+
+.panel-assign .panel-body label {
+    color: #fff;
+}
+
+/*Select menu custom dropdown arrow disable in IE*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   select {
+       background-color:#fff;
+       background-image: none !important;
+       padding: 2px !important;
+   }    
+}
+
+.checkbox-custom-label{
+    input{
+        float: left;
+        margin-left: 14px;
+    }
+}
+
+.publish.button{
+    margin-right:5px;
+    margin-bottom: 5px;
+}

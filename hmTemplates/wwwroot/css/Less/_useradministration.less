@@ -1,0 +1,257 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+#user-search{
+    .form-control{
+        width:45% !important;
+        @media (min-width: @screen-sm-min) {
+            width:200px !important;
+        }
+    }
+}
+.useradmin-search{
+}
+.useradminsearch-action {
+  display: inline;
+  float: left;
+  margin:5px;
+}
+.useradminsearch-action img {
+  max-width: 95%;
+  /*why? incorrect?*/
+}
+.useragreementpanel {
+  margin: 15px 0 0 0;
+  width: 100%;
+  float: left;
+}
+.agreemetDetWrap{
+    margin-bottom:@grid-gutter-width/2;
+    float:left;
+    width:100%;
+}
+.panel-org-admin{
+    .well{
+        padding:10px 15px;
+        border: none;
+        box-shadow: none;
+    }
+    
+}
+.userprofile-special{
+    margin-bottom:10px;
+}
+/*--------------------My Profile ----------------------*/
+.panel.panel-myprofile, .panel.panel-myaccount{
+    border: none !important;
+    background: none;
+    box-shadow: none !important;
+    .panel-heading{
+        display:none;
+    }
+    .panel-body{
+         padding: 0 !important;
+    }
+}
+
+/*-------------------- Rubrics Styling ----------------------*/
+.rubric-panel {
+    width: 205px;
+    height: 120px;
+    padding: 5px;
+    float: left;
+    border: 1px solid #ccc;
+    margin-right: 4px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;       
+    background: rgb(247,247,247); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(247,247,247,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(247,247,247,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(247,247,247,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+ }
+.rubric-panel.active { 
+    border: 2px solid #abd372;
+    background: -moz-linear-gradient(top, rgba(242,253,245,1) 0%, rgba(205,230,211,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(242,253,245,1) 0%,rgba(205,230,211,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(242,253,245,1) 0%,rgba(205,230,211,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2fdf5', endColorstr='#cde6d3',GradientType=0 ); /* IE6-9 */
+}
+.rubric-panel {
+    input {
+        border: none;
+    }
+    input[type=checkbox] {
+        float: right;
+    }
+}
+
+.rubric-panel-heading-x {
+    width: 205px;
+    height: 30px;
+    float: left;
+    border: 1px solid #d6d6d6;
+    margin-right: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+        .rubric-panel-heading-x-title {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: 7px;
+    }
+}
+.rubric-y {
+    display: inline-table;
+}
+.rubric-panel-heading-y {
+    width: 100%;
+    height: 120px;
+    padding:5px;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    margin-right: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    .rubric-panel-weight {
+        margin-top:10px;
+        input {
+            width: 35px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.editing-multiline {          
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+    border: dotted 1px #a0a0a0;
+    background: #FFF;
+    position: relative;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    word-wrap: break-word;
+    overflow: hidden;
+    height: 100%;
+    ruby-position: right;
+}
+.editing-multiline-y {          
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+    border: dotted 1px #a0a0a0;
+    position: relative;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    word-wrap: break-word;
+    overflow: hidden;
+    ruby-position: right;
+}
+.editing-singleline {
+    border: dotted 1px #a0a0a0;
+    background: #FFF;
+    height: 21%;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+    position: relative;
+}
+.editing-singleline-x {
+   border: dotted 1px #a0a0a0;
+    height: 100%;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+    position: relative;
+}
+
+.jq-rubrics-grid {
+    padding: 5px;
+    border: solid 1px #ccc;
+}
+.addbuttons {
+    padding-top: 8px;
+}
+.addbutton-x {
+    padding:5px 13px;
+    margin-right: 5px;
+    height:32px;
+    text-align: center;
+    background: #f3f3f3;
+    border-style: double; 
+    border-color: #ccc;          
+}
+          
+.addbutton-y {
+    padding:5px 13px;
+    height:32px;
+    text-align: center;
+    background: #f3f3f3;
+    border-style: double; 
+    border-color: #ccc; 
+}
+.rubrics-grid-row {
+    position: relative;
+}
+.remove-col {
+        position: absolute;
+        width: 17px;
+        height: 16px;
+        top: -5px;
+        right: -9px;
+        font-size: 13px !important;
+        color: #d81e21;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 13px;
+        border: solid 1px #f0f0f0;
+    }
+.remove-row {
+        position: absolute;
+        width: 18px;
+        height: 17px;
+        top: -4px;
+        left: 10px;
+        z-index: 9;
+        font-size: 14px !important;
+        color: #d81e21;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 13px;
+        border: solid 1px #f0f0f0;
+    }
+.xy-title {
+        font-weight: bold;
+        text-overflow: ellipsis;
+        overflow: hidden;
+}
+.xy-content {
+    padding-top: 5px;
+}
+.xy-points{
+    width: 40px;
+    height: 20px;
+}
+.xy-percent{
+    width: 50px;
+    height: 20px;
+}
+.points-score {
+    float: right;
+    input {
+        width: 67px;
+        margin-left: 5px;
+        text-align: center;
+        font-weight: bold;
+        border: 2px solid #abd372;
+    }
+}

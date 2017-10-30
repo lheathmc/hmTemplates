@@ -1,0 +1,309 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+
+html {
+    height: 100%;
+}
+
+body.login-page {
+    min-height: 100%;
+    height: 100%;
+
+    .clientlogo {
+        .make-xs-column(12);
+
+        .navbar-brand {
+            float: none;
+            margin: 0 auto;
+
+            img {
+                max-width: none;
+                float: none;
+                margin: 0 0 10px 0;
+
+                @media (min-width: @screen-sm-min) {
+                    margin: 10px 0 0 0;
+                }
+            }
+        }
+    }
+
+    .global-nav.navbar-right {
+        display: none;
+    }
+
+    .bg-image {
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-content-wrapper {
+        .main-content-container {
+            background: none;
+
+            .main-content {
+                li.utility.logout {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .login-caption-1, .login-caption-2 {
+            display: none;
+        }
+    }
+
+    @media (min-width: @screen-md-min) {
+        .login-caption-1, .login-caption-2 {
+            display: block;
+            position: absolute;
+            width: 300px;
+        }
+    }
+
+    .login-caption-1 {
+        font-weight: bold;
+        font-size: 3em;
+        top: -90px;
+        right: 10px;
+        .text-center;
+        font-family: 'Century Gothic' !important;
+    }
+
+    .login-caption-2 {
+        font-size: 1.5em;
+        top: -35px;
+        right: 10px;
+        .text-center;
+        font-family: 'Century Gothic' !important;
+    }
+}
+/* --------------------- S P L A S H ------------------------------*/
+/* desktop */
+@media screen and (min-width: 768px) {
+    .splash {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: -200px;
+    }
+}
+
+.splashlogin {
+    background: #efefef;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    margin: 0 auto 20px auto;
+    padding: 24px;
+    opacity: 0.85;
+    position: relative;
+    z-index: 15;
+
+    .form-actions {
+        input {
+            font-weight: bold;
+        }
+    }
+    .social-logins{
+        @facebook: #3C5999;
+        @google: #DE4C33;
+        @twitter: #45B0E4;
+        .text-center{
+
+        }
+        h3{
+            margin-top:10px;
+        }
+        button{
+            color:#fff;
+            margin-top:10px;
+            &:hover{
+                color:#fff;
+            }
+            i{
+                padding:9px;
+                display:inline-block;
+                position:absolute;
+                top:0;
+                left:0;
+                margin:0;
+                border-radius:4px 0 0 4px;
+            }
+            &.Facebook{
+                background-color:@facebook;
+                &:hover{
+                    background-color:darken(@facebook,10%);
+                    i{
+                        background-color:darken(@facebook,20%);
+                    }
+                }
+                i{
+                    &.fa-Facebook:before {
+                      content: "\f09a";
+                    }
+                    background-color:darken(@facebook,10%);
+                } 
+            }
+            &.Google{
+                background-color:@google;
+                &:hover{
+                    background-color:darken(@google,10%);
+                    i{
+                        background-color:darken(@google,20%);
+                    }
+                }
+                i{
+                    background-color:darken(@google,10%);
+                    &.fa-Google:before {
+                      content: "\f1a0";
+                    }
+                }
+                
+            }
+            &.Twitter{
+                background-color:@twitter;
+                &:hover{
+                    background-color:darken(@twitter,10%);
+                    i{
+                        background-color:darken(@twitter,20%);
+                    }
+                }
+                i{
+                    background-color:darken(@twitter,10%);
+                    &.fa-Twitter:before {
+                      content: "\f099";
+                    }
+                }
+            }    
+        }
+        
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .splashlogin {
+        max-width: 315px;
+        top: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) { /* the top login horizontal is centered for tablet */
+    .splash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+    }
+}
+
+.loginhelp {
+    div.loginhelp-step {
+        .text-center;
+        border: 1px solid #eee;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+    .well{
+        background: #cccccc;
+        color:#000;
+    }
+
+    .loginhelp-number {
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .loginhelp-desc {
+        font-size: 16px;
+        color: rgb(135, 131, 131);
+        padding: 10px 0px;
+        margin: 10px;
+    }
+}
+
+/*Login content public page header*/
+.login-page {
+    .navbar-right {
+        ul {
+            float: right;
+            margin: 0;
+            padding: 0;
+        }
+
+        .blendernav {
+            //float: left;
+            //width: auto !important;
+        }
+
+        .field-text input {
+            display: inline-block;
+        }
+
+        .form-error.text-left {
+            padding: 0;
+            width: 100%;
+            float: left;
+            margin-top: -17px;
+
+            div {
+                span {
+                    width: 201px;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+/*-------------- Parentivity Login --------------*/
+.theme-hdr-container {
+    .nav-login {
+        margin-top: 25px;
+        float: right;
+        width: 41.66666667%;
+
+        a {
+            line-height: 1;
+            padding: 0 5px;
+        }
+    }
+
+    .global-nav{ 
+        .navbar-form {
+            text-align:right; 
+            margin: 0 0 5px 0;
+            padding: 0;
+            @media (max-width: @screen-md-max) {
+                margin-right:5px;
+                margin-left:5px;
+            }     
+            .links {
+                padding-top: 10px;
+                padding-bottom: 10px; 
+                  .form-error {
+                    padding-top:10px; 
+                    span {
+                        float:right;
+                        font-size:12px;
+                        width:100%;
+                      }
+                   } 
+               }
+            
+            .form-control{
+                    @media (max-width: @screen-md-max) {
+                        margin-bottom:5px;
+                    }
+            }
+            
+                          
+            }
+        }
+}
+

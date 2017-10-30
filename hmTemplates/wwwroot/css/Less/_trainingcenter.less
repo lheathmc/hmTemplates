@@ -1,0 +1,150 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+
+
+
+.my-assignments-sec {
+    .trainingcenter-form {
+        .form-inline;
+        margin-bottom: (@grid-gutter-width / 2);
+
+        select {
+            .form-control;
+        }
+
+        .btn-view-all, .btn-manage {
+            .btn;
+            .btn-primary;
+        }
+    }
+
+    .my-assignment {
+        margin-bottom: (@grid-gutter-width / 2);
+        .clearfix;
+     
+
+        
+    }
+}
+
+.columns.layout2-84 {
+    .my-assignments-sec {
+        .my-assignments {
+            .my-assignment {
+                .make-sm-column(12);
+                .make-md-column(12);
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+
+
+.myassignment-stats {
+    .myassignment-due {
+        font-weight:bold;
+        .pull-left;
+    }
+
+    .myassignment-status {
+        font-weight:bold;
+        .pull-right;
+    }
+}
+
+.my-assignmentheader {
+    //font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    /*for mobile*/
+}
+
+@media screen and (min-width: 768px) {
+    .my-assignmentheader {
+        margin: 0 0 0;
+        /*for desktop*/
+    }
+}
+
+.my-assignment-notation {
+    margin-bottom: 5px;
+    font-weight: 600;
+
+    span {
+        font-weight: 400;
+    }
+}
+
+.myassignment-stats {
+    width: 100%;
+}
+
+.trainingcenter-progress {
+    font-weight: bold;
+}
+
+.friendly-datetime {
+    color: #9197a3;
+}
+
+.topic-heading {
+    font-weight: 700;
+    padding-bottom: 5px;
+    display: block;
+}
+/* My Journal tab styling */
+.panel-myjournal {
+    .journal-topic-list {
+        list-style-type: circle;
+        margin: 0;
+        /*max-height: 400px;*/ //This code is effect to my journal content in mobile Ram..
+        padding: 0;
+        .journal-attributes {
+          a.journal-attributename {
+              font-size:16px;
+              cursor:pointer;
+                label.attributevaluetitle {                    
+                        font-weight: bold; 
+                        margin-left:10px;                 
+                }
+            }
+            .li-deattribute{
+                overflow:auto;
+                 max-height: 300px; 
+             .chead {
+                    border-top: 1px solid #c7c7c7;
+                    background-color: #f7f7f7;
+                    border-bottom: 1px solid #c7c7c7;
+                    .cdata {
+                        background-color: #f7f7f7 !important;
+                        color: #000000 !important;
+                    }
+                }
+             .crow {
+                  border-bottom: 1px solid #c7c7c7;            
+                 .cdata {
+                            display: inline-block;
+                            padding: 2px 5px 2px 5px;
+                            background-color: #fff;
+                            &:hover{
+                                text-decoration: none !important;
+                            }
+                      }
+                 &:hover{
+                     background-color: #f7f7f7 !important;
+                 }
+              }                
+           }
+        } 
+        img{
+            @media (max-width: @screen-md-max) {
+                display:none;
+            }
+        } 
+    }
+}
+
+
+
+

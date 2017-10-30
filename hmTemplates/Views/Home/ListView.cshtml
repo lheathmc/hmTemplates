@@ -2,4 +2,22 @@
     ViewData["Title"] = "List View";
 }
 <h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
+
+<div id='jqxExpander'>
+    <div>
+        Early History of the Internet
+    </div>
+    <div>
+        <p>@ViewData["Message"]</p>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            // Create jqxExpander
+
+            $("#jqxExpander").jqxExpander({ width: '50%', height: '50%' });
+        });
+    </script>
+}

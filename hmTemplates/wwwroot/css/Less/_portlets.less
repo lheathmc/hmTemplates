@@ -1,0 +1,1434 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+
+.panel {
+    position: relative;
+    .panel-heading {
+        position: relative;
+        line-height: 1.1em;
+        i {
+            display: inline-block;
+            position: relative;
+            float: left;
+        }
+        i, .fa {
+            font-size: 18px;
+            margin: 0;
+        }
+        strong {
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 70%;
+            -webkit-user-select: none; /* Chrome all / Safari all */
+            -moz-user-select: none; /* Firefox all */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Likely future */
+        }
+        .portlet-header {
+            position:absolute;
+            right:15px;
+            .portlet-toolbar{
+
+                .dropdown-menu {
+                    min-width:170px;
+                    i {
+                        display: inline-block;
+                        width: 20px;
+                        vertical-align: top;
+                        line-height: 24px;
+                        margin: 2px 5px 0 0 !important;
+                        padding-left: 0;
+                        font-size: 16px !important;
+                        float: none;
+                    }
+                    strong {
+                        display: inline-block;
+                        width: 77%;
+                        vertical-align: top;
+                        margin: 4px 0 0 -5px;
+                        font-size: 13px;
+                        line-height: 20px;
+                    }
+                    a {
+                        display: block;
+                        font-weight: bold;
+                    }
+
+                    ul {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    .panel-body {
+    }
+    .well {
+        float: left;
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+    }
+}
+
+.panel-group {
+    .panel-body {
+        padding: 12px;
+    }
+
+    .panel .panel-heading i {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.btn-group.pull-left.portlet-link {
+    line-height: 1.6;
+}
+
+/*make Blender portlets inherit bootstrap .panel properties*/
+.portlet .portlet-header,
+.portlet.box .portlet-header,
+.portlet.banner .portlet-header {
+    .panel-heading;
+    padding: 5px;
+
+    table {
+        width: auto; /* HM - Overrides table width 100% */
+    }
+}
+
+.portlet .portlet-body,
+.portlet.box .portlet-body,
+.portlet.banner .portlet-body {
+    .panel-body;
+}
+
+/*Overwrite these values in the theme folder, not here*/
+@portlet-border-radius: 5px;
+@portlet-border: #000000;
+@portlet-background: #f5f5f5;
+@portlet-heading-background: #808080;
+@portlet-heading-color: #000000;
+
+/*Default portlets styling - what portlets look like without a theme*/
+.portlet {
+    border: 1px solid @portlet-border;
+    border-radius: @portlet-border-radius;
+    margin-bottom: (@grid-gutter-width/2);
+
+    .portlet-header {
+        i {
+            font-size: 21px;
+        }
+    }
+}
+
+.portlet .srgt-containerheader {
+    background: @portlet-heading-background;
+    color: @portlet-heading-color;
+    width: 100%;
+    -webkit-border-top-left-radius: (@portlet-border-radius)-(1);
+    -webkit-border-top-right-radius: (@portlet-border-radius)-(1);
+    -moz-border-radius-topleft: (@portlet-border-radius)-(1);
+    -moz-border-radius-topright: (@portlet-border-radius)-(1);
+    border-top-left-radius: (@portlet-border-radius)-(1);
+    border-top-right-radius: (@portlet-border-radius)-(1);
+    font-size: 1.286em;
+    line-height: 2.5em;
+    min-height: 50px;
+
+    td {
+        padding: 10px;
+    }
+
+    span:first-of-type {
+    }
+
+    span {
+        margin-left: 0;
+    }
+}
+
+
+.portlet .srgt-containerbody, .portlet .portlet-body {
+    padding: (@grid-gutter-width/2);
+    background: #fff;
+    -webkit-border-bottom-left-radius: (@portlet-border-radius)-(1);
+    -webkit-border-bottom-right-radius: (@portlet-border-radius)-(1);
+    -moz-border-radius-bottomleft: (@portlet-border-radius)-(1);
+    -moz-border-radius-bottomright: (@portlet-border-radius)-(1);
+    border-bottom-left-radius: (@portlet-border-radius)-(1);
+    border-bottom-right-radius: (@portlet-border-radius)-(1);
+}
+
+/*Hooking up the Border? or Title? options in ManagePortlets.aspx*/
+.portlet.srgt-noborder,
+.portlet.banner.srgt-noborder,
+.portlet.Banner.srgt-noborder,
+.portlet.box.srgt-noborder,
+.portlet.Box.srgt-noborder,
+.portlet.srgt-noborder > .portlet-body,
+.portlet.srgt-noborder > .srgt-containerbody,
+.well .srgt-containerheader,
+.well .srgt-containerbody,
+.srgt-portlet.srgt-noborder > .srgt-containerheader {
+    border: none !important;
+    background: none;
+}
+
+.srgt-notitle {
+    .srgt-containerheader {
+        display: none;
+    }
+}
+
+.srgt-noborder {
+    .srgt-containerbody {
+        padding: 0;
+        border: none !important;
+        background: none;
+    }
+}
+
+.well {
+    .srgt-containerbody {
+        border: none !important;
+        background: none;
+        padding: 0;
+    }
+}
+
+.portlet.srgt-notitle > .srgt-containerheader,
+.portlet.srgt-notitle > .portlet-header,
+.portlet.Box.srgt-notitle > .srgt-containerheader,
+.portlet.box.srgt-notitle > .srgt-containerheader,
+.portlet.banner.srgt-notitle > .srgt-containerheader,
+.portlet.Banner.srgt-notitle > .srgt-containerheader {
+    display: none;
+    visibility: collapse;
+}
+
+/* ------------------- banner, Banner portlet -------------------*/
+
+.portlet.banner .srgt-containerheader, .portlet.Banner .srgt-containerheader {
+    background: transparent;
+    color: @portlet-heading-color;
+}
+
+.portlet.banner .srgt-containerbody, .portlet.Banner .srgt-containerbody, .portlet.banner .portlet-body {
+    background: none;
+}
+/* ------------------- box, Box portlet -------------------*/
+.portlet.Box, .portlet.box {
+    background: #f4f4f4;
+    border: none !important;
+}
+
+.portlet.Box .srgt-containerheader, .portlet.box .srgt-containerheader {
+    background: none;
+}
+
+.portlet.Box .srgt-containerbody, .portlet.box .srgt-containerbody, .portlet.box .portlet-body {
+    background: transparent;
+}
+
+/* ------------------- Blank Portlet -------------------*/
+
+.portlet.blank > .srgt-containerheader, .portlet.Blank > .srgt-containerheader {
+    background: transparent;
+    color: @portlet-heading-color;
+    padding: 0;
+}
+
+.portlet.blank > .srgt-containerbody, .portlet.Blank > .srgt-containerbody, .portlet.blank > .portlet-body {
+    background: none;
+    padding: 0;
+}
+
+/* ---------------------- My Profile -------------------*/
+/*user image*/
+.portlet table#myProfileAboutMeTable td#image {
+    padding: 0 (@grid-gutter-width/4) 0 0;
+}
+/*user name*/
+.portlet table#myProfileAboutMeTable td#info {
+    padding-right: (@grid-gutter-width/2);
+}
+/*stupid arrow.gif has white space in top of image*/
+.srgt-portlet-links img {
+    position: relative;
+    top: -3px;
+}
+
+/* ----------------    VIEW MORE(s)    ----------------*/
+.portlet-more, .srgt-portlet-more, .viewmorebook {
+    margin-top: (@grid-gutter-width/2);
+}
+
+.portlet-more a:before, .srgt-portlet-more a:before, .viewmorebook span a:before {
+    font-family: fontawesome;
+    content: '\f0a9';
+    margin-right: 5px;
+}
+
+.portlet-more a, .srgt-portlet-more a, .viewmorebook span a {
+    padding-top: (@grid-gutter-width/2);
+    .make-sm-column(12);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ------------------ Rss Links ------------------*/
+.srgt-portlet-more.srgt-rsslinks:before {
+    content: none;
+}
+
+/* ---------------- Pulse Check ------------------ */
+
+/*ActionStepEdit - removing the old .panel-heading styles*/
+/*AdminLockedUser*/
+h1 .panel-heading {
+    padding: 0;
+    border: none;
+    margin-bottom: 0;
+}
+
+
+.portlet li {
+    list-style-type: none;
+}
+
+/* ------------------ Notifications --------------- */
+.notification-view {
+    .controls span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .NotificationPortlet-Photo {
+        margin: 10px 0 0 10px;
+    }
+
+    .NotificationPortlet-Details {
+        margin: 10px;
+
+        h3 {
+            font-size: 100%;
+            color: #666;
+            font-style: italic;
+            font-weight: normal;
+            margin: 0px 0px 5px 0px;
+        }
+
+        align-content {
+            margin: 0px;
+        }
+
+        br {
+            display: none;
+        }
+    }
+}
+
+/* -------------------- News Portlets ------------------ */
+.dashboard-orgnews {
+    .orgnews-select {
+        margin-bottom: 10px;
+        .form-control {
+            float: left;
+            width: auto;
+            margin-right: 5px;
+        }
+    }
+    .tab-content{
+        padding:0 !important;
+        width:100%;
+        float:left;
+    }
+    .newsblock{
+        margin: 0;
+        padding: 0;
+        border: none;
+             .newsdate {
+                width: 100%;
+                float: left;
+                background: #f2f2f2;
+                padding: 5px 15px;
+            }
+             .newsstory{
+                 padding:0 !important;
+                 margin:0 !important;
+             }
+            .newstitle {
+                padding: 8px 15px;
+                float: left;
+                width: 100%;
+                font-size: 14px;
+                font-weight: normal;
+            }
+            .newscontent {
+                float: left;
+                width: 100%;
+                padding: 0 15px 10px 15px;
+            }
+            .newsexp{
+                font-size: 13px;
+                padding-top: 8px;
+            }
+            .inline{
+                display: inline;
+                float: right;
+            }
+            .newstype{
+                float:right;
+                color:#3a6da0;
+            }
+            .pagination{
+                padding-left:25px;
+    }
+}
+
+}
+#orgNews {
+    .pagination {
+        float: right;
+    }
+}
+.newsblock {
+    /*.container-fluid; Manju I don't think we need affecting oher news section on palm*/
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+        .newsstory {
+            .make-sm-column(4);
+            padding-left: 0;
+            padding-bottom: @grid-gutter-width/2;
+        }
+
+        .newstitle {
+            font-size: 1.25em;
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        .newsstory:last-child {
+            padding: 0;
+        }
+    }
+
+.col-md-4 {
+    .newsblock {
+        .newsstory {
+            .make-xs-column(12);
+            .make-sm-column(6);
+            .make-md-column(12);
+
+            @media (min-width: @screen-xs-min) {
+                margin: 0 -20px;
+            }
+
+            @media (min-width: @screen-sm-min) {
+                margin: 0 -10px;
+            }
+
+            @media (min-width: @screen-md-min) {
+                margin: 0 -20px;
+            }
+        }
+    }
+}
+
+/* Admin Message */
+.admin-photo {
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/*-- Student Dashboard --*/
+.my-interests {
+    a.like::before, a.unlike::before {
+        padding: 5px 0 5px 5px;
+    }
+
+    .myinterest-comment {
+        i {
+            color: #dddddd;
+            cursor: pointer;
+
+            &:hover {
+                color: #cccccc;
+            }
+        }
+    }
+}
+
+/*--My Profile--*/
+.my-profile {
+    img {
+        float: left;
+        margin-right: 10px;
+        max-width: 95px;
+        min-width: 95px;
+        height: auto;
+    }
+    .helpfulness-teacherrating {
+        .rating {
+            margin-top: 5px;
+
+            .starsdiv {
+                float: left;
+                padding-left: 21%;
+                width: 100% !important;
+            }
+        }
+        img {
+            min-width: auto;
+            height: auto;
+            border: none;
+        }
+    }
+    h3 {
+    }
+    p {
+        margin-left: 105px;
+        .links {
+            margin-top: 10px;
+            display: block;
+        }
+    }
+    a {
+        display: block;
+    }
+}
+
+/*--Roster--*/
+.profile_highlight, .roster-img {
+    img {
+        width: auto;
+        height: auto;
+        max-width: 100px;
+    }
+}
+
+.contact-info {
+    img.contact-childimage {
+        width: auto;
+        height: auto;
+        max-width: 90px;
+        float: left;
+        padding-right: 10px;
+    }
+}
+
+/** Portlet Progress Monitor **/
+.portlet-progress-monitor {
+    border: solid 1px rgba(248,248,248,0.5);
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    padding: 5px;
+
+    span {
+        font-weight: bold;
+    }
+
+    button {
+        margin-top: 0;
+    }
+}
+
+/** New portlet styles **/
+.jq-portlet-header {
+    cursor: pointer;
+}
+
+/* My Resources */
+.panel-resources {
+    .col-sm-6 {
+        
+        padding-right:0;
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            min-height: 120px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    }
+    h5 {
+        margin: 15px 0 0 0;
+        word-break: break-word;
+        text-transform: capitalize;
+        font-size: 18px;
+        font-family:Arial,sans-serif;
+        overflow: hidden;
+    }
+    p {
+        margin: 5px 0 0 0;
+        font-size: 11px;
+    }
+    .img-container {
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin-left: 5px;
+        border-radius: 5px;
+        margin-top: 8px;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: @screen-md-min) { 
+        .col-sm-6{
+            padding-right:0;
+        }
+        .col-sm-6:nth-child(3), .col-sm-6:nth-child(6), .col-sm-6:nth-child(9), .col-sm-6:nth-child(12) {
+            padding-right:15px;
+        }
+    }
+    @media (min-width: @screen-lg-min) {
+        .col-sm-6:nth-child(3), .col-sm-6:nth-child(6), .col-sm-6:nth-child(9), .col-sm-6:nth-child(12) {
+            padding-right:0;
+        }
+        .col-sm-6:nth-child(4), .col-sm-6:nth-child(8), .col-sm-6:nth-child(12) {
+            padding-right:15px;
+        }
+    }
+    
+}
+
+/*-------------------Full Screen Option--------------*/
+.blender-full-screen {
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: #ffffff !important;
+    .panel-body {
+        height: 93.3%;
+        overflow: auto;
+        padding: 15px 15px 0 15px !important;
+        overflow-x: hidden;
+    }
+    .jqx-scrollbar {
+        width: 100% !important;
+    }
+}
+
+.blender-full-screen.well {
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+}
+
+/*--------------------Portlet Loader-------------------------*/
+.blender-blockUI {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+
+.blockUI-overlay {
+    width: 100%;
+    text-align: center;
+    border: none;
+    height: 100%;
+    opacity: 0.8;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 999999;
+    position: absolute;
+}
+
+.blockUI-overlay.pageoverlay {
+    position: fixed;
+}
+
+.blenderUI-block {
+    width: 130px;
+    height: 130px;
+    position: fixed;
+    top: 40%;
+    left: 45%;
+    border-radius: 50%;
+    z-index: 9999999;
+}
+
+.blenderUI-block .bf-mark-blender {
+    font-size: 3.8em;
+}
+
+.close-loader {
+    font-size: 22px;
+    position: relative;
+    z-index: 9999999;
+    color: #d32000;
+    padding: 20px;
+}
+
+.blender-loading {
+    text-align: center;
+    padding: 28px 0;
+}
+
+.block-loader {
+    background-size: 15px;
+    min-height: 20px;
+    z-index: 998;
+    background: url("../../images/spinner.gif") #FFFFFF center no-repeat !important;
+}
+
+/*--------------------Portlet Bulk Users------------------*/
+.panel-bulk-users, .panel-user-create, .panel-help-desk, .panel-my-profile, .panel-agreement, .panel-content-details, .panel-custom-content, .panel-org-message, .panel-site-announcement, .panel-admin-bookmark, .panel-manage-membership, .panel-rotating-page, .panel-locked-users {
+    border-radius: 6px;
+    background-color: #fff;
+    border: 5px solid #666666;
+    padding: 15px 15px 0 15px;
+    float: left;
+    width: 100%;
+
+    h4, .panel-heading {
+        margin: -16px -16px 15px -16px;
+        font-size: 18px;
+        padding: 15px;
+        background: #666666;
+        @media only screen and (max-width: 670px) { 
+            font-size: 14px;
+        }
+        .portlet-header {
+            float: left;
+        }
+    }
+
+    .panel-body {
+        background: #fff;
+        padding: 0;
+
+        h5 {
+            padding: 10px;
+            margin: @grid-gutter-width/2 0;
+            font-size: 18px;
+        }
+
+        .enable-flow {
+            margin-left: @grid-gutter-width/1.5;
+
+            .field-label, .field-input {
+                margin-top: @grid-gutter-width/2;
+            }
+        }
+
+        .nav-tabs, .tab-content {
+            margin: 0 -15px;
+            padding-bottom: 0;
+        }
+
+        .box-title {
+            color: #5791DE;
+            margin-bottom: @grid-gutter-width/1.5;
+        }
+
+        .useradminbulk-column {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 7px 5px 0 5px;
+        }
+
+        .useradminsearch-column {
+            margin: 9px 4px 0 4px;
+        }
+
+        .form-actions {
+            margin: 0 -15px !important;
+            padding: @grid-gutter-width/2 0;
+            background: #f7f7f7;
+        }
+
+        .link {
+            a {
+                color: #fff;
+            }
+        }
+
+        .icon40 {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+    }
+}
+
+.panel-site-announcement {
+    li {
+        list-style-type: disc;
+    }
+
+    .topbtns {
+        top: -79px;
+        margin-right: -20px;
+    }
+
+    h4 {
+        margin-top: -57px;
+    }
+
+    img {
+        float: left;
+        padding: 10px 40px 10px 0;
+    }
+}
+
+/*---------------------Portlet Locked Users------------------*/
+.panel-locked-users {
+    .portlet-header {
+        float: left;     
+        width: 102.8%;
+        padding: 15px;
+        margin: -15px -15px 20px -15px;
+        font-size: 18px;
+        background: #666666;
+        color: #ffffff;
+    }
+}
+
+/*-----------------Panel Content Details-----------------*/
+.panel-content-details {
+    .field-input {
+        label {
+            font-weight: 400;
+            padding: 0;
+        }
+    }
+
+    
+    .form-actions {
+        margin: 15px -15px -15px -15px !important;
+    }
+}
+
+/*-----------------Panel Content Edit-----------------*/
+.panel-content-edit {
+    border: none !important;
+    .panel-heading {
+        padding: 10px 0 0 0;
+    }
+    h4 {
+        margin: 0 0 15px 0;
+        font-size: 16px;
+        padding: 10px 0 0 0;
+    }
+    .tab-content {
+        padding: 15px !important;
+    }
+    iframe.jq-contentLoader {
+        border: 1px solid #ccc;
+        padding: 10px 0;
+        width: 99%;
+        height: 325px;
+    } 
+}
+.srgt-image-resizer {
+    .imageResizer-currentImage {
+        border: 1px solid #ccc;
+        margin: 10px 0;
+    }
+    .preview-wrap {
+        border: 1px solid #ccc;
+        min-height: 260px;
+    }
+    .canvas-wrap {
+        margin: 0 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        min-height: 260px;
+        width: 35% !important;
+    }    
+}
+
+ .contentitem-icon {
+        border-width: 1px !important;
+        border-style: solid !important;
+        border-color: rgb(204, 204, 204) !important;
+        border-image: initial !important;
+    }
+/*---------------Portlet Org Message--------------------*/
+.panel-org-message {
+    .col-sm-9 {
+        .newsdate {
+            color: #888;
+            font-weight: 600;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        span {
+            display: block;
+            text-align: left;
+            padding: 0 0 10px 0;
+        }
+    }
+
+    .col-sm-3 {
+        img {
+            height: auto;
+            border: 1px solid #ccc !important;
+        }
+    }
+}
+/*-- Help Desk --*/
+.panel-help-desk {
+    input[type="submit"] {
+        color: #fff;
+        background: #666666;
+        width: auto;
+    }
+
+    .AjaxUploaderAttachmentsTable {
+        margin-top: 20px !important;
+    }
+
+    .AjaxUploaderAttachmentsTable td {
+        border: 0;
+        padding: 8px 10px;
+        width: auto;
+        border-bottom: 1px solid #fff;
+        word-break: break-all;
+    }
+
+    .AjaxUploaderAttachmentsTable tr {
+        background: #888888 !important;
+
+        td {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+    .AjaxUploaderAttachmentsTable tr:nth-child(even) {
+        background: #f7f7f7 !important;
+
+        td {
+            color: #000;
+        }
+    }
+
+    .AjaxUploaderAttachmentsTable {
+        min-width: 100%;
+    }
+}
+/*-- Agreement --*/
+.panel-agreement {
+    padding: 0 15px 0 15px !important;
+
+    input {
+        display: inline-block;
+    }
+
+    label {
+        max-width: 94%;
+    }
+
+    h4 {
+        margin: 0 -15px 15px -15px !important;
+        color:#fff;
+    }
+
+    .divAgreemtText {
+        padding-bottom: 10px !important;
+    }
+}
+
+/*portlet toolbar styling*/
+.portlet-toolbar {
+    ul.jq-toolbar-content {
+        a {
+            padding: 5px;
+            text-align: left;
+        }
+
+        i {
+            width: 20px;
+        }
+    }
+
+    ul.dropdown-menu {
+        right: 0;
+        left: auto !important;
+        padding: 0;
+        border: none;
+        z-index: 999;
+    }
+
+    ul:empty {
+        display: none;
+    }
+
+    li {
+        right: 0;
+        left: auto !important;
+        padding: 0;
+        border: none;
+        z-index: 99;
+        list-style: none !important;
+
+        a {
+            text-decoration: none;
+            width: 100%;
+            padding: 10px;
+            float: left;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        a:hover {
+            color: #7a7a7a;
+
+            i {
+                color: #7a7a7a !important;
+            }
+        }
+    }
+
+    li span, li div, li a {
+        list-style: none;
+        text-align: left;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 2;
+        width: 100%;
+        float: left;
+    }
+
+    li span:hover, li div:hover {
+        color: #7a7a7a;
+
+        i {
+            color: #7a7a7a !important;
+        }
+    }
+
+    .dropdown-menu ul {
+        padding-left: 0;
+    }
+
+    .fa.fa-plus:hover:before,
+    .fa.fa-cog:focus:before {
+        transition: ease-in;
+        transition-delay: 0.3s;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .fa.fa-cog:hover:before,
+    .fa.fa-cog:focus:before {
+        animation: 1s wheel-rotate-right linear infinite;
+    }
+
+    @keyframes wheel-rotate-right {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        6.67% {
+            transform: rotate(32deg);
+        }
+
+        16.67% {
+            transform: rotate(30deg);
+        }
+
+        23.34% {
+            transform: rotate(62deg);
+        }
+
+        33.34% {
+            transform: rotate(60deg);
+        }
+
+        40% {
+            transform: rotate(92deg);
+        }
+
+        50% {
+            transform: rotate(90deg);
+        }
+
+        56.67% {
+            transform: rotate(122deg);
+        }
+
+        66.67% {
+            transform: rotate(120deg);
+        }
+
+        73.34% {
+            transform: rotate(152deg);
+        }
+
+        83.34% {
+            transform: rotate(150deg);
+        }
+
+        90% {
+            transform: rotate(182deg);
+        }
+
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+}
+/*end*/
+
+/*-----------------Portlet Create Course---------------------*/
+.panel-create-assignment, .panel-edit-assignment, .panel-course-edit, .panel-content-edit, .panel-course-details, .panel-course-manage-enrollment, .panel-course-roster, .panel-actionstep-edit {
+    border: 5px solid #dddddd;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    .panel-heading {
+        background: #dddddd;
+        border: none;
+    }
+
+    .panel-body {
+        padding: 15px;
+
+        .jqx-tabs {
+            border: none;
+
+            .jqx-tabs-header {
+                background-color: #777777;
+                padding: 5px 0 0 10px;
+            }
+        }
+
+        .date-field {
+            input {
+                border: none;
+                height: auto;
+                margin: 2px !important;
+                box-shadow: none;
+            }
+        }
+
+        .field-label, label {
+            white-space: initial;
+        }
+        .form-actions {
+            background: #f4f4f4;
+            padding: 15px 0;
+            margin: 0 -15px -15px -15px;
+            text-align: center;
+        }
+        .publish {
+            margin: 0 15px 12px 0;
+        }
+
+        .publish-btn {
+            margin-right: 10px;
+        }
+
+        .select-authors {
+            float: left;
+            margin-right: 2px;
+            background: #f4f4f4;
+            padding: 6px;
+            margin-bottom: 2px;
+            border: 1px solid #C1C1C1;
+
+            .author-name {
+                float: left;
+                padding-right: 5px;
+            }
+
+            .close-author {
+                color: #ff0000;
+                background: #fff;
+                float: left;
+                cursor: pointer;
+            }
+        }
+
+        .author-search {
+            margin-top: @grid-gutter-width/1.5;
+
+            .jqx-dropdownlist-state-normal {
+                .form-control();
+            }
+
+            .button {
+                color: #ffffff;
+            }
+
+            .jqx-grid {
+                margin: @grid-gutter-width/2 0;
+            }
+
+            .jq-selectedusers {
+                margin-top: @grid-gutter-width/3;
+            }
+
+            .jqx-toolbar-tool .jqx-checkbox {
+                position: relative;
+                top: 10px;
+            }
+        }
+    }
+
+    @media (max-width: @screen-md-min) {
+        .field-label {
+            padding: 0 0 5px 0;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+}
+
+.panel-course-edit.panel-default{
+    .panel-body{
+        padding:15px 0;
+        .form-actions{
+            margin: 0 0 -15px 0;
+        }
+    }
+}
+
+/*--------------------SOM-------------------*/
+.panel-som {
+    h4 {
+        font-size: 14px;
+        color: #888888;
+    }
+
+    .leftPanel {
+        padding-right: 0 !important;
+        .make-sm-column(4);
+    }
+
+    .rightPanel {
+        padding-left: 0 !important;
+        .make-sm-column(8);
+    }
+}
+/*---------------------Panel Bookmarks-------------------*/
+.panel-bookmarks {
+    .utilities-fav-link {
+        .button.btn {
+            margin: 6px;
+            float: right;
+        }
+    }
+
+    .create-bookmark {
+        float: right;
+        margin-top: 6px;
+    }
+}
+
+/*--------------Panel Help Content---------------*/
+.panel-help-content {
+    padding: 15px;
+
+    h4 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .document-tree {
+        padding:0 @grid-gutter-width/2;
+        margin: -5px -15px @grid-gutter-width/6 -15px;
+
+        span {
+            font-size: 12px;
+        }
+    }
+}
+
+.help-details {
+    h4 {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .subsectionheader {
+        padding: 9px;
+    }
+}
+
+.subsectionheader {
+    padding: 15px;
+    font-size: 16px;
+}
+
+.agreement {
+    position: relative;
+    margin-top:35px;
+}
+/*------------------Panel Manage Help---------------*/
+.panel-manage-help {
+    padding: 15px;
+    float: left;
+    width: 100%;
+
+    h4 {
+        margin: -15PX;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .manage-checklist {
+        padding: @grid-gutter-width/2;
+        margin: 15px -15px 15px -15px;
+    }
+
+    label {
+        font-weight: normal;
+    }
+}
+
+/*----------------------Panel Site Settings-----------------*/
+/*----------------------Panel Define Content-----------------*/
+.panel-site-settings, .panel-define-content, .panel-org-settings, .panel-org-admintabs {
+    table {
+        label {
+            font-weight: 400;
+        }
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        a {
+            padding: 8px 12px;
+            border: none;
+        }
+    }
+
+    .ui-tabs-panel {
+        border-top: none;
+    }
+}
+
+.panel-define-content {
+    .ui-tabs-panel {
+        border-top: none;
+    }
+
+    .tab-content-attributes {
+        h4 {
+            font-size: 16px;
+        }
+    }
+}
+/*-----------------------Panel Org Navigator------------------*/
+.panel-org-navigator, .panel-org-admin {
+    float: left;
+    width: 100%;
+
+    .columns {
+        margin: 0;
+    }
+
+    .org-lft {
+        .well();
+        h4 {
+            margin: 0 -15px;
+            font-size: 16px;
+            padding: 15px;
+        }
+
+        .gutter {
+            padding: 15px;
+            margin: 0 -20px 5px -20px;
+
+            .jqx-tree {
+                background: none;
+
+                .jqx-widget-content {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    .org-rht {
+        h4 {
+            margin: 0 0px;
+            font-size: 16px;
+            padding: 15px;
+        }
+
+        .gutter {
+            padding: 15px;
+            h4 {
+                background: none;
+                margin: 0;
+            }
+        }
+    }
+
+    .field-label {
+        .label {
+            white-space: inherit;
+        }
+    }
+}
+/*----------------------Custom Zones Blender 1.0---------------*/
+.custom-zone {
+    .zone-right-column-left {
+        width: 60%;
+        padding-right: 2%;
+        float: left;
+    }
+
+    .zone-right-column-right {
+        width: 40%;
+        float: left;
+    }
+}
+.panel-bulk-enrollment{
+    .panel-body {
+        .unenroll-participant {
+            cursor: pointer;
+        }
+    }
+}
+.dashboard-feedback {
+    .panel-heading {
+        cursor: pointer;
+    }
+}
+.self-assessment-action-step {
+    .panel-heading a {
+         &:hover {
+             color: #fff;
+         }
+    }
+}
+.studentdetails-supportteam, .dashboard-teachers {
+    .table {
+        @media only screen and (max-width: 1024px) {
+            td {
+                padding: 0px;
+                font-size: 13px;
+                .TeacherImage {
+                    width: 49px !important;
+                    margin-left: 3px;
+                    margin-right: 10px;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}

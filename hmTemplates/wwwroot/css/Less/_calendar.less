@@ -1,0 +1,463 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+
+.calendar-month {
+    table {
+        border: none !important;
+
+        td a {
+            border-radius: 15px;
+            padding: 2px;
+            min-width: 30px;
+            display: inline-block;
+        }
+
+        .calendar-day, .calendar-today, .calendar-eventday, .calendar-eventday-today {
+            color: #000;
+            background-color: #ddd;
+            border: 1px solid #fff;
+        }
+
+        .calendar-today a {
+            color: #fff !important;
+            font-weight: bold;
+            background-color: #555;
+        }
+
+        .calendar-eventday a {
+            border: solid 2px #808080;
+            background-color: #fff;
+        }
+
+        .calendar-selectedday {
+        }
+
+        .calendar-event {
+        }
+
+        .calendar-event-due a {
+            background: #cc0000;
+            color: white;
+        }
+    }
+}
+
+th.calendar-dayheader {
+    text-align: center;
+    /*gets S M T W T F S aligned overtop of the days*/
+}
+/*todays events*/
+.calendar-context {
+    margin-bottom: (@grid-gutter-width/2);
+    font-size: 1.143em; /*16px*/
+    font-weight: 600;
+}
+/*stupid png has white space on the left of it*/
+.calendar-context img {
+    position: relative;
+    left: -6px;
+}
+
+.calendar-context span {
+    display: inline-block;
+    text-align: left;
+}
+
+/*calendar month row is a table in a table*/
+table.srgt-calendar-title {
+    margin-bottom: (@grid-gutter-width/4);
+}
+/*month*/
+.calendar-month .calendar-title td {
+    padding: 0px;
+    text-align: center !important;
+    font-weight: bold;
+    border: 0px;
+    font-size: 1.143em; /*16px*/
+}
+/*calendar Arrows*/
+.calendar-month .calendar-title td a {
+    font-size: 2.143em; /*30px to make touch zone big enough*/
+    font-weight: normal;
+    color: #000000;
+    line-height: 0;
+}
+/*inline style won't allow this color to happen*/
+.calendar-month .calendar-title td a:hover {
+    color: #808080;
+    text-decoration: none;
+}
+
+
+.calendar-month {
+    width: 100%;
+    margin-bottom: (@grid-gutter-width/2);
+    border-collapse: separate;
+    border: none !important;
+}
+
+.calendar-month td {
+    padding: 4px;
+}
+
+.calendar-day {
+    margin-bottom: 10px;
+}
+
+.calendar-selectedday,
+.calendar-eventday {
+    font-weight: bold;
+}
+
+.calendar-othermonthday a {
+    display: none;
+}
+
+.calendar-today {
+    font-weight: bold;
+}
+
+.calendar-selectedday-style {
+    font-weight: bold;
+}
+
+.calendar-events {
+    margin-bottom: (@grid-gutter-width/2);
+}
+
+/*ActionStepEdit*/
+.ui-datepicker .ui-datepicker-title {
+    margin: 0;
+    border: none;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+    margin: 2px 4px 5px 4px;
+    display: inline;
+    text-align: left;
+    width: 33%;
+    padding: 4px;
+    height: auto;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    top: 6px !important;
+}
+/**CalendarEventList**/
+.calendarevent-startcalendar {
+    padding-right: 5px;
+}
+
+.calendarevent-endcalendar {
+    padding-left: 5px;
+}
+
+.srgt-calendarevent-emaillist {
+    background-color: #efefef;
+    border: solid 1px black;
+    list-style-type: none;
+    overflow: auto;
+    padding: 0;
+    position: fixed !important;
+    z-index: 999999 !important;
+}
+
+.srgt-calendarevent-emaillistitem, .srgt-calendarevent-emaillistitemselected {
+    margin: 2px;
+    padding: 4px;
+}
+
+.addevent {
+    float: right;
+    margin: 10px 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+.jqx-menu-vertical {
+    z-index: 99999 !important;
+}
+
+.schedulelist {
+    font-size: 18px;
+    color: dodgerblue;
+    margin: 10px 0;
+    display: block;
+}
+
+.scheduleitem {
+    line-height: 2;
+
+    a {
+        text-transform: capitalize;
+    }
+
+    span.fa.fa-circle {
+        font-size: 12px;
+        margin-right: 12px;
+        color: #a6a528;
+    }
+
+    .start-time {
+        display: inline-block;
+        width: 75px;
+    }
+}
+
+#jqx-tooltip-window {
+    position: absolute !important;
+    z-index: 99999999 !important;
+}
+
+.popover-content {
+    color: #000;
+}
+
+.jq-usertag.select-authors {
+    display: inline-block;
+    padding: 8px;
+}
+
+.jqx-scheduler {
+    margin: auto;
+}
+
+.event-page-container {
+    border: 1px solid #c7c7c7;
+    padding:15px;
+    height: auto;
+    width: 100%;
+    float: left;
+    clear: both;
+
+    h2 {
+        background: #777777;
+        color: #fff;
+        padding: 0 15px;
+        margin: 0;
+    }
+}
+
+.jq-numeric.smaller {
+    display: inline-block !important;
+    width: auto !important;
+    vertical-align: middle;
+}
+
+.recurrence.well {
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+
+    input {
+        width: auto !important;
+    }
+
+    .jqx-datetimeinput {
+        height: 34px;
+        width: 35%;
+        float: none !important;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 8px 12px;
+    }
+}
+
+.addattachmentgrid {
+    width: 99.8% !important;
+}
+
+.event-attendees {
+    a {
+        font-size: 18px;
+
+        span {
+            font-size: 18px !important;
+        }
+    }
+}
+
+.event-details {
+    .myassignment_calbox_overdue {
+        width: auto !important;
+        padding: 6px 12px;
+    }
+
+    .field-input span.event-description:not(.expanded) {
+        height: 21px;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .field-input > span.event-description {
+        line-height: 21px;
+        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+        /*transition: .24s;
+        -webkit-transition: .24s;
+        -moz-transition: .24s;
+        -ms-transition: .24s;*/
+        height: auto;
+    }
+
+    h2 {
+        margin-top: 0;
+        line-height: 2;
+    }
+
+    .event-attendees {
+        margin: 0 6px 6px 0;
+        line-height: 1.5;
+        display: inline-block;
+    }
+}
+
+/*.col-sm-2 {
+    padding: 0;
+}*/
+
+.event-details-calbox {
+    padding: 5px;
+    border: 1px solid #808080;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 4px;
+    width: 100px;
+
+    strong {
+        margin: 3px;
+        font-size: 26px;
+        line-height: 1;
+    }
+
+    .startmonth {
+        font-size: 14px;
+    }
+
+    i.fa-calendar {
+        display: inline-block;
+        position: absolute;
+        font-size: 18px;
+        left: 12px;
+        top: 5px;
+    }
+}
+
+.reccurence-details {
+    padding: 20px;
+    float: left;
+    width: 100%;
+}
+
+.recurrence-desc {
+    max-height: 150px;
+    display: inline-block;
+    overflow: auto;
+    padding-bottom: 12px;
+    white-space: normal;
+}
+
+
+.scheduler {
+    .jqx-scheduler-month-outer-cell {
+        color: #ccc;
+    }
+
+    .jqx-scheduler-appointment-inner-content a {
+        color: #000;
+    }
+
+    .jqx-fill-state-hover, .jqx-grid-cell-hover, .jqx-scheduler-cell-hover, .jqx-scheduler-month-weekend-cell {
+        background: #fff !important;
+    }
+
+    .jqx-scheduler-month-cell {
+        background: transparent;
+    }
+
+    .jqx-scheduler-appointment-inner-content {
+        a {
+            color: #000;
+        }
+    }
+
+    .jqx-todays-date {
+        background: #9b9370;
+        border: 1px solid #9b9370;
+
+        &:hover {
+            background: #9b9370 !important;
+        }
+
+        .jqx-scheduler-cell-focus {
+            background: #9b9370 !important;
+            border: 1px solid #9b9370;
+        }
+
+        .jqx-scheduler-month-cell {
+            background: transparent;
+            color: white;
+        }
+
+        .jqx-scheduler-appointment-inner-content {
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    .jqx-scheduler-not-work-time-cell {
+        background: white;
+    }
+}
+
+.question-index ul {
+    padding: 0;
+
+    li {
+        a {
+            padding: 6px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            width: 100%;
+            text-align: center;
+            color: #000;
+
+
+            &:hover {
+                border-left: 3px solid dodgerblue;
+                text-decoration: none;
+                background:#efefef;
+            }
+
+            &.active {
+                background: #777;
+            }
+        }
+
+        &:last-child a {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+.question-nav {
+    a {
+        padding: 5px;
+    }
+
+    i {
+        font-size: 22px;
+    }
+}
+ 
+.actionsteplist-startcalendar{
+    float: left;
+    padding: 0 15px;
+}

@@ -1,0 +1,111 @@
+﻿.sitehelp {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  color: #777;
+}
+.sitehelp:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+@import (reference) "../bootstrap/less/bootstrap.less";
+
+.help-tree {
+  margin-bottom: 25px;
+  font-size:13px;
+}
+.help-tree td,
+.help-tree th {
+  float: left;
+  /*not sure*/
+}
+.help-details { 
+        background-color: #fff;
+        border: 5px solid #696969;
+        border-radius: 8px;
+        margin: 0 0 20px 0;
+        padding:0 20px;
+   
+    .group{
+            margin-bottom:@grid-gutter-width/2;
+    }
+    label {
+        font-weight: 100;
+        margin:0 20px 0 0;
+        display:inline;
+    }
+    .subsectionheader {
+        margin: 0 -20px;
+        padding: 15px;
+        background: #696969;
+        font-size: 16px;
+        color: #fff;
+        font-weight:bold;
+    }
+    input[type="radio"], input[type="checkbox"]{
+        top:2px;
+    }
+    div.jHtmlArea {
+        width:100% !important;
+        min-width:100% !important;
+        .ToolBar {
+            width:100% !important;
+            ul {
+                width:100% !important;
+                li{
+                    a{
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        div > iframe {
+            width: 100% !important;
+        }
+    }
+    
+}
+.help-checkboxes {
+  display: inline-block;
+  margin: 3px 0;
+  width:220px;
+}
+.help-users {
+  background: none repeat scroll 0 0 #efefef;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.lineheader {
+  font-weight: bold;
+  margin-top: 15px;
+}
+.subsectionheader{
+    font-weight: bold;
+    margin-bottom:@grid-gutter-width/2;
+}
+.help-details .field-label-block{
+width:16.3333%;
+float:left;
+}
+.help-details .form-actions{
+    text-align:center;
+}
+
+.panel-organization-messages{
+     border:none;
+    .panel-body{
+        padding:0;
+    }
+    .view-messages{
+        padding:15px !important;
+        img{
+            float:left;
+            margin-right:15px;
+        }
+    }
+    .show {
+     display: inline !important;
+    }
+}

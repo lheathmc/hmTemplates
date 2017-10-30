@@ -1,0 +1,91 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+footer {
+  position:relative;
+  bottom:0;
+  width:100%;
+  margin: 0 0;
+  margin-bottom:0;
+  font-size:.9em;
+  min-height:200px;
+  .container{
+      padding-left:20px;
+      padding-right:20px;
+      i {
+            margin: 0;
+        }
+      .list-group {
+        background: transparent;
+        .list-group-item {
+            background-color: transparent;
+            border: none;
+            padding: 3px 0;
+        }
+    }
+    .footer-icon {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .footer-social {
+        font-size: 30px;
+        margin-left: -5px;
+        a i:hover {
+            text-decoration: underline;
+        }
+    }
+    .footer-address {
+        H3 a {
+            font-weight: bold !important;
+            font-size: 16px;
+        }
+        H3 a:hover {
+            text-decoration: underline;
+        }
+    }
+  }
+}
+
+.blender-logo {
+  background: url("../images/logos/logo-footer.png") no-repeat scroll center center #ffffff;
+  cursor: pointer;
+}
+
+.quicklinks {
+    padding-top: 0;
+    .container-fluid;
+    .container{
+        background: none !important;
+        background-color: none !important;
+    }
+    h1{
+        text-transform: uppercase;
+        color: white !important;
+        margin-bottom: 0 !important;
+        font-size: 100% !important
+    }
+    a{
+        color: white;
+    }
+}
+
+.footer-links {
+    background: url("/images/masterpage/bg_footer_links.jpg") no-repeat center center #fff;
+    padding: 40px;
+
+    .footer-logos {
+        background-color: #fff;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+        position: relative;
+        margin: 0 auto 0 auto;
+        max-width: 579px;
+        text-align: center;
+
+        img {
+            margin: 20px 10px;
+            width: 30px;
+
+            @media (min-width: @screen-sm-min) {
+                width: auto;
+            }
+        }
+    }
+}

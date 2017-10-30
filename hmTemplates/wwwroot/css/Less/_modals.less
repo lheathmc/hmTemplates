@@ -1,0 +1,290 @@
+﻿.popup-actions {
+  text-align: center;
+  width: 100%;
+  float: left;
+  padding-bottom: 10px;
+}
+.popup, .pop-up {
+  border: solid 1px #ddd;
+  padding: 0;
+  position: relative;
+  z-index: 1000;
+  background:#fff;
+}
+.popup h2,
+.popup-body .form-actions {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.popup h2,
+.popup-header {
+  padding: 10px;
+  background-color: #444;
+}
+.popup h2 span {
+  color: #fff;
+}
+
+.popup.definecontent-popup {
+    h3 {
+        margin: 0;
+        padding: 15px;
+        font-size: 14px;
+    }
+    .from-pair {
+        margin-bottom: 10px;
+    }
+}
+
+.popup-body {
+  position: relative;
+  padding: 15px;
+}
+.popup-body .form-actions {
+  position: absolute;
+  bottom: -21px;
+}
+.popup-body .form-actions .group {
+  margin-bottom: 0px;
+  background-color: #999;
+  padding: 5px;
+}
+.popup .popup-body {
+  max-height: 562px;
+  width: 100%;
+}
+.popup .popup-body .popup-list {
+  max-height: 520px;
+  overflow: auto;
+  width: 100%;
+}
+div.popup-list .field-input {
+  float: none;
+}
+.popup-list th,
+.popup-list td {
+  padding: 5px 10px 5px 10px;
+}
+.popup-list tr:nth-child(odd) {
+  background-color: #eee;
+}
+.popupWrapper .blockOverlay {
+  z-index: 500;
+  display: block;
+  border: medium none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #000000;
+  opacity: 0.6;
+  cursor: default;
+  position: fixed;
+}
+.popup .field-input-block {
+  width: 570px;
+}
+.Popup-div h3 {
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left:0;
+  font-size:16px;
+}
+.contenttype-popup {
+  padding-top: 25px;
+  box-shadow: none !important;
+}
+.modal-title{
+    margin:0 !important;
+    padding:0 !important;
+    background:none !important;
+}
+
+#shareBookmarkSOM {
+    position: fixed;
+    .jqx-window-content {
+        overflow: hidden;
+    }
+    .modal-body {
+        height: 385px !important;
+        overflow: auto !important;
+        #divSOMAcess {
+            overflow: hidden !important;
+        }
+    }
+    .modal-footer {
+        margin-bottom: 0;
+    }
+}
+
+.jqx-popup.add-facilitator-popup {
+    .jqx-window-content {
+        height: 420px !important;
+        overflow: hidden;
+    }
+}
+
+.jqx-popup.attr-popup.popup_jqxWindow {
+    .jqx-window-content {
+        height: 350px !important;
+        overflow: hidden;
+    }
+}
+
+#PopUpPreView {
+    .jqx-window-content {
+        height: 470px !important;
+        overflow: auto;
+    }
+}
+
+.feedback-popup.jqx-window-content {
+    height: 240px !important;
+    overflow: auto;
+}
+
+#questionmanagerwindow.jqx-popup {
+    left: 12% !important;
+
+    .jqx-window-content {
+        height: 450px !important;
+        overflow: auto;
+    }
+}
+
+.help-popup {
+    .modal-header {
+        background-color: #777777;
+        color: #ffffff;
+
+        .close {
+            color: #ffffff;
+            opacity: 1;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .modal-title {
+            color: #ffffff;
+        }
+    }
+    .modal-body {
+        height: 400px !important;
+        overflow: auto;
+        h2 {
+            font-size: 16px;
+        }
+        hr {
+            border-bottom: 1px solid #cccccc;
+            background: none;
+            border-top: 0;
+        }
+        p:empty {
+            display: none;
+        }
+    }
+    .modal-footer {
+        margin-bottom: 0;
+    }
+}
+
+.blockUI.blockMsg.blockPage .modal-body p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.rangePopUp{
+    .jq-stCard {
+        border: 1px solid #cfcfcf;       
+        height: auto;       
+        padding: 9px;
+        width: 200px;
+    }
+}
+
+.panel-attribute-popup{
+    width: 750px;
+    overflow: auto;
+}
+.jqx-popup.blender-confirmation{
+    z-index: 9999999 !important;
+}
+
+.viewer-popup{
+    .modal-dialog{
+        width:90%;
+        height:90%;
+        iframe{
+            height:500px;
+        }
+    }
+}
+
+ @media (max-width: 568px) {
+     .Doc{
+            width: 60%;
+            float: left;
+            word-break: break-all;
+            font-size: 12px;
+     }
+     .viewer-popup .modal-header{
+         float:left;
+         width:100%;
+         .close{
+             position:relative;
+             z-index:99;
+         }
+     }
+     .doc-download{
+         padding:2px;
+     }
+
+}
+
+
+
+.modal iframe{
+    height:400px;
+}
+.calendarevent-emailfields.modal iframe{
+    height: inherit;
+}
+.modal .nc-message-body iframe{
+    height:100% !important;
+}
+.modal-body {
+    word-wrap: break-word;
+    .jqx-tree-dropdown-root {
+        width: 100% !important;
+    }
+}
+#blender-confirmation.modal, #blender-alert.modal{
+    z-index:180020 !important;
+}
+.topcare-roster-page, .studentlogin, .topcare-details-page{
+    .modal {
+        overflow-x: hidden;
+        overflow-y: auto
+    }
+}
+.helpContent {
+    h2 {
+        font-size: 18px;
+    }
+}
+
+.modal-dialog {
+    .modal-dialog {
+        margin: 0 auto !important;
+    }
+}
+.modal, .jqx-toolbar-minimized-popup{
+    z-index:1000 !important;
+}
+.modal-backdrop{
+    z-index:999 !important;
+}

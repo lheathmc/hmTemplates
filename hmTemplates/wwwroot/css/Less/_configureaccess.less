@@ -1,0 +1,169 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+.SOMHeader {
+  /*Blender Security Object Definition*/
+  margin: 0px 0px 20px 0px;
+  border-radius: 3px;
+  height: 25px;
+  padding: 5px 0px 0px 20px;
+  background-color: #808080;
+  /*theme*/
+  color: #ffffff;
+  /*theme*/
+}
+.somstatus {
+  color: #cc0000;
+  /*use bootstrap class text-warning instead*/
+  padding: 5px;
+}
+.SOMloading {
+  /*what is this? doesn't look correct*/
+  width: 69%;
+  background: #FFF;
+  float: right;
+  height: 400px;
+  position: relative;
+  left: -7px;
+  color: #003667;
+  font-weight: 700;
+}
+.somsettingsoptions {
+  margin: 10px 0 0 0;
+}
+.somsettingsoptions div {
+  display: inline;
+}
+.somsettingsoptions .inline {
+  margin: 0 5px 0 0;
+  float: left;
+  /*incorrect. if you need to float left, put class "pull-left" on it.*/
+}
+.jq-ul-attrummary li, .jq-ul-rolesummary li, .jq-ul-orgsummary li{
+    text-align:left;
+}
+.AccessTabList li {
+  cursor: pointer;
+  list-style-type: none;
+  padding: 7px !important;
+  text-align:left;
+  /*incorrect, we don't use !important */
+  background-color: #E1E1E1 ;
+  /*theme*/
+  border-right: none;
+  margin-bottom: 2px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 0 !important;
+  /*incorrect, we don't use !important */
+}
+.liActive,
+.liActivelist {
+  background-color: #FFF !important;
+  /*theme*/
+  font-weight: 700;
+  color: #003667;
+  padding:0 15px;
+  /*theme*/
+}
+.scoring-rules {
+  padding: 0;
+}
+.scoring-rules li {
+  list-style: none;
+}
+.scoring-rules li label {
+  font-weight: 400;
+}
+
+/*-----------------------Admin Config-------------------*/
+.view-access{
+    margin-left:-60px;
+    @media (min-width: @screen-sm-min) {
+        margin-left:-15px;
+    }
+    .view-show{
+        .make-xs-column-offset(8);
+        .make-sm-column-offset(4);
+    }
+    label{
+        .make-xs-column(2);
+    }
+    label:last-child{
+        
+    }
+}
+.admin-config{
+    .well{
+        padding: 15px !important;
+        border-radius: 6px !important;
+        background: #fbfbfb;
+        .not-pref-freq{
+            .make-xs-column(12);
+            margin:10px 0;
+            border-radius:6px;
+            background-color:#dddddd;
+            padding:10px;
+            
+            span{
+                margin-right:10px;
+            }
+            select{
+                width:120px;
+                display:inline;
+            }
+            .freq{
+                @media (min-width: @screen-sm-min) {
+                    display:inline;
+                    margin-left:10px;
+                }
+            }
+        }
+        label{
+            .make-xs-column(8);
+            .make-sm-column(4);
+            font-weight: bold;
+        }
+        .inline{
+            .make-xs-column(2);
+            span, select, input{
+                float:left;
+                margin-right:8px;
+                width:auto;
+            }
+            select{
+                position: relative;
+                top: -6px;
+            } 
+        }
+        .inline.pull-right{
+            padding:0;
+        }
+        .sub-childs{
+            background-color:#ffffff;
+            margin:0;
+            padding: 8px 0;
+            width: 100%;
+            float: left;
+            label{
+                padding-left:15px;
+            }
+            .sub-childs{
+                border:solid 1px #efefef;
+                background-color:#eeeeee;
+                margin-top:6px;
+                label{
+                   padding-left:30px;
+                }
+            }
+        }
+        strong{
+            padding: 0 15px 0 30px;
+            float: left;
+            width: 100%;
+        }
+        .sub-childs-group label{
+            padding-left:40px !important;
+        }
+
+    }
+    
+}

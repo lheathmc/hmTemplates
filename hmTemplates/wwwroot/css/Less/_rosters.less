@@ -1,0 +1,1777 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+
+.roster {
+    overflow: auto;
+
+    .register-menu {
+        display: none;
+    }
+
+    .main-content-wrapper .main-content-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .theme-wrapper .header-accent1 {
+        height: 50px;
+        top: 0;
+    }
+
+    .theme-hdr-container {
+        padding-top: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        min-height: 20px;
+        width: 100% !important;
+
+        .clientlogo {
+            margin: 0 !important;
+            padding: 0 !important;
+
+            @media (min-width: @screen-sm-min) {
+                width: 10% !important;
+                
+            }
+
+            img {
+                max-height: 35px;
+                padding: 4px 10px 2px;
+                margin: 4px 0;
+            }
+            
+        }
+        .mobilemenu{
+            top:8px;
+        }
+        .welcome {
+            top:0;
+            margin-top:14px !important;
+            @media (min-width: @screen-sm-min) {
+                margin-top:8px !important;
+                margin-left: 10px;
+                top:auto;
+            }
+            .username{
+                display:none;
+            }
+        }
+
+        .navbar-bg {
+            .blendernav{    
+                 margin-right: 0 !important;
+                 margin-top:0 !important;
+            }
+            @media (min-width: @screen-sm-min) {
+                width: auto !important;
+                position: relative;
+                top: 5px;
+                padding-right:8px !important;
+            }
+
+            margin: 0 !important;
+            padding: 0 !important;
+            
+            .navbar-header {
+                width:100%;
+                @media (min-width: @screen-sm-min) {
+                    width: 100% !important;
+                    text-align: right;
+                    float:right;
+                }
+
+                .global-nav {
+                    margin: 0;
+                }
+            }
+        }
+
+        .utilities {
+            width: auto;
+            float: right;
+            margin: 7px 5px 0 5px;
+
+            #utility-help {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-right: 0;
+            }
+        }
+
+        .blendernav {
+            width: auto;
+
+            @media (min-width: @screen-md-min) {
+            }
+
+            margin-bottom: 0;
+        }
+    }
+
+    background-color: #fff !important;
+
+
+    .portlet-notification-status {
+        display: none;
+    }
+
+    .separator {
+        border-left: 1px solid #ccc;
+        padding-left: 8px;
+    }
+
+    .breadcrumb-container {
+        display: none;
+    }
+
+    .main-content {
+        box-shadow: none;
+        .container-fluid;
+        width: 100% !important;
+        padding: 5px !important;
+        overflow: hidden;
+
+        .filters {
+            margin-bottom: 5px !important;
+            .filters-body{
+
+                @media (max-width: @screen-xs-min) {
+                    .filter-group{
+                        width:100%;
+                        margin-bottom:5px;
+			            .label{
+                            display:inline-block;
+			                width:30% !important;
+                            text-align:right;
+			            }
+			            .jqx-form-control,.form-control{
+                            display:inline-block;
+			                width:65%;
+                            .jqx-dropdownlist-state-normal{
+                                width:95% !important;
+                            }
+			            }
+			            &.set-attributes{
+			                margin-left:12%;
+			            }
+                        &.separator{
+                            border-left:solid 0px;
+                            padding-left:0;
+                        }
+                        .fa-cog{
+                            float:right;
+                            margin-top:5px;
+                            margin-bottom:-20px;
+                        }
+                        
+		            }
+
+                    .btn-group{
+                        margin-left:32.5%;
+                        margin-bottom:5px;
+                    }
+                    h3{
+                        font-size:1.15em;
+                    }
+                    .patient-name{
+                        margin-top:5px;
+                        margin-left:32.5%;
+                        margin-bottom:5px;
+                    }
+                }
+
+            }
+            .pnlExport {
+                display: inline;
+                float: right;
+                margin: 0 0 0 10px;
+                padding: 0 0 0 8px;
+
+                .button {
+                    width: auto !important;
+                    height: auto !important;
+                    padding: 3px;
+                }
+
+                .export-dropdown {
+                    float: left;
+                }
+            }
+
+            .set-attributes {
+                height: 30px;
+                padding: 5px 0 0 28px;
+                vertical-align: middle;
+                margin-right: 0;
+            }
+
+            .btn-group {
+                float: left;
+
+                .button {
+                    font-size: 13px;
+                    padding: 4px 5px;
+                    margin: 0 5px 0 0;
+                }
+            }
+
+            .download_here {
+                float: left;
+                margin-right: 4px;
+
+                .jqx-form-control {
+                    height: 26px !important;
+                }
+
+                .jqx-widget {
+                    float: left;
+                    margin-right: 4px;
+                }
+
+                .button {
+                    float: left;
+                }
+            }
+
+            .attribute-filters {
+                border-top: solid 1px #ddd;
+                padding-top: 4px;
+                margin-bottom: 0;
+                .clearfix;
+                clear: both;
+
+                .form-inline {
+                    .filter-group {
+                        margin-bottom: 0;
+                    }
+                }
+
+                h3 {
+                    @media (min-width: @screen-sm-min) {
+                        font-size:1em;
+                        font-weight:bold;
+                        float: left;
+                        margin: 4px 20px 0 0;
+                        padding: 0;
+                        border-radius: 3px 0 0 3px;
+                    }
+                }
+            }
+
+            .student-search {
+                .filter-group {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    #roster-breadcrumb, #divBreadcrumbNav {
+        display: none;
+    }
+
+    .site-footer {
+        display: none;
+    }
+
+    .blendernav {
+        text-align: right;
+    }
+
+
+
+
+
+    .panel-diabetes, .panel-demographics, .panel-contanct, .panel-careplan, .panel-colorectal, .panel-notes, .panel-hypertension, .panel-cve, .panel-hf, .panel-summary, .panel-cervical, .panel-mammogram {
+        border: none;
+        margin-bottom: 0;
+
+        .blockOverlay {
+            height: 106% !important;
+        }
+
+        .row {
+            margin: 0 -15px 0 -15px;
+        }
+
+        .jqx-grid.jqx-widget {
+            margin-bottom: 20px;
+        }
+
+        .well {
+            margin-bottom: -35px;
+        }
+    }
+}
+
+/* Top Care Roster */
+.roster-footer {
+    padding: 2px 5px;
+    .jqx-dropdownlist-state-normal {
+        padding: 2px 4px 4px 4px !important;
+    }
+    .clearfix;
+    margin: 0;
+
+    .columns {
+        margin: 0;
+
+        .column {
+            padding: 0;
+        }
+    }
+
+    border-radius: 4px;
+    border: solid 1px #ccc !important;
+
+    .labelSpan {
+        right: auto !important;
+        top: 10px !important;
+    }
+}
+
+.topcare-roster-page .roster-filter .buttons {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.NextVisitWrapper {
+    padding: 3px;
+}
+
+.NextVisitWrapper span {
+    width: auto;
+    float: left;
+    display: block;
+    vertical-align: middle;
+    text-align: right;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.NextVisitWrapper div {
+    margin: 0 0 2px 0;
+}
+
+.NextVisitWrapper div input {
+    font-size: 11px;
+}
+
+.status span {
+    float: left;
+}
+
+.dot {
+    width: 14px;
+    height: 15px;
+    background-color: transparent;
+    float: left;
+    margin-left: 2px;
+}
+
+.dot:hover, .dotChange {
+    background-color: rgb(255,255,128);
+    cursor: pointer;
+}
+
+.status .red {
+    background-color: #FF0000;
+}
+
+.status .yellow {
+    background-color: #FFFF00;
+}
+
+.status .green {
+    background-color: #008300;
+}
+
+.status .orange {
+    background-color: #FF9409;
+}
+
+.status .grey {
+    background-color: #808080;
+}
+
+.status .blue {
+    background-color: #002F90;
+}
+
+.status .purple {
+    background-color: #FF78FF;
+}
+
+.status .black {
+    background-color: #000000;
+}
+
+
+.topcare-roster-page .label {
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.topcare-roster-page INPUT[type="checkbox"], .topcare-roster-page INPUT[type="radio"] {
+    position: relative;
+    top: 0;
+}
+
+.topcare-roster-page .jqx-expander .jqx-expander-header {
+    padding: 7px 10px;
+}
+
+.coming-due {
+    float: left !important;
+}
+
+#patient-status-colorpicker {
+    float: right !important;
+}
+
+.topcare-roster-page .breadcrumbs, .topcare-details-page .breadcrumbs {
+    display: none;
+}
+
+.topcare-roster-page #divTagsOrRadio input[type="text"] {
+    width: 99%;
+    font-size: 12px;
+}
+
+.topcare-roster-page textarea {
+    font-size: 12px;
+}
+
+.topcare-roster-page .jqxCheckedListBoxDiv {
+    background: #d9e7f2 !important;
+}
+
+.topcare-roster-page .filter {
+    .clearfix;
+    font-size: 11px;
+    background-color: #FAE295;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-bottom: 0;
+}
+
+.topcare-roster-page .filterPadding {
+    padding: 5px;
+    float: left;
+    width: 100%;
+}
+
+.topcare-roster-page .filter h3 {
+    margin: 14px 6px 0px 6px;
+    display: inline;
+    float: left;
+    color: #000;
+}
+
+.topcare-roster-page .filter .patientSearch {
+    margin: 7px 8px 0px 2px;
+}
+
+.topcare-roster-page1 .filter input {
+    margin-bottom: 5px;
+}
+
+.topcare-roster-page .filter input[type=text] {
+    width: 120px;
+    padding: 0;
+}
+
+.topcare-roster-page .filter .jqx-widget-content input[type=text] {
+    border: none !important;
+}
+
+.topcare-roster-page .filter span.label {
+    display: inline-table;
+    float: left;
+    margin-left: 4px;
+    text-align: right;
+    padding-top: 0;
+}
+
+.topcare-roster-page .filter .srgt-button {
+    font-size: 10px;
+}
+
+.topcare-roster-page .filterdropDown {
+    width: 123px;
+}
+
+.topcare-roster-page .filterdropdownRoster {
+    width: 350px;
+}
+
+.topcare-roster-page .filter .buttons {
+}
+
+.topcare-roster-page .alignRight {
+    text-align: right;
+}
+
+.topcare-roster-page .alignLeft {
+    text-align: left;
+}
+
+.topcare-roster-page .jqx-dropdownlist-content {
+    font-size: 11px;
+}
+
+.topcare-roster-page #popup_jqxWindow iframe {
+    border: none !important;
+    height:430px;
+}
+
+.topcare-roster-page #jqxddlRSO {
+    width: 75px !important;
+}
+
+.topcare-roster-page #filter-toggle {
+    width: 30px;
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 3px;
+    z-index: 1000;
+}
+
+.topcare-roster-page .hidefilter {
+    clear: both;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 11px;
+    background-color: #fff;
+    width: 17px;
+    float: right;
+    margin: -2px 7px 0 0;
+    height: 19px;
+}
+
+.topcare-roster-page .HideFilterHandleText {
+    cursor: pointer;
+    float: right;
+}
+
+.topcare-roster-page #jq-HideFilterHandleSign {
+    float: left;
+    margin-right: 5px;
+}
+
+.topcare-roster-page .roster-filter {
+    position: relative;
+    border: solid 1px #ddd;
+    background-color: #eee;
+    padding: 0px;
+    border-radius: 5px;
+    width: 100%;
+    float: left;
+}
+
+.topcare-roster-page .roster-filter .dropdown {
+    white-space: nowrap;
+    display: inline-block;
+    float: left;
+    margin: 6px 2px 5px 0px;
+}
+
+.topcare-roster-page .roster-filter .buttons {
+    white-space: nowrap;
+    margin: 5px 0px 5px 7px;
+    margin-top: 3px;
+    display: inline-block;
+    margin-top: 5px;
+    float: left;
+}
+
+.topcare-roster-page .roster-search {
+    padding: 0px;
+    margin-top: 8px;
+    float: left;
+    width: 100%;
+}
+
+.topcare-roster-page .roster-search h3 {
+    display: inline;
+}
+
+.topcare-roster-page .roster-search div {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+}
+
+.topcare-roster-page .roster-search div.three {
+    border-left: 1px solid #aaa;
+    padding: 0 15px 0 5px;
+    width: auto;
+}
+
+.topcare-roster-page .roster-search div.three span {
+    padding-top: 4px;
+}
+
+.topcare-roster-page .roster-search div.three .nextVisitFrom {
+    padding-top: 5px;
+}
+
+.topcare-roster-page .roster-search div.three .labelcolor-subtle {
+    padding-top: 5px;
+    float: left;
+}
+
+.topcare-roster-page .roster-search .buttons {
+    margin-left: 3px;
+    margin-right: 0px;
+}
+
+.topcare-roster-page .jqx-action-button {
+    padding-left: 0;
+}
+
+.topcare-roster-page .roster-search div.three .nextVisitTo {
+    padding-top: 5px;
+    padding-left: 4px;
+    float: left;
+}
+
+.topcare-roster-page .jq-patient-nextvisit {
+    margin-left: 6px;
+}
+
+.topcare-roster-page .trk-datepicker {
+    border: none !important;
+}
+
+.topcare-roster-page .Oneviewname {
+    position: absolute;
+    bottom: 20px;
+}
+
+.topcare-roster-page .jq-copymrntext {
+    position: absolute;
+    bottom: 5px;
+}
+
+.topcare-roster-page .oneViewPopulation {
+    position: absolute;
+    top: 0;
+    line-height: 14px;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.topcare-roster-page .hmeAddress {
+    position: absolute;
+    top: 6px;
+    line-height: 16px;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.topcare-roster-page #roster-spacer {
+    display: none;
+    clear: both;
+    height: 15px;
+}
+
+.topcare-roster-page .jqx-menu-item:hover {
+    border-color: #999;
+    background: #d1d1d1;
+}
+
+.growlUI {
+    h3{
+        font-size: 17px;
+    } 
+    h3, h4 {
+         color:#fff !important;
+    }  
+    
+}
+
+.growlUI h4 {
+    font-size: 14px;
+}
+
+.gutter > .one {
+    margin-bottom: 4px;
+}
+
+.topcare-details-page .columns .two {
+    width: 48%;
+}
+
+.topcare-roster-page .jqx-menu-popup .jqx-menu-popup ul, .topcare-details-page .jqx-menu-popup .jqx-menu-popup ul {
+    width: 220px !important;
+}
+
+/** Roster Details Page **/
+.topcare-details-page {
+    .page-title {
+        margin: 0;
+
+        h1 {
+            padding-left: 15px !important;
+            width: 50%;
+            float: left;
+        }
+
+        a {
+            padding: 15px 16px 0 0;
+
+            i {
+                transition: 0.5s ease;
+                margin-right: 0px;
+
+                &hover {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .roster-header {
+        margin-top: 0;
+        padding: 10px;
+
+        h2 {
+            font-size: 1.65rem;
+        }
+
+        .student-info {
+
+            li {
+                list-style-type: none;
+            }
+
+            .studentid {
+                float: right;
+                width: auto;
+                margin: 0 !important
+            }
+        }
+
+        .roster-img {
+            .pull-left;
+            margin-right: 10px;
+            max-width: 100px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 3px;
+        }
+
+        .tab-content {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.topcare-details-page .ui-tabs .ui-tabs-panel {
+    padding: 0 !important;
+}
+
+.topcare-details-page .long-text {
+    width: 100%;
+}
+
+#roster-breadcrumb {
+    width: 460px;
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: 107px;
+    color: #fff;
+}
+
+#roster-breadcrumb span {
+    color: #fff;
+    font-size: 11px;
+}
+/*.topcare-details-page #popup_jqxWindow #content { box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 20px;
+    height:560px !important;
+    width:100% !important;
+}*/
+
+.overview-settings {
+    .row {
+        margin-bottom: 0;
+    }
+}
+
+
+.topcare-details-page #popup_jqxWindow #content:empty {
+    height: auto !important;
+}
+
+.topcare-details-page #tabCarePlan div.jHtmlArea {
+    display: inline block;
+    min-width: 90% !important;
+    min-height: 300px !important;
+    height: 300px !important;
+}
+
+.topcare-details-page #tabCarePlan div.jHtmlArea iframe {
+    min-width: 90% !important;
+    min-height: 300px !important;
+    height: 300px !important;
+}
+
+.topcare-details-page #tabCarePlan div.jHtmlArea .ToolBar {
+    min-width: 90% !important;
+    width: 90% !important;
+}
+
+.topcare-details-page #tabCarePlan div.jHtmlArea .ToolBar ul {
+    width: 99.7%;
+}
+
+.topcare-details-page .reason select {
+    min-width: 280px;
+}
+
+#divhldTopCareCommonPopup {
+    line-height: 20px;
+}
+
+#divhldTopCareCommonPopup .field-value .label {
+    width: 100px;
+    font-size: 11px;
+    padding-top: 4px;
+}
+
+.app-wrapper .app-header #lnkBtnHelp {
+    float: right;
+    position: absolute;
+    right: -6%;
+    top: 5px;
+}
+
+.app-wrapper .app-header .app-support {
+    float: right;
+    right: 11.2%;
+    position: relative;
+    top: 5px;
+}
+
+.app-wrapper .app-header .app-MessageCenter {
+    position: relative !important;
+    left: -2% !important;
+    top: 5px !important;
+    float: right;
+}
+
+.app-wrapper .app-header .app-logo {
+    width: 54% !important;
+    left: 62px !important;
+}
+
+.app-MessageCenter a:hover {
+    text-decoration: none !important;
+}
+
+
+/*For screens wider than 1024*/
+.sitemenuwrapper_1024plus {
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+.topcare-roster-page .wrapper_1024plus {
+    width: 99.8% !important;
+}
+
+.topcare-roster-page .wrapper_1024plus .content {
+    width: 99.9% !important;
+}
+
+.topcare-roster-page .wrapper_1024plus .content-wrapper {
+    padding: 0;
+}
+
+.topcare-roster-page .wrapper_1024plus .jqx-grid-pager {
+    width: 99.9% !important;
+}
+
+.topcare-details-page .wrapper_1024plus #SectionBody {
+    height: auto;
+}
+
+.studentdetails-goalssummary, .plp-goals, .plp-clc, .dashboard-goals, .popgoals-notes {
+    border-top: 0;
+
+    .panel-group {
+        .panel-heading {
+            display: block;
+        }
+    }
+
+    .panel-body {
+        h5 {
+            color: #fff;
+        }
+    }
+
+    .goal-updates div {
+        line-height: 5px;
+        padding-top: 21px;
+    }
+}
+/*lead conference*/
+.create-lead-conf {
+    border: none;
+    background: none;
+    .panel-default {
+       // border-color: transparent;
+        background: none;
+    }
+
+    .add-btn, .portfolioitems, .goalitems {
+        text-align: right;
+        padding: 0 10px;
+    }
+
+    .label-md .field-input {
+        padding: 0;
+        .form-control;
+    }
+}
+.rootprintclass{
+    h3{
+        border-bottom:dashed 1px #ccc;
+    }
+}
+/*-----------------------Assessment tab---------------*/
+.assesment-tab {
+    padding: 20px 10px 0 20px;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+
+    .jqx-widget {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    span.jq-student-compare {
+        padding-left: 12px;
+    }
+}
+
+.ass-compare {
+    vertical-align: middle;
+    margin-left: 20px;
+    display: inline-block;
+
+    i.fa-close {
+        font-size: 16px;
+        color: red;
+        margin-top: 7px;
+        cursor: pointer;
+    }
+
+    span {
+        color: #000;
+    }
+}
+/*about me*/
+.overview-strengths {
+
+    ul {
+        padding-left: 0;
+        margin-top: 25px;
+
+        li {
+            list-style: none;
+            padding: 4px 0 0 30px;
+        }
+    }
+
+    li:before {
+        content: "-" !important;
+    }
+}
+
+.overview-ic {
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+     @media (max-width: @screen-sm-min) {
+         width:100%;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 4px 0 0 30px;
+    }
+
+    li:before {
+        content: "-";
+    }
+
+    span {
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+}
+
+
+.jq-status.error {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+.l-mt20 {
+    margin-top: 20px;
+}
+
+div#pnlReplyComposeMessage .label {
+    width: 122px !important;
+    text-align: right !important;
+}
+
+.jq-CloseUser {
+    width: 20px !important;
+    height: 24px !important;
+    text-align: center;
+}
+
+.l-message-list .notification-search .notification-search-wrap {
+    width: 405px;
+    position: relative;
+    top: 16px;
+}
+
+
+@-moz-document url-prefix() {
+    .jq-create-group .fa.fa-times-circle, .jq-create-group .fa.fa-remove {
+        position: relative;
+    }
+}
+
+.jq-create-group {
+    z-index: 9999;
+
+    .jqx-window-header div:first-child {
+        width: 100%;
+    }
+
+    .btn-group {
+        display: block;
+        text-align: center;
+    }
+
+    .fa.fa-times-circle, .fa.fa-remove {
+        float: right;
+        padding-top: 8px !important;
+        font-weight: normal;
+        font-size: 16px !important;
+        cursor: pointer;
+    }
+}
+
+.filter-group.separator {
+    a.fa-cog {
+        font-size: 20px;
+        padding: 0;
+        line-height: 20px;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        margin: 0;
+    }
+}
+
+#pnlGroupItem:empty {
+    display: none;
+}
+
+
+.jq-goalCreatedby {
+    padding-left: 12px;
+
+    img {
+        width: 25px;
+        height: 25px;
+        border: 1px solid #ccc;
+        margin-right: 4px;
+    }
+}
+
+.topcare-details-page .page-title.student-deatils {
+    margin: 0 0 -14px 0;
+    padding: 0;
+}
+
+.topcare-details-page.roster {
+    .page-title .top-hdng {
+        padding: 0;
+    }
+
+    .dashboard-tabfilters.jq-portlet-container, .TabFilters.jq-portlet-container, .dashboard-assessments {
+        border-color: transparent;
+    }
+
+    .dashboard-tabfilters.panel-default, .TabFilters.panel-default, .dashboard-assessments {
+        margin-bottom: 0;
+
+        .panel-body {
+            padding: 0;
+        }
+    }
+}
+
+.jqx-progressbar-text {
+    top: 9%;
+}
+
+.jq-viewtopics.label-md {
+    .button {
+        float: right;
+    }
+}
+
+.header-popup-studentroster {
+    float: none;
+
+    span {
+        float: left;
+    }
+}
+
+
+.year-filter {
+    label, .form-control, .button, span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.tab-content {  
+    .row {
+        margin-bottom: 0;
+    }
+}
+
+/*------------------MGH Roster Styles-------------*/
+.roster {
+    /*overflow: hidden;*/
+    .topcare-details {
+        .nav-tabs > li > a {
+            padding: 5px 10px;
+        }
+
+        .tab-content {
+            padding: 0;
+        }
+    }
+
+    .well {
+        width: 100%;
+        float: left;
+    }
+
+    .form-pair {
+        .field-label {
+            .label {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .tabColorectal {
+        .form-pair .field-label .label {
+            white-space: normal;
+            text-align: right;
+        }
+    }
+
+    .jqx-grid.jqx-widget {
+        .jqx-widget-header {
+            min-height: 29px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+
+    .roster-top {
+        padding: 2px;
+
+        .clientlogo {
+            @media (min-width: @screen-md-min) {
+                width: 10% !important;
+                margin: auto !important;
+                float: none;
+            }
+
+            img {
+                max-height: 27px;
+                padding: 4px 10px 2px;
+                margin: 2px 0;
+                border-radius: 5px;
+            }
+        }
+
+        .portlet-notification-status {
+            display: inline-block;
+            float: right;
+            margin-top: 4px;
+            background: none !important;
+
+            a {
+                border: none;
+                padding: 0 25px;
+            }
+        }
+
+        .roster-support, .roster-help {
+            float: right;
+            padding: 0 10px;
+            margin-top: 4px;
+        }
+    }
+
+    .roster-filter {
+        strong {
+            float: left;
+            padding: 4px 10px 0 0;
+        }
+
+        span {
+            float: left;
+            font-weight: bold;
+            padding: 7px 5px 0 0;
+        }
+
+        .roster-filters {
+            float: left;
+            margin-right: 15px;
+            font-size: 12px;
+
+            .jqx-dropdownlist-state-normal {
+                padding: 2px !important;
+                .form-control();
+            }
+
+            div {
+                float: left;
+            }
+        }
+
+        .roster-filters-buttons {
+            float: left;
+            margin-left: -10px;
+
+            .btn {
+                padding: 4px 8px;
+            }
+        }
+    }
+
+    .roster-search {
+        margin-top: 5px;
+        margin-bottom: 0;
+        float: left;
+        width: 100%;
+
+        strong {
+            float: left;
+            padding: 4px 10px 0 0;
+        }
+
+        span {
+            float: left;
+            font-weight: bold;
+            padding: 7px 5px 0 0;
+        }
+
+        .jqx-dropdownlist-state-normal {
+            padding: 2px !important;
+            float: left;
+            margin-right: 5px;
+            .form-control();
+        }
+
+        .jqx-datetimeinput {
+            margin: 0 5px 0 0;
+        }
+
+        .roster-filters {
+            margin-right: 15px;
+            font-size: 12px;
+            float: left;
+        }
+
+        .btn {
+            padding: 4px 8px;
+        }
+    }
+
+    .roster-search {
+        .form-control {
+            width: auto;
+            padding: 4px 8px;
+            height: 30px;
+            float: left;
+        }
+    }
+
+    .roster-actions, .roster-searchon {
+        font-size: 12px;
+
+        span {
+            float: left;
+            font-weight: bold;
+            padding: 5px 5px 0 0;
+        }
+
+        .jqx-dropdownlist-state-normal {
+            padding: 2px !important;
+            float: left;
+            margin-right: 5px;
+            .form-control();
+        }
+
+        .btn {
+            padding: 4px 8px;
+        }
+    }
+
+    .roster-icons {
+        margin-right: 0 !important;
+
+        span {
+            border-radius: 5px;
+            width: 31px;
+            height: 30px;
+            margin-left: 8px;
+            line-height: 20px;
+            padding: 5px 5px 5px 8px !important;
+            cursor: pointer;
+        }
+
+        i {
+            margin: 0;
+        }
+    }
+
+    .roster-actions {
+        margin-right: 0 !important;
+
+        span.icon-btn {
+            border-radius: 5px;
+            width: 31px;
+            height: 30px;
+            margin-left: 8px;
+            line-height: 20px;
+            padding: 5px 5px 5px 8px !important;
+            cursor: pointer;
+        }
+
+        i {
+            margin: 0;
+        }
+
+        i.bf-messages-sent {
+            margin: 0 0 0 -5px;
+        }
+    }
+
+    .roster-status {
+        span {
+            float: right;
+            font-weight: bold;
+            padding: 0 5px 0 0;
+            font-size: 12px;
+        }
+
+        .status-img {
+            float: right;
+            margin-right: 15px;
+            margin-top: 0;
+        }
+
+        .btn {
+            padding: 4px 8px;
+            float: right;
+            margin: -4px 0 0 0;
+        }
+    }
+
+    .roster-new-window {
+        margin-bottom: -13px;
+        float: right;
+        position: relative;
+
+        input {
+            float: right;
+            margin-right: 5px;
+        }
+
+        label {
+            font-weight: 400;
+            float: right;
+        }
+    }
+
+    .arrows {
+        padding: 1px 4px 4px 4px;
+        margin: 0 0 0 8px;
+        float: right;
+        display: inline-block;
+
+        span {
+            padding: 0 3px;
+            cursor: pointer;
+        }
+    }
+
+    .flt-input {
+        width: auto;
+        padding: 4px 8px;
+        height: 30px;
+        float: left;
+    }
+
+    .action-label {
+        padding: 8px 0 0 10px !important;
+    }
+
+    .roster-nextvisit {
+        font-size: 12px;
+        float: left;
+
+        input {
+            padding: 4px 8px;
+        }
+
+        .form-control {
+            padding: 2px 1px 2px 4px;
+            margin: 0 5px 0 0;
+        }
+
+        .jqx-action-button {
+            left: inherit !important;
+            right: 0 !important;
+        }
+
+        .roster-nextvisit-to {
+            padding-left: 5px;
+        }
+
+        span {
+            padding-top: 5px;
+        }
+    }
+
+    .bg-info {
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 13px;
+        margin: 5px 0;
+    }
+
+    .text-input {
+        position: absolute;
+        left: 1px;
+        height: 18px !important;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        overflow: hidden;
+        resize: none;
+        font-size: 1em;
+        top: 0;
+    }
+
+    .status-picker {
+        position: absolute;
+        border-radius: 5px;
+        padding: 10px;
+        margin: -35px 0 0 0;
+        display: none;
+
+        .close {
+            position: absolute;
+            right: -12px;
+            top: -7px;
+            opacity: 1;
+        }
+
+        .js-dot {
+            cursor: pointer;
+        }
+    }
+
+    .Oneviewname {
+        position: absolute;
+        bottom: 22px;
+    }
+
+
+    .Oneviewnamerefresh {
+        position: absolute;
+        bottom: 27px;
+    }
+
+    .Oneviewrefresh {
+        position: absolute;
+        bottom: 1px;
+        font-size: 11px;
+    }
+
+    .oneViewPopulation {
+        position: absolute;
+        top: 0;
+        line-height: 14px;
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
+
+    .oneview {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 12px;
+        width: 98%;
+        height: 310px;
+        position: absolute;
+        top: 0;
+
+        .form-pair {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            white-space: normal;
+        }
+
+        .note-phone {
+            input {
+                float: none;
+            }
+
+            label {
+                padding-right: 20px;
+            }
+        }
+
+        .jqx-widget {
+            font-size: 12px;
+        }
+
+        .notes-wrapper {
+            height: 280px !important;
+            margin-left: 2%;
+            overflow: auto;
+
+
+            .jqx-grid-cell span {
+                width: 100%;
+            }
+
+            .divNotes {
+                padding: 10px;
+
+                .note-date {
+                    margin-right: 14px;
+                }
+
+                div:last-child {
+                    width: 96%;
+                }
+            }
+        }
+
+        .sendletter {
+            margin: 0 5px 0 0;
+            float: left;
+
+            .jqx-dropdownlist-state-normal {
+                .form-control();
+            }
+        }
+
+        .patient-info {
+            .field-label {
+                padding: 0 10px 0 0;
+
+                .label {
+                    white-space: normal;
+                    margin: 0;
+                    font-size: 11px;
+                }
+            }
+
+            .field-input {
+                padding: 0;
+                white-space: normal;
+                font-size: 11px;
+            }
+        }
+    }
+
+    .user-rosters {
+        li {
+            padding: 10px 0 20px 0;
+
+            button {
+                padding: 2px 8px;
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+
+    .ui-sortable {
+        padding: 10px;
+        float: left;
+        width: 100%;
+        height: 150px;
+        overflow: auto;
+
+        li {
+            float: left;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+
+    .export-download {
+        label {
+            float: left;
+            margin: 8px 5px 0 0;
+        }
+    }
+
+    .section-measure-exception, .section-exception-text, .section-exception-text-exemptall {
+        width: 200px;
+        float: left;
+        margin: 0 5px;
+    }
+
+    .span-reason-required {
+        float: left;
+    }
+
+    .panel-management {
+        ul {
+            padding: 0;
+
+            li {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .filter-toggle {
+        position: absolute;
+        top: -37px;
+        z-index: 999;
+        right: 2px;
+        padding: 10px 0 7px 0;
+        cursor: pointer;
+    }
+
+    .patient-search {
+        margin: 0 5px 0 8px;
+    }
+}
+
+@-moz-document url-prefix() {
+    .roster .oneview .patient-info .field-label {
+        margin-top: -4px;
+    }
+}
+
+.oneview.blender-fullscreen .oneviewdetail {
+    margin: 100px 15px 15px 15px;
+    width: 98%;
+    padding: 15px;
+}
+
+.topcare-details-page.roster {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*---------------------Roster Menu--------------*/
+.roster-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 125px !important;
+    height: 18px !important;
+    float: left;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        padding: 0;
+        line-height: 20px !important;
+    }
+
+    .jqx-fill-state-pressed, .jqx-fill-state-hover {
+        border: none !important;
+    }
+
+    .jqx-menu-item-top {
+        font-size: 12px !important;
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .jqx-menu-dropdown {
+        border-radius: 0 0 10px 10px !important;
+        margin-top: 0;
+    }
+
+    .jqx-menu-dropdown .jqx-popup {
+        margin-top: 0 !important;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px !important;
+    }
+
+    .jqx-widget-header {
+        padding: 4px;
+    }
+}
+
+.roster-breadcrumb {
+    float: left;
+    font-size: 12px;
+    margin-top: 9px;
+}
+
+.tabNotes {
+    padding: 10px;
+}
+/*----------------------Create Action Step Plan styles stars here---------*/
+.studentlogin {
+    .tabs-title {
+        padding: 0 15px 10px 15px;
+    }
+}
+/*----------------------Create Action Step Plan styles ends here---------*/

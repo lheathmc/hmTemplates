@@ -1,0 +1,79 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+.favorites .recommended {
+    width: 250px;
+    min-width: 250px;
+    margin-right: 10px;
+    float: left;
+}
+.recommended {
+    position: relative;
+    background: no-repeat;
+    min-height: 245px;
+    margin-bottom:0;
+    @media (max-width: @screen-md-max) {
+               min-height: 227px;
+               margin-bottom:10px;
+        }
+    .panel {
+        border: 1px solid #ddd !important;
+    }
+    .panel-heading {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .panel-body {
+        padding:0;
+        width: 100%;
+        min-height: 245px;
+        position: relative;
+        cursor: pointer;
+        text-align:center;
+        @media (max-width: @screen-md-max) {
+               min-height: 227px;
+               img{
+                    width: 100%;
+               }
+        }
+        img{
+            display:inline;
+        }
+    }
+}
+
+.recommended h4 {
+    margin-left: -10px;
+    color:#fff;
+}
+.recommended a:hover .recommended-overlay{
+    text-decoration:underline;
+}
+
+.recommended .row {
+    margin:0;
+}
+.recommended .col-md-3 {
+    padding:0;
+}
+
+.recommended-overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: left;
+    padding: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.badge-overlay,
+.bird-overlay {
+    display: none;
+    z-index: 500;
+    position: absolute;
+}
+
+
+
+

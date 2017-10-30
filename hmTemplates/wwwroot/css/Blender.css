@@ -1,0 +1,23 @@
+﻿@import url('import/layout.css');
+/* Default layout for header, nav, content, and footer. */
+
+@import url('import/pages.css'); 
+/* Dashboards, Courses, Reports, Discussions, etc. */
+
+@import url('import/typography.css'); 
+/* Font Family, Adjustments to default font-sizes and styling for headers, p, i, ul elements */
+
+@import url('import/forms.css');
+/* Form elements */
+
+@import url('import/ui.css'); 
+/* Tabs, Accordians, Modals, Filters and other ui elements used on several types of pages. */
+
+@import url('import/rosters.css'); 
+/* All things rosters */
+
+@import url('import/helpers.css');
+/* Margins, padding, etc.*/
+
+@import url('import/mods.css');
+/* Bootstrap & jqWidget modifications */

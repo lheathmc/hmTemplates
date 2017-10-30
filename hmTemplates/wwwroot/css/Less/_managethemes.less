@@ -1,0 +1,208 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+/*theme-henry ---------- Not sure what this is for??????????? -HM 8/23/16 */
+.theme-henry {
+    h4 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    a {
+        display: block;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-right: 0;
+    }
+}
+
+.select-default {
+    .theme-henry.selected:before {
+        background: rgba(255,255,255,0.6);
+        position: absolute;
+        border-radius: 50%;
+        top: ~"calc(50% - 34px)";
+        left: ~"calc(50% - 30px)";
+        color: #000;
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f00c";
+        padding: 8px;
+        font-size: 40px;
+        box-shadow: 3px 5px 5px rgba(0,0,0,0.7);
+        z-index: 99;
+    }
+
+    .theme-henry:after {
+        width: ~'calc(100% - 30px)';
+        content: '';
+        height: ~'calc(100% - 70px)';
+        position: absolute;
+        top: 40px;
+        z-index: 1;
+        display: none;
+    }
+
+    .theme-henry.selected:after, .theme-henry.hover:after {
+        display: block;
+    }
+
+    .theme-henry.hover:before {
+        content: 'Select!';
+        position: absolute;
+        top: ~"calc(50% - 14px)";
+        left: ~"calc(50% - 26px)";
+        color: #fff;
+        font-size: 16px;
+        z-index: 99;
+        display: inline-block;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.theme-henry.ribbon-show .ribbon {
+    display: block;
+}
+
+.theme-default {
+    .theme-henry {
+        background: linear-gradient(to bottom, #f6f6f6, #999999);
+        background: -o-linear-gradient(to bottom, #f6f6f6, #999999);
+        background: -moz-linear-gradient(to bottom, #f6f6f6, #999999);
+        background: -webkit-linear-gradient(to bottom, #f6f6f6, #999999);
+        border-radius: 4px;
+
+        p {
+            padding: 20px 60px;
+        }
+    }
+
+    .ribbon {
+        position: absolute;
+        left: 15px;
+        top: 80px;
+        z-index: 1;
+        overflow: hidden;
+        width: 75px;
+        height: 75px;
+        display: none;
+
+        i {
+            background: #fff;
+            border-radius: 50%;
+            font-size: 15px;
+            color: #c70911;
+            padding: 3px 0;
+            transform: rotate(27deg);
+            margin-top: 2px;
+        }
+    }
+
+    .ribbon span {
+        font-size: 0;
+        color: #fff; /* text-transform: uppercase; */
+        text-align: center; /* font-weight: bold; */
+        line-height: 10px;
+        transform: rotate(-45deg);
+        width: 100px;
+        display: block;
+        background: #79A70A;
+        background: linear-gradient(#ba1a31 0%, #cc0001 100%);
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 9px;
+        left: -26px;
+        padding: 4px;
+    }
+}
+
+.select-default, .theme-default {
+    h2 {
+        padding-left: 14px;
+        font-weight: bold;
+        font-size: 22px !important;
+    }
+}
+
+.color-picker {
+    padding: 20px 10px;
+
+    .color-picker-primary, .color-picker-secondary {
+        .jscolor {
+            padding: 22px;
+            border: 1px solid #000;
+            vertical-align: middle;
+            margin: 0 5px;
+            border-radius: 4px;
+        }
+    }
+}
+/*themes page image transitions*/
+.demo-2 {
+    position: relative;
+    overflow: hidden;
+    height: 224px;
+}
+
+.demo-2 span {
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding: 16px 0;
+}
+
+.effect img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    margin: 0;
+    -webkit-transition: bottom .3s ease-in-out;
+    -moz-transition: bottom .3s ease-in-out;
+    -o-transition: bottom .3s ease-in-out;
+    transition: bottom .3s ease-in-out;
+}
+
+.effect img.top:hover {
+    bottom: -60px;
+}
+/*end*/
+/*popup primary secondary*/
+.color-scheme-heading {
+    display: flex;
+
+    h4 {
+        flex: 1;
+        padding-left: 20px;
+    }
+}
+
+.theme-save-btn a, .color-save-btn {
+    display: block;
+}
+
+span.col-sm-5.selected, .col-sm-7 b.selected {
+    border: 4px solid #fff;
+}
+
+.row.color-set.selected {
+    background: #eee;
+}
+
+body.color-scheme {
+    padding-top: 50px;
+
+    .navbar {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        top: 0;
+    }
+}
+
+.save-theme {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin: 40px 0;
+}

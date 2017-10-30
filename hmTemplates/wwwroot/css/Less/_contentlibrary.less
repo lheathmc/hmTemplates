@@ -1,0 +1,387 @@
+﻿ /*Chrome fix for disappearing content when toggling visibility between basic and advanced search*/
+.contentlibrary-basicsearch, .contentlibrary-advancedsearch {
+    border: 1px solid transparent;
+}
+
+.contentlibrary-types {
+  display: inline-block;
+  width: 100%;
+  margin: 25px auto;
+  text-align: center;
+  vertical-align: top;
+
+  span, A {
+      display: inline-block;
+      width: 100px;
+      margin: 0 0 5px 0;
+      text-align: center;
+      text-decoration: none !important;
+      vertical-align: top;
+      width: 120px;
+      font-weight: normal;
+      &:focus{
+          outline: none;
+      }
+    }
+
+    span:before {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        padding: 20px 0;
+        margin-bottom: 5px;
+        color: #fff;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            font-size: 9px;
+        }
+    }
+
+    span:hover:before {
+        color: #fff;
+    }
+}
+
+.contentlibrary-types .contentlibrary-searchresults {
+    .grid-actions {
+        margin-bottom: 0;
+    }
+
+    .form-inline {
+        margin-bottom: 0;
+    }
+}
+
+.contentlibrary-types SPAN::before,
+.contentlibrary [class^="-small"]:before,
+.contentlibrary [class*="-small"]:before {
+  display: inline-block;
+  font-family: "blenderfont";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  font-size: 1.5em;
+  color: #808080;
+}
+
+.contentlibrary-types SPAN::before {
+  font-size: 2.5em;
+}
+
+.srgt-contentrepository-all-active SPAN:before,
+.srgt-contentrepository-all SPAN:before {
+  content: '\e87f';
+}
+
+.srgt-contentrepository-actionstep-active SPAN:before,
+.srgt-contentrepository-actionstep SPAN:before,
+.srgt-contentrepository-actionstep-small:before {
+  content: '\e840';
+  font-family: Blenderfont;
+}
+
+.srgt-contentrepository-courseassignments-active SPAN:before,
+.srgt-contentrepository-courseassignments SPAN:before,
+.srgt-contentrepository-courseassignments-small:before {
+  content: '\e840';
+}
+
+.srgt-contentrepository-courseresources-active SPAN:before,
+.srgt-contentrepository-courseresources SPAN:before,
+.srgt-contentrepository-courseresources-small:before {
+  content: '\e83f';
+}
+
+.srgt-contentrepository-instructionalresources-active SPAN:before,
+.srgt-contentrepository-instructionalresources SPAN:before,
+.srgt-contentrepository-instructionalresources-small:before {
+  content: '\e83f';
+}
+
+.srgt-contentrepository-calendarevent-active SPAN:before,
+.srgt-contentrepository-calendarevent SPAN:before,
+.srgt-contentrepository-calendarevent-small:before {
+  content: '\e846';
+}
+
+.srgt-contentrepository-communities-active SPAN:before,
+.srgt-contentrepository-communities SPAN:before,
+.srgt-contentrepository-communities-small:before {
+  content: '\f0c0';
+  font-family: fontawesome !important;
+}
+
+.srgt-contentrepository-discussion-active SPAN:before,
+.srgt-contentrepository-discussion SPAN:before,
+.srgt-contentrepository-discussion-small:before {
+  content: '\e876';
+}
+
+.srgt-contentrepository-discussions-active SPAN:before,
+.srgt-contentrepository-discussions SPAN:before,
+.srgt-contentrepository-discussions-small:before {
+  content: '\e876';
+}
+
+.srgt-contentrepository-learningobjects-active SPAN:before,
+.srgt-contentrepository-learningobjects SPAN:before,
+span.srgt-contentrepository-learningobjects-small:before {
+  content: '\e851';
+  font-family:blenderfont;
+}
+
+.srgt-contentrepository-news-active SPAN:before,
+.srgt-contentrepository-news SPAN:before,
+.srgt-contentrepository-news-small:before {
+  content: '\e858';
+}
+
+.srgt-contentrepository-people-active SPAN:before,
+.srgt-contentrepository-people SPAN:before,
+.srgt-contentrepository-people-small:before {
+  content: '\e85a';
+}
+
+.srgt-contentrepository-notes-active SPAN:before,
+.srgt-contentrepository-notes SPAN:before,
+.srgt-contentrepository-notes-small:before {
+ content: "\f15c";
+    font-family: fontawesome !important;
+}
+
+.srgt-contentrepository-audio-active SPAN:before,
+.srgt-contentrepository-audio SPAN:before {
+  content: '\e873';
+}
+
+.srgt-contentrepository-video-active SPAN:before,
+.srgt-contentrepository-video SPAN:before {
+  content: '\e860';
+}
+
+.srgt-contentrepository-links-active SPAN:before,
+.srgt-contentrepository-links SPAN:before {
+  content: '\e853';
+}
+
+.srgt-contentrepository-course-active SPAN:before,
+.srgt-contentrepository-course SPAN:before,
+.srgt-contentrepository-course-small:before {
+  content: '\e84c';
+}
+
+.srgt-contentrepository-ccsdcourses-active SPAN:before,
+.srgt-contentrepository-ccsdcourses SPAN:before,
+.srgt-contentrepository-ccsdcourses-small:before {
+  content: '\e84c';
+}
+
+.srgt-contentrepository-curriculumcourse-active SPAN:before,
+.srgt-contentrepository-curriculumcourse SPAN:before,
+.srgt-contentrepository-curriculumcourse-small:before {
+  content: '\e84c';
+}
+
+
+.srgt-contentrepository-courseunit-active SPAN:before,
+.srgt-contentrepository-courseunit SPAN:before,
+.srgt-contentrepository-courseunit-small:before {
+  content: '\e86f';
+}
+
+.srgt-contentrepository-richtext-active SPAN:before,
+.srgt-contentrepository-richtext SPAN:before {
+  content: '\e848';
+}
+
+.srgt-contentrepository-ssoapps-active SPAN:before,
+.srgt-contentrepository-ssoapps SPAN:before {
+  content: '\e864';
+}
+
+.srgt-contentrepository-scormunit-active span:before,
+.srgt-contentrepository-scormunit span:before {
+  content: '\e852';
+}
+
+.srgt-contentrepository-assignment-active span:before,
+.srgt-contentrepository-assignment span:before,
+.srgt-contentrepository-assignment-small:before {
+  content: '\e872';
+}
+
+.srgt-contentrepository-contentcollection-active span:before,
+.srgt-contentrepository-contentcollection span:before,
+.srgt-contentrepository-contentcollection-small:before {
+  content: '\e83f';
+}
+
+.srgt-contentrepository-assessment-active span:before,
+.srgt-contentrepository-assessment span:before,
+.srgt-contentrepository-assessment-small:before {
+  content: '\e871';
+  font-family: blenderfont;
+}
+
+.srgt-contentrepository-htmldocument-active span:before,
+.srgt-contentrepository-htmldocument span:before,
+.srgt-contentrepository-htmldocument-small:before {
+  content: "\f1c9";
+  font-family: "FontAwesome" !important;
+}
+.srgt-contentrepository-document-active span:before,
+.srgt-contentrepository-document span:before,
+.srgt-contentrepository-document-small:before {
+  content: "\f15b";
+  font-family: "FontAwesome" !important;
+}
+
+.srgt-contentrepository-workspace-active span:before,
+.srgt-contentrepository-workspace span:before,
+.srgt-contentrepository-workspace-small:before {
+  content: '\e874';
+  font-family: blenderfont;
+}
+
+.srgt-contentrepository-organization-active SPAN:before,
+.srgt-contentrepository-organization SPAN:before,
+.srgt-contentrepository-organization-small:before {
+  content: "\f19c";
+  font-family: "FontAwesome" !important;
+}
+
+.srgt-contentrepository-studentmeasure-active SPAN:before,
+.srgt-contentrepository-studentmeasure SPAN:before,
+.srgt-contentrepository-studentmeasure-small:before {
+  content: "\f19d";
+  font-family: "FontAwesome" !important;
+}
+
+.srgt-contentrepository-graduationcompetency-active SPAN:before,
+.srgt-contentrepository-graduationcompetency SPAN:before,
+.srgt-contentrepository-graduationcompetency-small:before {
+  content: "\f19d";
+  font-family: "FontAwesome" !important;
+}
+
+.srgt-contentrepository-topic-active SPAN:before,
+.srgt-contentrepository-topic SPAN:before,
+.srgt-contentrepository-topic-small:before {
+  content: "\e852";
+  font-family: "blenderfont";
+}
+
+.srgt-contentrepository-videolibrary-active SPAN:before,
+.srgt-contentrepository-videolibrary SPAN:before,
+.srgt-contentrepository-videolibrary-small:before {
+    content: "\f03d";
+    font-family: "FontAwesome" !important;
+}
+
+.srgt-contentrepository-lessonplan-active SPAN:before,
+.srgt-contentrepository-lessonplan SPAN:before,
+.srgt-contentrepository-lessonplan-small:before {
+  content: "\e852";
+  font-family: "blenderfont";
+}
+
+.delete-content-status {
+  margin-bottom: 10px;
+}
+
+#tabContentTypes .form-actions {
+    margin-left: 0;
+    text-align: center;
+}
+
+.contentlibrary-keyword input {
+    margin-bottom: 5px;
+}
+
+.ratingtd table {
+    width: auto !important;
+}
+
+.ratingtd table td {
+    width: auto;
+    padding: 0;
+}
+
+.ratingtd table td label {
+    padding: 0 25px 0 0;
+    font-weight: normal;
+    position: relative;
+    top: 5px;
+}
+
+#contentEdit {
+    h4 {
+        margin-bottom: 30px;
+        padding-bottom:15px;
+        padding-left:15px;
+    }
+
+    .jqx-datetimeinput input {
+        height: auto !important;
+    }
+}
+.actionsteplist-container {
+      @media(max-width: 736px) {
+         .filter-actionsteps{
+                text-align: left !important;
+                padding-left: 15px;
+         }
+     }
+ .actionstep-keyword { 
+    /*@media (max-width: @screen-sm-min) { 
+        input[type="text"]{
+            margin-bottom: 10px;
+        }
+    }*/
+  }
+}
+/*---- Actionsteplist styling -----*/
+.action-step-filter {
+    .filter-checkbox-label {
+        label {
+            font-weight: normal;
+        }
+    }
+}
+.actionsteplist-startcalendar, .actionsteplist-endcalendar {
+    .jqx-calendar-title-content {
+        color: #fff;
+    }
+}
+
+.panel-content-edit {
+   h4 {
+       margin: 0 0 15px 0;
+       font-size: 16px;
+       padding: 15px;
+   }
+
+   .tab-content {
+       padding: 15px !important;
+   }
+
+   iframe.jq-contentLoader {
+       border: 1px solid #ccc;
+       padding: 10px 0;
+       width: 99%;
+       height: 325px;
+   }
+}
+
+ .contentitem-icon {
+        width: 100px;
+        border-width: 1px !important;
+        border-style: solid !important;
+        border-color: rgb(204, 204, 204) !important;
+        border-image: initial !important;
+    }

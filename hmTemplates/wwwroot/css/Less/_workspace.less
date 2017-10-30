@@ -1,0 +1,371 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+.page-title {
+    .workspace-title {
+        width: 100%;
+    }
+}
+.gridtable TR TH {
+  padding: 10px;
+}
+.message-table-footer {
+  /*to make the footer row look like the header row in gridtable - workspace */
+  padding: 5px;
+}
+.row.message-table-footer {
+  /*this table has been transformed into divs that append to the bottom of the data tables - PAGINATION - workspace */
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+/* Workspace Moderators	*/
+.advisor-item{
+    padding-left:0;
+    width:100%;
+    float:left;
+    margin-bottom:@grid-gutter-width/2;
+    .moderator-photo{
+       float:left;
+       margin-right:@grid-gutter-width/2;
+    }
+    .moderator-info{
+       float:left; 
+    }
+}
+
+/*Workspace dynamic tabs*/
+.workspace-dynamic-tabs {
+    list-style-type: none;
+    height: 400px;
+    overflow-y: auto;
+    padding: 0;
+
+    ul.ulSections {
+        margin: 8px 0 25px 10px;
+        padding: 0;
+
+        li {
+            cursor: pointer;
+            list-style-type: none;
+            margin: 4px;
+            padding: 5px 5px;
+            text-transform: lowercase;
+        }
+    }
+}
+.select-template {
+    .pull-left {
+        margin-right: 10px;
+    }
+
+    label, a {
+        margin-top: 5px;
+    }
+}
+.top-right-btns {
+    position: relative;
+    top: -54px;
+    margin-bottom: -30px;
+    text-align: right;
+}
+.panel-workspacelist-content.panel{
+    box-shadow:none !important;
+    .panel-heading{
+        display:none;
+    }
+    .panel-body{
+        padding:0 !important;
+         .attributes-grid{
+             padding:6px;
+        }
+    }
+}
+.panel-workspace-content{
+     .panel-heading{
+        border-radius:0;
+    }
+    .well{
+        padding:10px;
+        border-radius:4px;
+        input[type="checkbox"] {
+            margin: 0 5px;
+            position: relative;
+            top: 1px;
+    }
+    }
+    .attributes-grid{
+       padding:6px;
+     }
+    
+}
+.panel-workspace-administration.panel, .panel-workspace-list.panel, .panel-workspace-topics.panel {  
+    .panel-body{
+        padding:0 !important;
+        .list-group-item {
+            border-radius:0;
+            border:none;
+            width: 100%;
+            float: left;
+            
+        }
+        span{
+            width: 100%;
+            float: left;
+            cursor: pointer;
+            .community-title{
+                width:auto;
+            }
+        } 
+    }
+}
+.panel-workspace-administration.panel{
+    .list-group-item{
+        a{
+            color:#fff;
+            width: 100%;
+            float: left;
+            padding-bottom: 6px;
+            padding:0;
+            background:none !important;
+            &:hover{
+                color:#fff;
+                background:none !important;
+            }
+        }
+        .panel-communities{
+            padding: 0;
+            margin: 0 -15px 0 -15px;
+
+            .panel-body{
+                    background: #fff !important;
+                    float: left;
+                    width: 100%;
+                    margin-bottom: -10px;
+                    margin-top: 5px;
+                    padding: 0 0 0 35px !important;
+                    border-radius: 0;
+                    li{
+                        list-style-type: disc;
+                        padding: 5px 15px 5px 0;
+                        float: left;
+                        width: 100%;
+                    }
+                    li.active{
+                        font-weight:bold;
+                    }
+
+                  
+            }
+            .list-group-item:last-child{
+                border-radius:0;
+            }
+        }   
+    }
+}
+/*------------------------------Workspace Administration Tabs--------------*/
+.administration-tabs{
+    padding:0;
+    .well{
+        width:100%;
+        float:left;
+        margin-bottom:5px;
+        label{
+            float: left;
+            padding: 6px 10px 0 10px;
+        }
+        .form-control{
+            margin-right: 10px;
+            padding: 3px 12px;
+            float:left;
+        }
+    }
+    .ulTabs{
+        width: 220px;
+        .list-group();
+        li{
+            .list-group-item();
+        }
+    }
+    .tabs-section{
+        width: 100%;
+        float: left;
+        padding: 15px;
+        margin:0;
+        border-radius: 5px;
+        .ulTabs{
+            padding-left: 0;
+            margin:0;
+            height: 580px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            li{
+                background: none;
+                float: left;
+                border: none;
+                width: 100%;
+                padding:0;
+                border-radius:0;
+                ul{
+                    margin: 0 0 0 -1px;
+                    padding: 0;
+                    float: left;
+                    width:100.2%;
+                    li{
+                        border:none;
+                        padding: 10px 15px;
+                        cursor:pointer;
+                        margin: 0 0 2px 14px;
+                        &:hover{
+                            border-radius: 8px 0 0 8px !important;
+                        }
+                    }
+                }
+            }
+            a{
+                float: right;
+                width: 100%;
+                padding: 10px 0 10px 15px;
+                text-decoration:none;
+            }
+            a.collapsed:before{
+                content: "\f13a";
+                font-family:fontawesome;
+                margin-right:10px;
+            }
+            a:before{
+                content: "\f139";
+                font-family:fontawesome;
+                margin-right:10px;
+                float:right;
+        }
+
+        }
+        .activeSection{
+            border-radius: 0 !important;
+            border-radius: 8px 0 0 8px !important;
+        }
+        .tab-links{
+            width:100%;
+        }
+        .tabs-editor{
+            pointer-events: all;
+            padding: 15px !important;
+            border-radius: 5px;
+            width: 100%;
+            top: 6px;
+            input[type="checkbox"]{
+                margin: 0 5px;
+                position: relative;
+                top: 2px;
+            }
+        }
+        h4{
+            float:left;
+            margin-top:0;
+        }
+        .section-editor{
+            float:left;
+            width:100%;
+        }
+
+        .form-actions{
+            float:left;
+            width:100%;
+        }
+    }
+}
+/*------------------------Panel Organize Workspaces------------------------*/
+.panel-organize-workspaces{
+    .panel-heading{
+        background: #646464;
+        span.label{
+            color:#fff;
+            font-size:100%;
+        }
+    }
+    .panel-body{
+        border: 1px solid #ccc;
+    }
+        h4{
+            margin-top:20px;
+            width:100%;
+            float:left;
+    }
+        .wrapit, .jqUlselection{
+            float:left;
+        padding-right: 25px;
+    }
+        .controls-blk{
+            margin-bottom:20px;
+            width:100%;
+            float:left;
+    }
+
+       .gutter{
+           padding:0 15px;
+           span{
+            float: left;
+            margin-top: 8px;
+            margin-right: 8px;
+        }
+           .form-control{
+            width: 500px;
+            float: left;
+        }
+    }
+
+    .treeview {
+        margin-top:0;
+        width: 11px;
+        height: 15px;
+        border-bottom: 2px solid #000;
+        border-left: 2px solid #000;
+        float: left;
+        margin-right: 2px;
+        margin-left:10px;
+        padding:0;
+    }
+    .lblwstitle {
+        width: 58% !important;
+        float: left !important;
+        padding: 0;
+    }
+    .lblwsstatus {
+        width: 12% !important;
+        text-align: right;
+        padding: 0;
+    }
+    .lblwsid {
+        width: 25% !important;
+        float: left !important;
+        padding: 0;
+    }
+    #dvUnitInfo, #dvLessionInfo{
+        margin-top:5px;
+        float:left;
+        width:100%;
+        .lblwsstatus{
+            width: 12% !important;
+        }
+    }
+   .mrl30{
+        margin-left: 30px !important;
+    }
+   .courseinfo{
+       margin-bottom:20px;
+       margin-top:20px;
+       label{
+           font-weight:normal;
+        }
+     }
+}
+/*-------------Panel Workspace moderators----------------------*/
+.panel-workspace-moderators{
+    .panel-body{
+        height: 350px;
+        overflow-y: auto;
+    }
+    .portlet-toolbar .fa.fa-cog{
+        color: rgba(0,0,0,.3) !important;
+    }
+}
+

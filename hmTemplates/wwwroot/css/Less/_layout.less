@@ -1,0 +1,751 @@
+﻿@import (reference) "../bootstrap/less/bootstrap.less";
+/*background image in the template; needed its own container*/
+.bg-image {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+[class*="accent"] {
+    display: none;
+}
+
+/* L A Y O U T S */
+.columns.layout1-12 {
+    .make-row;
+
+    > .column {
+        .make-sm-column(12);
+    }
+}
+
+.columns.layout2-66 {
+    .make-row;
+
+    > .column {
+        .make-sm-column(6);
+    }
+}
+
+.columns.layout2-84 { //Two column with the first column being wider
+    .make-row;
+
+    > .column {
+        .make-md-column(8);
+    }
+
+    > .column:last-child {
+        .make-md-column(4);
+    }
+}
+
+.columns.layout2-48 { //Two column with the second column wider
+    .make-row;
+
+    > .column {
+        .make-md-column(8);
+    }
+
+    > .column:first-child {
+        .make-md-column(4);
+    }
+}
+
+.columns.layout2-39 { //Two column with the second column wider
+    .make-row;
+
+    > .column {
+        .make-md-column(9);
+    }
+
+    > .column:first-child {
+        .make-md-column(3);
+    }
+}
+
+.columns.layout2-102 {
+    .make-row;
+
+    > .column {
+        .make-md-column(10);
+    }
+
+    > .column:last-child {
+        .make-md-column(2);
+    }
+}
+
+.columns.layout2-210 {
+    .make-row;
+
+    > .column {
+        .make-md-column(10);
+    }
+
+    > .column:first-child {
+        .make-md-column(2);
+    }
+}
+
+.columns.layout3-444 { //Three equal columns
+    .make-row;
+
+    > .column {
+        .make-md-column(4);
+    }
+}
+
+.columns.layout3-363 { // Three columns with middle column wider
+    .make-row;
+
+    > .column:first-child, .column:last-child {
+        .make-md-column(3);
+    }
+
+    > .column {
+        .make-md-column(6);
+    }
+}
+
+.columns.layout3-633 { // Three columns with middle column wider
+    .make-row;
+
+    > .column:first-child {
+        .make-md-column(6);
+    }
+
+    > .column {
+        .make-md-column(3);
+    }
+
+    .column:last-child {
+        .make-md-column(3);
+    }
+}
+
+.columns.layout4-3333 { // Three columns with middle column wider
+    .make-row;
+
+    > .column {
+        .make-md-column(3);
+    }
+}
+
+.columns.outline {
+    border: dotted 1px #ff0000;
+
+    .column {
+        border: solid 1px #eee;
+    }
+}
+
+.columns.layout3-552 {
+    .make-row;
+
+    > .column:first-child {
+        .make-md-column(5);
+    }
+
+    > .column:last-child {
+        .make-md-column(2);
+    }
+
+    > .column {
+        .make-md-column(5);
+    }
+}
+
+.columns.layout3-354 {
+    .make-row;
+
+    > .column:first-child {
+        .make-md-column(3);
+    }
+
+    > .column:last-child {
+        .make-md-column(4);
+    }
+
+    > .column {
+        .make-md-column(5);
+    }
+}
+
+.columns.layout3-255 {
+    .make-row;
+
+    > .column {
+        .make-md-column(5);
+    }
+
+    > .column:first-child {
+        .make-md-column(2);
+    }
+}
+
+.box-title {
+    margin-bottom: 20px;
+}
+
+/*the page title with or without a button*/
+/*This only works if you can CHANGE the core file to utilize this wrapper*/
+.page-title {
+    .make-row;
+    margin-left: -15px;
+    margin-right: -15px;
+    .clearfix;
+    margin-bottom: (@grid-gutter-width / 2);
+
+    .top-hdng {
+        width: 42%;
+
+        h1 {
+            font-weight: 700;
+            padding: 0 12px;
+            padding-left: 15px;
+        }
+
+        .pull-right {
+            padding: 0;
+            cursor: pointer;
+            position: relative;
+            top: 6px;
+
+            .jqx-widget {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+
+            label {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    h1, h2 {
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 32px;
+        margin: 0 !important;
+    }
+
+    .page-title-right {
+        .make-sm-column(7);
+        .text-right;
+        margin-top: 7px;
+
+        .button {
+            .btn;
+            .btn-primary;
+            margin-top: 0;
+            margin-left: 0;
+
+            @media (min-width: @screen-sm-min) {
+                float: right;
+                margin-top: 0;
+                margin-left: 5px; /*incase there are 2 buttons*/
+            }
+        }
+    }
+}
+
+.long-page-title {
+   h1 { 
+       width: 70% !important;
+   }
+   .page-title-right {
+       width: 30% !important;
+   }
+}
+
+.page-title.banner {
+    border-radius: @border-radius-base @border-radius-base 0 0;
+    height: 175px;
+    margin: -15px -15px 15px -15px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    .workspace-title {
+        color: #fff;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 66px;
+        padding: 0 0 0 20px;
+    }
+}
+
+.banner-content {
+    .columns.layout2-39 {
+        .column:last-child{
+            padding-left: 5px;
+        }
+    }
+}
+
+.main-content-wrapper {
+    .main-content-container {
+        .container();
+        .clearfix;
+        position: relative;
+
+        .notifications-status-container {
+            background-color: transparent;
+            position: relative;
+            margin-bottom: 15px;
+            /* iPads (landscape) ----------- */
+            @media (min-width: @screen-sm-min) {
+                .make-sm-column(4);
+                .make-lg-column(3);
+                position: absolute;
+                background-color: transparent;
+                right: 15px;
+                top: 15px;
+                z-index: 1;
+            }
+
+            .portlet-notification-status {
+                margin-left: 0;
+                margin-right: 0;
+                height: auto;
+                margin-bottom:15px;
+
+                @media (min-width: @screen-sm-min) {
+                    height: 32px;
+                    margin-bottom: 0;
+                }
+
+                .notification-status {
+                    height: 32px;
+                    line-height: 2.3;
+                    border-radius: @border-radius-base;
+
+                    @media (min-width: @screen-sm-min) {
+                        border-radius: 0 @border-radius-base @border-radius-base 0;
+                    }
+
+                    a {
+                        font-weight: bold;
+                        padding: 0 12px;
+
+                        @media (min-width: @screen-sm-min) {
+                            font-size:1em;
+                        }
+                        @media (max-width: @screen-sm-max) {
+                            font-size:1em !important;
+                        }
+                        .text-center;
+
+                        :empty {
+                            display: none;
+                        }
+
+                        :first-child {
+                            border: none;
+                        }
+                    }
+
+                    a:nth-child(2) {
+                        
+                    }
+
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .breadcrumbs {
+            padding-top: 0;
+            margin-bottom: 15px;
+            background-color: transparent;
+            width: 100%;
+            //float: left; Heath - removed. Was causing alignment issues.
+            padding-left: 15px;
+            height: 32px;
+            -webkit-border-top-right-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-topright: 5px;
+            -moz-border-radius-bottomright: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .breadcrumb-nav {
+                // Heath - The below two lines mess up the alignment moving the breadcrumb -15px to the left of the rest of the page. 12/6/16
+                //.make-row;
+                //.make-sm-column(12);
+                position: relative;
+                // font-size: 12px; - it appears too small for custom themes
+                border-radius: @border-radius-small;
+
+                a, span {
+                    display: inline-block;
+                    font-size: 12px;
+                    padding-top: 10px;
+                    padding-bottom: 6px;
+                }
+            }
+        }
+
+        .main-content {
+            .make-lg-column(12);
+            padding-top: 15px;
+            position: relative;
+
+            @extend: clearfix;
+
+            .btn-row {
+                .row();
+            }
+
+            @media (min-width: @screen-sm-min) {
+                min-height: 522px;
+            }
+        }
+    }
+}
+/* STUDENT LAYOUT */
+.studentlogin {
+    .main-content, .theme-hdr-container, #divBreadcrumbNav, footer.site-footer .container, .main-content-container {
+        width: 100% !important;
+    }
+
+    .main-content-wrapper {
+        .page-title {
+            margin-bottom: 0;
+        }
+    }
+}
+/* Public Pages */
+.public-page {
+    .clientlogo {
+        padding: 0;
+
+        .navbar-brand {
+            padding: 0;
+
+            img {
+                padding: 0;
+            }
+        }
+    }
+
+    .navbar-right {
+        .make-xs-column(12);
+        .make-sm-column(12);
+
+        @media screen and (min-width: @screen-sm-min) {
+            float: none !important;
+            width: 75%;
+            margin: 0 auto !important;
+        }
+
+        @media screen and (min-width: @screen-md-min) {
+            .make-md-column(6);
+            .pull-right;
+        }
+
+        clear: none;
+
+        .navbar-form {
+            border: none;
+            margin-bottom: 10px;
+
+            @media screen and (min-width: @screen-md-min) {
+                .pull-right;
+                text-align: right;
+            }
+
+            .form-control {
+                /*@media screen and (min-width: @screen-md-min) {
+                    width: 218px;
+                }*/
+                margin-right: 5px;
+            }
+
+            .button {
+                @media (min-width: @screen-md-min) {
+                    .pull-right;
+                    margin-top: 5px;
+                    margin-right: 5px;
+                }
+
+                @media (min-width: @screen-lg-min) {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .links {
+            .pull-right;
+            /*text-align: left;*/
+            /*@media screen and (min-width: @screen-sm-min) {
+                .pull-left;
+                width: 80%;
+            }*/
+            @media (min-width: @screen-lg-min) {
+                padding-left: 15px;
+            }
+        }
+
+        .form-error {
+            span {
+                margin: 0;
+                padding: 0;
+                font-size: .9em;
+                color: #cc0000;
+            }
+
+            .form-error-username {
+                //.make-md-column(4);
+                //padding-right:0;
+                //margin-top:10px;
+            }
+
+            .form-error-password {
+                //.make-md-column(4);
+                //padding-right:0;
+            }
+        }
+    }
+
+    .portlet-notification-status {
+        display: none;
+    }
+}
+
+.main-content .page-title-long {
+    .make-row;
+    .clearfix;
+    margin-bottom: (@grid-gutter-width / 2);
+
+    h1, h2 {
+        .make-sm-column(6);
+        font-size: 20px;
+        line-height: 32px;
+        margin: 0;
+    }
+
+    .page-title-right {
+        .make-sm-column(6);
+        margin-top: 7px;
+
+        .button {
+            .btn;
+            .btn-primary;
+            margin-top: 0;
+            margin-left: 0;
+
+            @media (min-width: @screen-sm-min) {
+                float: right;
+                margin-top: 0;
+                margin-left: 5px; /*incase there are 2 buttons*/
+            }
+        }
+    }
+}
+
+.page-title {
+    .top-hdng {
+        padding: 0 15px 8px 15px;
+        float: left;
+
+        h1 {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+/* === Custom styles ====*/
+.border-borrom {
+    border-bottom: solid 2px #ccc;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.m-t-15 {
+    margin-top: -15px !important;
+}
+
+.m-t0 {
+    margin-top: 0 !important;
+}
+
+.m-r0 {
+    margin-right: 0 !important;
+}
+
+.m-l0 {
+    margin-left: 0 !important;
+}
+.m-l5 {
+    margin-left: 5 !important;
+}
+
+.m-b0 {
+    margin-bottom: 0px !important;
+}
+
+.m-t10 {
+    margin-top: 10px !important;
+}
+
+.m-tb10 {
+    margin: 10px 0 !important;
+}
+
+.m-tb15 {
+    margin: 15px 0 !important;
+}
+
+.m-t15 {
+    margin-top: 15px !important;
+}
+
+.m-t20 {
+    margin-top: 20px !important;
+}
+
+.m-t100 {
+    margin-top: 100px !important;
+}
+
+.m-b15 {
+    margin-bottom: 15px !important;
+}
+
+.m-b10 {
+    margin-bottom: 10px !important;
+}
+
+.m-b20 {
+    margin-bottom: 20px !important;
+}
+
+.m-b5 {
+    margin-bottom: 5px !important;
+}
+
+.m-r10 {
+    margin-right: 10px !important;
+}
+
+.m-r15 {
+    margin-right: 15px !important;
+}
+
+.p-l0 {
+    padding-left: 0 !important;
+}
+
+.p-all10 {
+    padding: 10px !important;
+}
+
+.p-l10 {
+    padding-left: 10px !important;
+}
+
+.p-t10 {
+    padding-top: 10px !important;
+}
+
+.p-t5 {
+    padding-top: 5px !important;
+}
+
+.p-b10 {
+    padding-bottom: 10px !important;
+}
+
+.p-r10 {
+    padding-right: 10px !important;
+}
+
+.p-r25 {
+    padding-right: 25px !important;
+}
+
+.p-r0 {
+    padding-right: 0px !important;
+}
+
+.p-b0 {
+    padding-bottom: 0px !important;
+}
+
+.p-t0 {
+    padding-top: 0px !important;
+}
+
+.l-p0 {
+    padding: 0;
+}
+
+.l-mb5 {
+    margin-bottom: 5px;
+}
+
+.l-mr5 {
+    margin-right: 5px !important;
+}
+.l-mlt0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.lbl-btn {
+    margin: -6px 0 -10px 5px !important;
+    float: left !important;
+}
+
+/*---------------------Blender Loading-----------------*/
+.blender-blockUI {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+
+.blockUI-overlay {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 999999;
+    position: absolute;
+}
+
+.blockUI-overlay.pageoverlay {
+    position: fixed;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+span.alert {
+    padding: 0;
+    margin-bottom: 0;
+}
+.word-wrap{
+    word-break:break-all;
+}
+@media (max-width: @screen-sm-max) {
+    .iframe-scrolling {
+        overflow:scroll;
+        -webkit-overflow-scrolling: touch;
+     }
+}
+.nodata-available {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.text-normal{
+    font-weight:normal;
+}
