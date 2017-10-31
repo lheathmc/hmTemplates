@@ -1,8 +1,12 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans";
-  color: #999; }
-  body h1, body h2 {
-    color: #000; }
+  color: #444; }
+  body h1 {
+    color: #666; }
+  body h2 {
+    color: gray; }
+  body h3 {
+    color: #999999; }
   body a {
     color: #0d72b5; }
     body a:visited {

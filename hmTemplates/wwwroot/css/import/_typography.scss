@@ -2,8 +2,14 @@
 body{
     font-family:$FontFamily;
     color:$BodyColor;
-    h1, h2{
+    h1{
         color:$Headers;
+    }
+    h2{
+        color:lighten($Headers, 10%);
+    }
+    h3{
+        color:lighten($Headers, 20%);
     }
     a{
         color:$LinkColor;
