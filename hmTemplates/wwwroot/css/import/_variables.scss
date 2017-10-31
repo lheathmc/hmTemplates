@@ -1,5 +1,5 @@
 $FontFamily: "Helvetica Neue", Helvetica, Arial, "Open Sans";
-$LinkColor: #900;
-$LinkHoverColor: #C00;
+$LinkColor: #0d72b5;
+$LinkHoverColor: lighten($LinkColor, 10%);
 $Headers: #000;
 $BodyColor: #999;
