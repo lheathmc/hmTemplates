@@ -1,5 +1,160 @@
 ﻿@{
     ViewData["Title"] = "Detail View";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
+<h2>@ViewData["Title"]</h2>
+
+<div id="ctl00_ctl00_body_body_pnlActionStepDetails" class="action-step">
+    <div class="row">
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="well">
+                <div id="dvActionStepTitle">
+                    <h3 class="m-t0">
+                        <span id="ctl00_ctl00_body_body_lblTitle">Self Actionstep for Admin</span>
+                    </h3>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <!--StartDate -->
+                        <div class="dateset">
+                            <div class="date-label">Start Date</div>
+                            <div class="srgt-actionstepblue">
+                                <div class="startdow">
+                                    <span id="ctl00_ctl00_body_body_lbStartDateDay">Thu</span>
+                                </div>
+                                <div class="startmonth">
+                                    <span id="ctl00_ctl00_body_body_lbStartDateMonth">Oct</span>
+                                    <span id="ctl00_ctl00_body_body_lbStartDateDate">05</span>
+                                </div>
+                                <div class="startyear">
+                                    <span id="ctl00_ctl00_body_body_lblStartYear">2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <!--DueDate -->
+                        <div class="dateset">
+                            <div class="date-label">Due Date</div>
+                            <div id="ctl00_ctl00_body_body_dvDueDate" class="srgt-actionstepblue" style="cursor: default;">
+                                <div class="duedow">
+                                    <span id="ctl00_ctl00_body_body_lbDueDateDay">Thu</span>
+                                </div>
+                                <input name="ctl00$ctl00$body$body$txtDatePicker" type="text" value="10/05/2017" id="txtDatePicker" style="display: none">
+                                <div class="duemonth">
+                                    <span id="ctl00_ctl00_body_body_lbDueDateMonth">Oct</span>
+                                    <span id="ctl00_ctl00_body_body_lbDueDateDate">05</span>
+                                </div>
+                                <div class="dueyear">
+                                    <span id="ctl00_ctl00_body_body_lblDueYear">2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <!--CompleteDate -->
+                        <div id="ctl00_ctl00_body_body_dvCompletedDate" class="dateset">
+                            <div class="date-label">Completed</div>
+                            <div class="srgt-actionstepblue">
+                                <div class="duedow">
+                                    <span id="ctl00_ctl00_body_body_lblCompletedDateDay">Fri</span>
+                                </div>
+                                <div class="duemonth">
+                                    <span id="ctl00_ctl00_body_body_lblCompletedDateMonth">Oct</span>
+                                    <span id="ctl00_ctl00_body_body_lblCompletedDateDate">27</span>
+                                </div>
+                                <div class="dueyear">
+                                    <span id="ctl00_ctl00_body_body_lblCompletedYear">2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Status-->
+                <div id="dvActionStepStatus" class="action-step-status">
+                    <div class="form-pair group">
+                        <div class="field-label">
+                            <span id="ctl00_ctl00_body_body_lblActionStepStatus" class="group label">Status</span>
+                        </div>
+                        <div class="field-input standard">
+                            <span id="ctl00_ctl00_body_body_lblActionStepStatusValue" class="label-btn-assigned">Completed</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="ctl00_ctl00_body_body_dvActionStepAuthor">
+                    <div class="form-pair group">
+                        <div class="field-label">
+                            <span id="ctl00_ctl00_body_body_lblActionStepAuthor" class="group label">Assigned By:</span>
+                        </div>
+                        <div class="field-input standard blue-txt">
+                            <a href="/#" id="ctl00_ctl00_body_body_hlnkAuthor" onclick="return fnOpenPopupIframeWS();" class="studentacs">site Admin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-sm-12 actionstep-score">
+                    <div id="dvNoOfAttempts" class="well attempts">
+                        <span id="ctl00_ctl00_body_body_lblNoOfAttempts">Attempts</span>
+                        <span id="lblNoOfAttemptsValue" class="data">1</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--Description-->
+        <div id="dvActionStepDescription" class="col-md-8 col-sm-12 col-xs-12">
+            <div class="form-pair group">
+                <div class="field-label">
+                    <span id="ctl00_ctl00_body_body_lblDescription" class="group label">Description:</span>
+                </div>
+                <div class="field-input standard">
+                    <span id="ctl00_ctl00_body_body_lblDescriptionValue">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non nunc vel augue cursus tempor in nec leo. Integer interdum, augue a congue iaculis, purus neque convallis ligula, vel viverra urna neque vel sem. Cras ac lacinia velit. Curabitur placerat sit amet eros non euismod. Aliquam id nulla ligula. Proin eu congue sapien, non finibus lorem. Vestibulum lorem arcu, congue in turpis ut, ullamcorper rhoncus.</p>
+                    </span>
+                </div>
+            </div>
+            <!--Status-->
+            <div id="dvNextStep">
+                <div class="form-pair group">
+                    <div class="field-label">
+                        <span id="ctl00_ctl00_body_body_lblNextStep" class="group"></span>
+                    </div>
+                    <div class="field-input standard green-txt">
+                        <span id="ctl00_ctl00_body_body_lblNextStepValue" class="group"></span>
+                        <input type="submit" name="ctl00$ctl00$body$body$btnTakeAssessment" value="View My Response" onclick="return fnOpenAssessment(this);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$body$body$btnTakeAssessment&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnTakeAssessment" class="btn btn-primary" href="/AssessmentPlayer.aspx?asid=5819&amp;wid=45&amp;psp=goto_return_url&amp;ReturnUrl=https%3a%2f%2fhenryuat.srgtech.com%2fActionStep.aspx%3fp%3dd%26asid%3d5819%26returnURL%3dDashboard.aspx&amp;prsp=setreadonly" reload="1" title="Quiz">
+                        <input type="submit" name="ctl00$ctl00$body$body$lnkRetakeNextStep" value="Re-Take the Quiz" onclick="return fnOpenAssessment(this);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$body$body$lnkRetakeNextStep&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="lnkRetakeNextStep" class="btn btn-primary" href="/AssessmentPlayer.aspx?asid=5819&amp;wid=45&amp;psp=goto_return_url&amp;ReturnUrl=https%3a%2f%2fhenryuat.srgtech.com%2fActionStep.aspx%3fp%3dd%26asid%3d5819%26returnURL%3dDashboard.aspx&amp;prsp=dntswres" reload="1" title="Quiz">
+                    </div>
+                </div>
+            </div>
+            <div id="ctl00_ctl00_body_body_dvResponseWithoutEditor" style="" class="actionstep-description">
+                <div class="form-pair group">
+                    <div class="field-label">
+                        <span id="ctl00_ctl00_body_body_lblUserResponse2" class="group label">User Response/Feedback:</span>
+                    </div>
+                    <div class="field-input standard">
+                        <span id="lblUserResponseValue"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-pair group">
+                <div class="field-label">
+                    <span id="ctl00_ctl00_body_body_LinkID" class="group label">Links:</span>
+                </div>
+                <div id="ctl00_ctl00_body_body_dvTagLinks" class="field-input standard">
+                    <span class="doc">No Links available</span>
+                </div>
+            </div>
+            <div id="dvbuttons" class="text-center actionstep-container actionstep-btns m-b15">
+                <input type="submit" name="ctl00$ctl00$body$body$btnSave" value="Save" onclick="return SaveUserDetailsAndUpdateStatus(this, false, false);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$body$body$btnSave&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_body_body_btnSave" class="button" style="display:none;">
+                <input type="submit" name="ctl00$ctl00$body$body$btnSubmitForReview" value="Submit for review" onclick="return SaveUserDetailsAndUpdateStatus(this, false, true);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$body$body$btnSubmitForReview&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_body_body_btnSubmitForReview" class="button" style="display:none;">
+                <a id="ctl00_ctl00_body_body_lnlEdit" class="btn btn-primary" onclick="UpdatePublishedStatus(event);" href="/ActionStepEdit.aspx?asid=5819&amp;isstudent=">Unpublish &amp; Edit</a>
+                <a id="ctl00_ctl00_body_body_lnkViewStatus" class="btn btn-primary" href="/ActionStepStatus.aspx?asid=5819&amp;isstudent=&amp;returnURL=Dashboard.aspx">View Status</a>
+                <a id="btnASEditCancel" onclick="onASEditCancelClick()" class="btn btn-default btn-cancel">Cancel</a>
+            </div>
+
+        </div>
+    </div>
+</div>
