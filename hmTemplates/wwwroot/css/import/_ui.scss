@@ -1,0 +1,25 @@
+.nav-tabs{
+    li{
+        a{
+            background-color:#efefef;
+            border-left:solid 1px #eee;
+            border-top:solid 1px #eee;
+            border-right:solid 1px #eee;
+        }
+        &.active, &:hover{
+            a{
+                background-color:#fff;
+                &:hover{
+                    
+                }
+            }
+        }
+    }
+}
+.tab-content{
+    padding:15px;
+    border-left:solid 1px #ddd;
+    border-right:solid 1px #ddd;
+    border-bottom:solid 1px #ddd;
+    border-radius:0 0 6px 6px;
+}

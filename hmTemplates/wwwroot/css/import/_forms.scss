@@ -1,8 +1,9 @@
-.form-data, .form-data[readonly]{
+.form-data {
+    height:auto;
     background-color:transparent;
     border:none;
     box-shadow: none;
     padding-left:0;
-    border-bottom:dashed 1px #ddd;
+    border-bottom:solid 1px #ddd;
     border-radius:0;
 }
