@@ -38,3 +38,5 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+hmTemplates/wwwroot/css/bootstrap/css/theme.css.map
+hmTemplates/wwwroot/css/bootstrap/css/bootstrap.css

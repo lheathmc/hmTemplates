@@ -49,7 +49,8 @@ body {
   background-color: #efefef;
   border-left: solid 1px #eee;
   border-top: solid 1px #eee;
-  border-right: solid 1px #eee; }
+  border-right: solid 1px #eee;
+  border-radius: 5px 5px 0 0; }
 
 .nav-tabs li.active a, .nav-tabs li:hover a {
   background-color: #fff; }

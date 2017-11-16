@@ -1,3 +1,4 @@
+@import "_variables.scss";
 .nav-tabs{
     li{
         a{
@@ -5,6 +6,7 @@
             border-left:solid 1px #eee;
             border-top:solid 1px #eee;
             border-right:solid 1px #eee;
+            border-radius: $TabRadius;
         }
         &.active, &:hover{
             a{
