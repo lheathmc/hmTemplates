@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Search Pages";
+}
+
+<div class="search-page">
+    <div id="example-text" class="example">
+
+        <div class="row page-title">
+            <h1 class="col-sm-6 pull-left">@ViewData["Title"]</h1>
+
+            <div class="col-sm-6 pull-right text-right l-mt15">
+                <a id="ctl00_ctl00_body_body_btnCreateActionStep" class="btn btn-default l-mt5" href="">Page Action Items</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well remove l-h200">
+                    Expander, Search Filters, etc.
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well remove l-h400">
+                    Grid Results
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <pre class="snippet"><code class="html hljs xml">&lt;div class="row page-title"&gt;&NewLine;&Tab;&lt;h1 class="col-sm-6 pull-left"&gt;@ViewData["Title"]&lt;/h1&gt;&NewLine;&Tab;&lt;div class="col-sm-6 pull-right text-right l-mt15"&gt;&NewLine;&Tab;&Tab;&lt;a id="ctl00_ctl00_body_body_btnCreateActionStep" class="btn btn-default l-mt5" href=""&gt;Page Action Items&lt;/a&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div class="row"&gt;&NewLine;&Tab;&lt;div class="col-sm-12"&gt;&NewLine;&Tab;&Tab;&lt;!--SearchFilters--&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div class="row"&gt;&NewLine;&Tab;&lt;div class="col-sm-12"&gt;&NewLine;&Tab;&Tab;&lt;!--SearchResults--&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&lt;/div&gt;&NewLine;</code></pre>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+}

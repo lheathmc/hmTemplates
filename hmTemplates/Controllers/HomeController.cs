@@ -26,24 +26,30 @@ namespace hmTemplates.Controllers
 
             return View();
         }
-        
         public IActionResult Rosters()
         {
-            ViewData["Message"] = "Roster page";
+            ViewData["Message"] = "Roster Pages";
 
             return View();
         }
-        
-        public IActionResult ListView()
+
+        public IActionResult SearchPages()
         {
-            ViewData["Message"] = "List view page";
+            ViewData["Message"] = "";
 
             return View();
         }
-        
-        public IActionResult DetailView()
+
+        public IActionResult LeftColumn()
         {
-            ViewData["Message"] = "Detail view page";
+            ViewData["Message"] = "";
+
+            return View();
+        }
+
+        public IActionResult RightColumn()
+        {
+            ViewData["Message"] = "";
 
             return View();
         }

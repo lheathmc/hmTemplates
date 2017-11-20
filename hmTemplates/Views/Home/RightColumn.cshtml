@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Right Column";
+}
+
+
+<div class="row page-title">
+    <h1 class="col-sm-6 pull-left">@ViewData["Title"]</h1>
+</div>
+
+<div id="example-text" class="example">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="well remove l-h200">
+                Main Content
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="well remove l-h400">
+                Right Column
+            </div>
+        </div>
+    </div>
+</div>
+<pre class="snippet"><code class="html hljs xml">&lt;div class="row"&gt;&NewLine;&Tab;&lt;div class="col-sm-8"&gt;&NewLine;&Tab;&Tab;&lt;!--LeftColumn--&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&Tab;&lt;div class="col-sm-4"&gt;&NewLine;&Tab;&Tab;&lt;!--RightColumn--&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&lt;/div&gt;
+</code></pre>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+}

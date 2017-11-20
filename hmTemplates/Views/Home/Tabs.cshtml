@@ -1,24 +1,31 @@
 ﻿@{
     ViewData["Title"] = "Tabs";
 }
-<h2>@ViewData["Title"]</h2>
-<ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-  <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-  <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-</ul>
+<h2>Tabs</h2>
 
-<div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
-    <h3>HOME</h3>
-    <p>Some content.</p>
-  </div>
-  <div id="menu1" class="tab-pane fade">
-    <h3>Menu 1</h3>
-    <p>Some content in menu 1.</p>
-  </div>
-  <div id="menu2" class="tab-pane fade">
-    <h3>Menu 2</h3>
-    <p>Some content in menu 2.</p>
-  </div>
+<div id="example-text" class="example">
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#tab1">Tab 1</a></li>
+        <li><a data-toggle="tab" href="#tab2">Tab 2</a></li>
+        <li><a data-toggle="tab" href="#tab3">Tab 3</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="tab1" class="tab-pane fade in active">
+            <h3>Tab 1</h3>
+            <p>Some content.</p>
+        </div>
+        <div id="tab2" class="tab-pane fade">
+            <h3>Tab 2</h3>
+            <p>Some content in tab 2.</p>
+        </div>
+        <div id="tab3" class="tab-pane fade">
+            <h3>Tab 3</h3>
+            <p>Some content in tab 3.</p>
+        </div>
+    </div>
+
 </div>
+
+<pre class="snippet"><code class="html hljs xml">&lt;ul class="nav nav-tabs"&gt;&NewLine;&Tab;&lt;li class="active"&gt;&lt;a data-toggle="tab" href="#tab1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;&NewLine;&Tab;&lt;li&gt;&lt;a data-toggle="tab" href="#tab2"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;&NewLine;&Tab;&lt;li&gt;&lt;a data-toggle="tab" href="#tab3"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;&NewLine;&lt;/ul&gt;&NewLine;&lt;div class="tab-content"&gt;&NewLine;&Tab;&lt;div id="tab1" class="tab-pane fade in active"&gt;&NewLine;&Tab;&Tab;&lt;h3&gt;Tab 1&lt;/h3&gt;&NewLine;&Tab;&Tab;&lt;p&gt;Some content.&lt;/p&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&Tab;&lt;div id="tab2" class="tab-pane fade"&gt;&NewLine;&Tab;&Tab;&lt;h3&gt;Tab 2&lt;/h3&gt;&NewLine;&Tab;&Tab;&lt;p&gt;Some content in tab 2.&lt;/p&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&Tab;&lt;div id="tab3" class="tab-pane fade"&gt;&NewLine;&Tab;&Tab;&lt;h3&gt;Tab 3&lt;/h3&gt;&NewLine;&Tab;&Tab;&lt;p&gt;Some content in tab 3.&lt;/p&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&lt;/div&gt;</code></pre>

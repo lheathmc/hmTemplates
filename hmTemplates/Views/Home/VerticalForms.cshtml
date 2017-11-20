@@ -1,35 +1,41 @@
 ﻿@{
     ViewData["Title"] = "Vertical Forms";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
-<h4>Vertical Single Column Form</h4>
+<h2>@ViewData["Title"]</h2>
 <div class="row">
-    <div class="col-sm-8 col-md-6 col-sm-offset-">
-        <div>
-            <div class="form-group">
-                <label class="control-label" for="email">Short Label:</label>
-                <input type="email" class="form-control" placeholder="Placeholder" />
-            </div>
-            <div class="form-group">
-                <label class="control-label">Medium Label:</label>
-                <input class="form-control" placeholder="Readonly" readonly />
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="pwd">Very Long Label:</label>
-                <input type="password" class="form-control" placeholder="Placeholder" />
-            </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" />Checkbox label goes here
-                    </label>
+    <div class="col-md-7">
+
+            <div id="example-text" class="example">
+
+                <div class="form-group">
+                    <label class="control-label" for="email">Short Label:</label>
+                    <input type="email" class="form-control" placeholder="Placeholder" />
                 </div>
+                <div class="form-group">
+                    <label class="control-label">Medium Label:</label>
+                    <input class="form-control" placeholder="Readonly" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="pwd">Very Long Label:</label>
+                    <input type="password" class="form-control" placeholder="Placeholder" />
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" />Checkbox label goes here
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">SubmitButton</button>
+                    <button type="submit" class="btn btn-cancel">CancelButton</button>
+                </div>
+
             </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">SubmitButton</button>
-                <button type="submit" class="btn btn-cancel">CancelButton</button>
-            </div>
-        </div>
+
+
+        <pre class="snippet"><code class="html hljs xml">&lt;div class="form-group"&gt;&NewLine;&Tab;&lt;label class="control-label" for="email"&gt;Short Label:&lt;/label&gt;&NewLine;&Tab;&lt;input type="email" class="form-control" placeholder="Placeholder" /&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div class="form-group"&gt;&NewLine;&Tab;&lt;label class="control-label"&gt;Medium Label:&lt;/label&gt;&NewLine;&Tab;&lt;input class="form-control" placeholder="Readonly" readonly /&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div class="form-group"&gt;&NewLine;&Tab;&lt;label class="control-label" for="pwd"&gt;Very Long Label:&lt;/label&gt;&NewLine;&Tab;&lt;input type="password" class="form-control" placeholder="Placeholder" /&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div class="form-group"&gt;&NewLine;&Tab;&lt;div class="checkbox"&gt;&NewLine;&Tab;&Tab;&lt;label&gt;&NewLine;&Tab;&Tab;&Tab;&lt;input type="checkbox" /&gt;Checkbox label goes here&NewLine;&Tab;&Tab;&lt;/label&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div class="form-group"&gt;&NewLine;&Tab;&lt;button type="submit" class="btn btn-primary"&gt;SubmitButton&lt;/button&gt;&NewLine;&Tab;&lt;button type="submit" class="btn btn-cancel"&gt;CancelButton&lt;/button&gt;&NewLine;&lt;/div&gt;
+</code></pre>
+
     </div>
 </div>

@@ -1,5 +1,58 @@
 ﻿@{
     ViewData["Title"] = "Rosters";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
+<div class="row page-title">
+    <h1 class="col-sm-12">Roster Details Page</h1>
+</div>
+
+<div id="example-text" class="example">
+
+
+    <div class="roster-details">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well remove l-h200">
+                    Roster Header
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="left-column">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="well remove l-h200">
+                                        Left Column
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="well remove l-h400">
+                                        Content Details
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <h3>Menu 1</h3>
+                        <p>Some content in menu 1.</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<pre class="snippet"><code class="html hljs xml">&lt;div class="roster-details"&gt;&NewLine;&Tab;&lt;div class="row"&gt;&NewLine;&Tab;&Tab;&lt;div class="col-sm-12"&gt;&NewLine;&Tab;&Tab;&Tab;&lt;div class="well remove l-h200"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;Roster Header&NewLine;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&Tab;&lt;div class="row"&gt;&NewLine;&Tab;&Tab;&lt;div class="col-sm-12"&gt;&NewLine;&Tab;&Tab;&Tab;&lt;ul class="nav nav-tabs"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;li class="active"&gt;&lt;a data-toggle="tab" href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;li&gt;&lt;a data-toggle="tab" href="#menu1"&gt;Menu 1&lt;/a&gt;&lt;/li&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;li&gt;&lt;a data-toggle="tab" href="#menu2"&gt;Menu 2&lt;/a&gt;&lt;/li&gt;&NewLine;&Tab;&Tab;&Tab;&lt;/ul&gt;&NewLine;&Tab;&Tab;&Tab;&lt;div class="tab-content"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;div id="home" class="tab-pane fade in active"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div class="left-column"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div class="row"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div class="col-sm-3"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div class="well remove l-h200"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;Left Column&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div class="col-sm-9"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div class="well remove l-h400"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;Content Details&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;div id="menu1" class="tab-pane fade"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;h3&gt;Menu 1&lt;/h3&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;p&gt;Some content in menu 1.&lt;/p&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;div id="menu2" class="tab-pane fade"&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;h3&gt;Menu 2&lt;/h3&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;p&gt;Some content in menu 2.&lt;/p&gt;&NewLine;&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&Tab;&lt;/div&gt;&NewLine;&Tab;&lt;/div&gt;&NewLine;&lt;/div&gt;</code></pre>
