@@ -81,7 +81,12 @@ namespace hmTemplates.Controllers
 
             return View();
         }
+        public IActionResult Panels()
+        {
+            ViewData["Message"] = "UI Elements such as tabs, modals, panels, etc";
 
+            return View();
+        }
         public IActionResult Error()
         {
             return View();
