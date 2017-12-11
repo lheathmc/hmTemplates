@@ -5,6 +5,7 @@
 <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#single">Single Column Form</a></li>
     <li><a data-toggle="tab" href="#double">Two Column Form</a></li>
+    <li><a data-toggle="tab" href="#errors">Errors</a></li>
 </ul>
 <div class="tab-content">
     <div id="single" class="tab-pane fade in active">
@@ -15,7 +16,7 @@
                     <div class="form-horizontal">
                         <h4>Form Section Header</h4>
                         <div class="form-group">
-                            <label class="control-label col-sm-4" for="email">Short Label:</label>
+                            <label class="control-label col-sm-4 required" for="email">Short Label:</label>
                             <div class="col-sm-8">
                                 <input type="email" class="form-control" placeholder="Placeholder" />
                             </div>
@@ -55,7 +56,7 @@
  &lt;div class="form-horizontal"&gt;
  &Tab;&lt;h4&gt;Form Section Header&lt;/h4&gt;
  &Tab;&lt;div class="form-group"&gt;
- &Tab;&Tab;&lt;label class="control-label col-sm-4" for="email"&gt;Short Label:&lt;/label&gt;
+ &Tab;&Tab;&lt;label class="control-label col-sm-4 required" for="email"&gt;Short Label:&lt;/label&gt;
  &Tab;&Tab;&lt;div class="col-sm-8"&gt;
  &Tab;&Tab;&Tab;&lt;input type="email" class="form-control" placeholder="Placeholder" /&gt;
  &Tab;&Tab;&lt;/div&gt;
@@ -98,13 +99,13 @@
                 <div class="col-sm-6">
                     <div class="form-horizontal">
                         <div class="form-group">
-                            <label class="control-label col-sm-3" for="email">Label:</label>
+                            <label class="control-label col-sm-3 required" for="email">Label:</label>
                             <div class="col-sm-9">
                                 <input type="email" class="form-control" placeholder="Placeholder" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3">Label:</label>
+                            <label class="control-label col-sm-3 required">Label:</label>
                             <div class="col-sm-9">
                                 <input type="password" class="form-control" placeholder="Placeholder" />
                             </div>
@@ -133,7 +134,7 @@
                 <div class="col-sm-6">
                     <div class="form-horizontal">
                         <div class="form-group">
-                            <label class="control-label col-sm-3">Medium Label:</label>
+                            <label class="control-label col-sm-3 required">Medium Label:</label>
                             <div class="col-sm-9">
                                 <input class="form-control" placeholder="Placeholder" />
                             </div>
@@ -185,13 +186,13 @@
 &Tab;&lt;div class="col-sm-6"&gt;
 &Tab;&Tab;&lt;div class="form-horizontal"&gt;
 &Tab;&Tab;&Tab;&lt;div class="form-group"&gt;
-&Tab;&Tab;&Tab;&Tab;&lt;label class="control-label col-sm-3" for="email"&gt;Label:&lt;/label&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;label class="control-label col-sm-3 required" for="email"&gt;Label:&lt;/label&gt;
 &Tab;&Tab;&Tab;&Tab;&lt;div class="col-sm-9"&gt;
 &Tab;&Tab;&Tab;&Tab;&Tab;&lt;input type="email" class="form-control" placeholder="Placeholder" /&gt;
 &Tab;&Tab;&Tab;&Tab;&lt;/div&gt;
 &Tab;&Tab;&Tab;&lt;/div&gt;
 &Tab;&Tab;&Tab;&lt;div class="form-group"&gt;
-&Tab;&Tab;&Tab;&Tab;&lt;label class="control-label col-sm-3"&gt;Label:&lt;/label&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;label class="control-label col-sm-3 required"&gt;Label:&lt;/label&gt;
 &Tab;&Tab;&Tab;&Tab;&lt;div class="col-sm-9"&gt;
 &Tab;&Tab;&Tab;&Tab;&Tab;&lt;input type="password" class="form-control" placeholder="Placeholder" /&gt;
 &Tab;&Tab;&Tab;&Tab;&lt;/div&gt;
@@ -220,7 +221,7 @@
 &Tab;&lt;div class="col-sm-6"&gt;
 &Tab;&Tab;&lt;div class="form-horizontal"&gt;
 &Tab;&Tab;&Tab;&lt;div class="form-group"&gt;
-&Tab;&Tab;&Tab;&Tab;&lt;label class="control-label col-sm-3"&gt;Medium Label:&lt;/label&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;label class="control-label col-sm-3 required"&gt;Medium Label:&lt;/label&gt;
 &Tab;&Tab;&Tab;&Tab;&lt;div class="col-sm-9"&gt;
 &Tab;&Tab;&Tab;&Tab;&Tab;&lt;input class="form-control" placeholder="Placeholder" /&gt;
 &Tab;&Tab;&Tab;&Tab;&lt;/div&gt;
@@ -266,4 +267,35 @@
 &lt;/div&gt;
 </code></pre>
     </div>
+    <div id="errors" class="tab-pane fade">
+        <div id="example-text" class="example">
+            <div class="text-danger validation-summary-errors">
+                <ul>
+                    <li>Error one</li>
+                    <li>Error two</li>
+                    <li>Error three</li>
+                </ul>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="required">Label</label>
+                <input class="form-control input-validation-error"/>
+                <span class="text-danger field-validation-error">Field error message.</span>
+            </div>
+        </div>
+        <pre class="snippet"><code class="html hljs xml">
+&lt;div class="text-danger validation-summary-errors"&gt;
+&Tab;&lt;ul&gt;
+&Tab;&Tab;&lt;li&gt; Error One &lt;/li&gt;
+&Tab;&Tab;&lt;li&gt; Error Two &lt;/li&gt;
+&Tab;&Tab;&lt;li&gt; Error Three &lt;/li&gt;
+&Tab;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-feedback"&gt;
+&Tab;&lt;label class="required">Label&lt;/label&gt;
+&Tab;&lt;input class="form-control input-validation-error"/&gt;
+&Tab;&lt;span class="text-danger field-validation-error"&gt;Field error message.&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
 </div>
+
