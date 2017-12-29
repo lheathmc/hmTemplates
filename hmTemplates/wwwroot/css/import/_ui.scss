@@ -26,7 +26,29 @@
     border-radius:0 0 6px 6px;
 }
 .btn {
-    i{
-        margin-right:5px;
+    i {
+        margin-right: 5px
+    }
+    color:#fff;
+    transition: background .5s ease-in, transform .5s .25s ease-in-out;
+    &:hover {
+        color:#fff;
+        transform: scale(.95);
+    }
+}
+.btn-primary, .btn-default {
+    background-color: $LinkColor;
+    border: solid 1px $LinkColor
+
+    &:hover {
+        background-color: $LinkHoverColor;
+        border: solid 1px $LinkHoverColor
+
+    }
+}
+.btn-cancel{
+    background-color:#ccc;
+    &:hover{
+        background-color:#444;
     }
 }
