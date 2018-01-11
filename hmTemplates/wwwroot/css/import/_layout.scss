@@ -70,7 +70,8 @@ body {
             -webkit-text-stroke-color: white;
             border: solid 1px #888;
             border-radius: 8px;
-            box-shadow: 4px 4px 2px #ddd
+            box-shadow: 3px 3px 4px #ddd;
+            text-shadow: 2px 2px 3px #444
         }
 
         .pending, .unenrolled {
@@ -101,7 +102,6 @@ body {
 
         .plate-wa {
             background-image: url("/images/plates/WA-LicensePlate.png")
-
         }
     }
 }
