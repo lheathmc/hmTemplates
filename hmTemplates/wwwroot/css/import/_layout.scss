@@ -24,4 +24,87 @@ body {
     }
 }
 
+/* Vehicles */
+.vehicles {
+    .btn-green {
+        margin: 35px auto 15px auto;
+        display: block;
+        width: 200px
+    }
+
+    .vehicle {
+
+        hr {
+            margin: 20px 15px
+        }
+
+        h2 {
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 10px 0
+        }
+
+        .actions {
+            .btn {
+                display: block;
+                width: 100px;
+                margin: 10px auto
+            }
+        }
+
+        [class*="plate"] {
+            display: block;
+            max-width: 200px;
+            max-height: 100px;
+            margin-bottom: 10px;
+            background-size: cover;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px 0;
+            color: black;
+            -webkit-text-fill-color: black;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+            border: solid 1px #888;
+            border-radius: 8px;
+            box-shadow: 4px 4px 2px #ddd
+        }
+
+        .pending, .unenrolled {
+            opacity: .4
+        }
+
+        .pending, .unenrolled {
+            [class*="plate-"], .plate-az {
+                opacity: .4
+            }
+        }
+
+        .plate-az {
+            background-image: url("/images/plates/AZ-LicensePlate.png")
+        }
+
+        .plate-de {
+            background-image: url("/images/plates/DE-LicensePlate.png")
+        }
+
+        .plate-fl {
+            background-image: url("/images/plates/FL-LicensePlate.png")
+        }
+
+        .plate-id {
+            background-image: url("/images/plates/ID-LicensePlate.png")
+        }
+
+        .plate-wa {
+            background-image: url("/images/plates/WA-LicensePlate.png")
+
+        }
+    }
+}
+
+
 /*Forms*/

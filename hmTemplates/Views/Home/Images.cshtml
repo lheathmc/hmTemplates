@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="row">
+    <div class="col-sm-3">
+        <div class="plate wa">ABC 123</div>
+        <label>VIN:</label>123456789AB123456
+        <label>Registration Expires:</label>10/2018
+    </div>
+    <div class="col-sm-6">
+        data
+    </div>
+    <div class="col-sm-2">
+        data
+    </div>
+</div>
+<div class="row mt100">
+    <div class="col-sm-2">
+        <a href="~/images/email_header.jpg" target="_blank">
+            <img src="~/images/email_header.jpg" class="thumbnail img-responsive"/>
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <asp:hyperlink id="HyperLink1" target="_blank" runat="server" NavigateUrl="~/images/email_header.jpg">
+            <img src="~/images/email_header.jpg" class="thumbnail img-responsive"/>
+        </asp:hyperlink>
+        
+        <asp:HyperLink ID="MyHyperLinkControl" NavigateUrl="http://google.com" runat="server">link</asp:HyperLink>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script>
+        
+    </script>
+}

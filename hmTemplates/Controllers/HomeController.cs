@@ -91,5 +91,13 @@ namespace hmTemplates.Controllers
         {
             return View();
         }
+        public IActionResult Images()
+        {
+            return View();
+        }
+        public IActionResult ScratchPad()
+        {
+            return View();
+        }
     }
 }
