@@ -68,9 +68,16 @@ namespace hmTemplates.Controllers
             return View();
         }
         
+        public IActionResult Filters()
+        {
+            ViewData["Message"] = "";
+
+            return View();
+        }
+        
         public IActionResult Tabs()
         {
-            ViewData["Message"] = "UI Elements such as tabs, modals, panels, etc";
+            ViewData["Message"] = "";
 
             return View();
         }
@@ -83,7 +90,7 @@ namespace hmTemplates.Controllers
         }
         public IActionResult Panels()
         {
-            ViewData["Message"] = "UI Elements such as tabs, modals, panels, etc";
+            ViewData["Message"] = "";
 
             return View();
         }

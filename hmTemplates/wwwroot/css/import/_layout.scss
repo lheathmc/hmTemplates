@@ -54,26 +54,6 @@ body {
             }
         }
 
-        [class*="plate"] {
-            display: block;
-            max-width: 200px;
-            max-height: 100px;
-            margin-bottom: 10px;
-            background-size: cover;
-            font-size: 2em;
-            font-weight: bold;
-            text-align: center;
-            padding: 30px 0;
-            color: black;
-            -webkit-text-fill-color: black;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: white;
-            border: solid 1px #888;
-            border-radius: 8px;
-            box-shadow: 3px 3px 4px #ddd;
-            text-shadow: 2px 2px 3px #444
-        }
-
         .pending, .unenrolled {
             opacity: .4
         }
@@ -84,25 +64,6 @@ body {
             }
         }
 
-        .plate-az {
-            background-image: url("/images/plates/AZ-LicensePlate.png")
-        }
-
-        .plate-de {
-            background-image: url("/images/plates/DE-LicensePlate.png")
-        }
-
-        .plate-fl {
-            background-image: url("/images/plates/FL-LicensePlate.png")
-        }
-
-        .plate-id {
-            background-image: url("/images/plates/ID-LicensePlate.png")
-        }
-
-        .plate-wa {
-            background-image: url("/images/plates/WA-LicensePlate.png")
-        }
     }
 }
 
