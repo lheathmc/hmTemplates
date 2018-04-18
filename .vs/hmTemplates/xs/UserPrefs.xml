@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{B817481F-E3ED-456F-9B80-D961DCECFB99}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="hmTemplates/wwwroot/css/import/_dev.scss">
+    <Files>
+      <File FileName="hmTemplates/Controllers/HomeController.cs" Line="93" Column="38" />
+      <File FileName="hmTemplates/Views/Home/ScratchPad.cshtml" Line="96" Column="28" />
+      <File FileName="hmTemplates/Views/Home/Filters.cshtml" Line="6" Column="1" />
+      <File FileName="hmTemplates/wwwroot/css/import/_layout.scss" Line="55" Column="10" />
+      <File FileName="hmTemplates/wwwroot/css/import/_plates.scss" Line="16" Column="24" />
+      <File FileName="hmTemplates/Views/Shared/_Layout.cshtml" Line="82" Column="1" />
+      <File FileName="hmTemplates/Views/Home/HorizontalForms.cshtml" Line="60" Column="40" />
+      <File FileName="hmTemplates/Views/Home/Modals.cshtml" Line="24" Column="23" />
+      <File FileName="hmTemplates/Views/Home/Tabs.cshtml" Line="6" Column="1" />
+      <File FileName="hmTemplates/Views/Home/Panels.cshtml" Line="20" Column="14" />
+      <File FileName="hmTemplates/Views/Home/LeftColumn.cshtml" Line="29" Column="35" />
+      <File FileName="hmTemplates/Views/Home/RightColumn.cshtml" Line="26" Column="34" />
+      <File FileName="hmTemplates/wwwroot/css/site.scss" Line="9" Column="23" />
+      <File FileName="hmTemplates/wwwroot/css/import/_dev.scss" Line="35" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.hmTemplates PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
